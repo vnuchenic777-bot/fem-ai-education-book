@@ -1,0 +1,9 @@
+module_id,order_index,title,estimated_hours,competencies,completion_rule,lessons_count,assessments_count,competencies_text
+M01,1,Введение: зачем преподавателю ИИ,6,['ПК-ИИ-1'],all_lessons_completed AND all_required_assessments_passed,5,2,ПК-ИИ-1
+M02,2,Как устроены нейронные сети на понятном уровне,8,['ПК-ИИ-1'],all_lessons_completed AND all_required_assessments_passed,5,2,ПК-ИИ-1
+M03,3,Большие языковые модели и генеративный ИИ,8,"['ПК-ИИ-1', 'ПК-ИИ-3', 'ПК-ИИ-8']",all_lessons_completed AND all_required_assessments_passed,6,2,ПК-ИИ-1; ПК-ИИ-3; ПК-ИИ-8
+M04,4,Постановка запросов как профессиональный навык,10,"['ПК-ИИ-2', 'ПК-ИИ-1']",all_lessons_completed AND all_required_assessments_passed,6,2,ПК-ИИ-2; ПК-ИИ-1
+M05,5,ИИ в учебной и методической работе,10,"['ПК-ИИ-4', 'ПК-ИИ-5', 'ПК-ИИ-2', 'ПК-ИИ-3', 'ПК-ИИ-8']",all_lessons_completed AND all_required_assessments_passed,7,3,ПК-ИИ-4; ПК-ИИ-5; ПК-ИИ-2; ПК-ИИ-3; ПК-ИИ-8
+M06,6,ИИ в научной и аналитической работе,8,"['ПК-ИИ-6', 'ПК-ИИ-2', 'ПК-ИИ-3']",all_lessons_completed AND all_required_assessments_passed,5,2,ПК-ИИ-6; ПК-ИИ-2; ПК-ИИ-3
+M07,7,"Документы, коммуникация и повседневная профессиональная рутина",8,"['ПК-ИИ-7', 'ПК-ИИ-2', 'ПК-ИИ-8']",all_lessons_completed AND all_required_assessments_passed,5,2,ПК-ИИ-7; ПК-ИИ-2; ПК-ИИ-8
+M08,8,"Риски, этика, безопасность и итоговый проект",14,"['ПК-ИИ-9', 'ПК-ИИ-10']",all_lessons_completed AND all_required_assessments_passed,6,4,ПК-ИИ-9; ПК-ИИ-10

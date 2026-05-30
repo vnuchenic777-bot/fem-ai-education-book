@@ -1,0 +1,56 @@
+title: "Проектирование цифровой образовательной экосистемы факультета"
+author: "TODO: указать автора"
+copyright: "2026"
+only_build_toc_files: true
+exclude_patterns:
+  - _build/**
+  - .venv/**
+  - venv/**
+  - env/**
+  - .git/**
+  - .jupyter_cache/**
+  - incoming_unpacked/**
+  - data/**
+  - assets/**
+  - scripts/**
+  - .github/**
+  - "10 — Сертификат или удостоверение.*/**"
+  - "Ветка*/**"
+  - " Ветка*/**"
+  - "файлы назначение которых?/**"
+  - "файлы назначение которых?/**"
+  - "*назначение*/*"
+  - "*.zip"
+  - "*.docx"
+  - "*.pdf"
+  - "*.pages"
+  - ".DS_Store"
+
+execute:
+  execute_notebooks: cache
+  timeout: 120
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - substitution
+
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+
+repository:
+  url: https://github.com/TODO_USERNAME/TODO_REPOSITORY
+  branch: main
+
+launch_buttons:
+  notebook_interface: jupyterlab
+
+bibtex_bibfiles:
+  - bibliography.bib
+
+sphinx:
+  config:
+    language: ru

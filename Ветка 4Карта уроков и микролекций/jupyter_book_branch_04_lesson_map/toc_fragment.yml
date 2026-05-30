@@ -1,0 +1,4 @@
+# Фрагмент для подключения главы к _toc.yml Jupyter Book.
+# Вставьте этот блок в нужный раздел parts/chapters.
+- file: branch_04_lesson_map
+  title: "Ветка 4. Карта уроков и микролекций"

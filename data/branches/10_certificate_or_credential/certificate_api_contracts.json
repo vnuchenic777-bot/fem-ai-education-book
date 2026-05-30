@@ -1,0 +1,121 @@
+{
+  "base_prefix": "/api/v1",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/certificates/me",
+      "access": "authenticated learner",
+      "description": "Возвращает список документов текущего пользователя.",
+      "response_fields": [
+        "id",
+        "registrationNumber",
+        "courseTitle",
+        "hours",
+        "issuedAt",
+        "status",
+        "verificationUrl"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/certificates/{id}",
+      "access": "owner or authorized admin/teacher",
+      "description": "Возвращает карточку документа с учетом прав доступа.",
+      "response_fields": [
+        "id",
+        "documentType",
+        "registrationNumber",
+        "holder",
+        "course",
+        "competencies",
+        "status",
+        "issuedAt",
+        "downloadUrl"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/course-runs/{id}/certificates/generate",
+      "access": "organization_admin | program_admin | authorized teacher/reviewer",
+      "description": "Создает документы для слушателей, выполнивших условия завершения курса.",
+      "request_fields": [
+        "mode",
+        "enrollmentIds",
+        "templateId",
+        "dryRun"
+      ],
+      "response_fields": [
+        "generated",
+        "skipped",
+        "errors"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/certificates/verify/{verificationCode}",
+      "access": "public rate-limited",
+      "description": "Публичная проверка подлинности по коду или QR-ссылке.",
+      "response_fields": [
+        "valid",
+        "status",
+        "holderName",
+        "courseTitle",
+        "hours",
+        "issuedAt",
+        "issuer",
+        "registrationNumber"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/certificates/{id}/revoke",
+      "access": "organization_admin | super_admin",
+      "description": "Отзывает документ и фиксирует причину в AuditLog.",
+      "request_fields": [
+        "reason",
+        "comment"
+      ],
+      "response_fields": [
+        "id",
+        "status",
+        "revokedAt"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/certificates/{id}/reissue",
+      "access": "organization_admin | super_admin",
+      "description": "Создает новую версию документа при исправлении ошибки или повторной выдаче.",
+      "request_fields": [
+        "reason",
+        "changes"
+      ],
+      "response_fields": [
+        "oldCertificateId",
+        "newCertificateId",
+        "newRegistrationNumber"
+      ]
+    }
+  ],
+  "public_verification_response_example": {
+    "valid": true,
+    "status": "issued",
+    "holderName": "Иван Иванов",
+    "courseTitle": "ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания принципов до практического применения",
+    "hours": 72,
+    "issuedAt": "2026-12-20T00:00:00.000Z",
+    "issuer": "ФЭМ СПБГТИ(ТУ)",
+    "registrationNumber": "FEM-DPO-AI-2026-0001"
+  },
+  "non_public_fields": [
+    "userId",
+    "email",
+    "phone",
+    "storageKey",
+    "fileHash",
+    "signatureMetadata",
+    "internalAuditMetadata",
+    "ipAddress",
+    "userAgent"
+  ]
+}

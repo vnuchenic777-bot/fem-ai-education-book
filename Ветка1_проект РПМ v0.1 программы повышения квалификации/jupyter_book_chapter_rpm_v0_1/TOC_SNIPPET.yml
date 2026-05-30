@@ -1,0 +1,8 @@
+# Фрагмент для подключения главы в _toc.yml Jupyter Book
+# Вариант с одной страницей:
+- file: chapters/rpm_dpo_ai_72h_v0_1
+
+# Вариант внутри раздела:
+# - caption: Методическое проектирование ДПО
+#   chapters:
+#     - file: chapters/rpm_dpo_ai_72h_v0_1

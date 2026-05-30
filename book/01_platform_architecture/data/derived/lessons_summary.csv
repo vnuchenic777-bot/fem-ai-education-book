@@ -1,0 +1,46 @@
+module_id,module_order,module_title,lesson_id,lesson_order,title,lesson_type,estimated_minutes,completion_rule,progress_event
+M01,1,Введение: зачем преподавателю ИИ,M01-L01,1,Навигация по курсу и логика образовательной платформы,mixed,25,view_required_resources AND mark_completed,LessonProgress.completed
+M01,1,Введение: зачем преподавателю ИИ,M01-L02,2,Какие задачи преподавателя меняются при появлении ИИ-инструментов,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M01,1,Введение: зачем преподавателю ИИ,M01-L03,3,"Страхи, мифы и профессиональная ответственность преподавателя",mixed,35,view_required_resources AND mark_completed,LessonProgress.completed
+M01,1,Введение: зачем преподавателю ИИ,M01-L04,4,Первая проба: слабый и уточненный запрос,mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M01,1,Введение: зачем преподавателю ИИ,M01-L05,5,Карта личных задач преподавателя для применения ИИ,assignment_intro,30,view_required_resources AND mark_completed,LessonProgress.completed
+M02,2,Как устроены нейронные сети на понятном уровне,M02-L01,1,Перцептрон Розенблатта как понятная модель нейросети,mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M02,2,Как устроены нейронные сети на понятном уровне,M02-L02,2,"Входы, веса, порог и функция активации",video,40,view_required_resources AND mark_completed,LessonProgress.completed
+M02,2,Как устроены нейронные сети на понятном уровне,M02-L03,3,"Обучение модели: ошибка, корректировка, повторение",mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M02,2,Как устроены нейронные сети на понятном уровне,M02-L04,4,От простых моделей к современным нейронным сетям,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M02,2,Как устроены нейронные сети на понятном уровне,M02-L05,5,Как объяснять нейросеть студентам без технического жаргона,assignment_intro,40,view_required_resources AND mark_completed,LessonProgress.completed
+M03,3,Большие языковые модели и генеративный ИИ,M03-L01,1,Языковая модель: генерация вероятного продолжения текста,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M03,3,Большие языковые модели и генеративный ИИ,M03-L02,2,"Токены, контекст и влияние формулировки запроса",mixed,35,view_required_resources AND mark_completed,LessonProgress.completed
+M03,3,Большие языковые модели и генеративный ИИ,M03-L03,3,Сильные стороны и ограничения больших языковых моделей,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M03,3,Большие языковые модели и генеративный ИИ,M03-L04,4,Галлюцинации: уверенный текст без фактического основания,mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M03,3,Большие языковые модели и генеративный ИИ,M03-L05,5,"Многомодальный ИИ: текст, изображение, аудио, видео, презентации",video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M03,3,Большие языковые модели и генеративный ИИ,M03-L06,6,Практика проверки сгенерированного ответа,assignment_intro,40,view_required_resources AND mark_completed,LessonProgress.completed
+M04,4,Постановка запросов как профессиональный навык,M04-L01,1,Запрос как профессиональная постановка задачи,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M04,4,Постановка запросов как профессиональный навык,M04-L02,2,"Роль, цель, контекст, исходные данные",mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M04,4,Постановка запросов как профессиональный навык,M04-L03,3,"Ограничения, формат ответа и критерии качества",mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M04,4,Постановка запросов как профессиональный навык,M04-L04,4,Итерации: как улучшать слабый результат,mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M04,4,Постановка запросов как профессиональный навык,M04-L05,5,"Запросы для учебных, научных и административных задач",video,40,view_required_resources AND mark_completed,LessonProgress.completed
+M04,4,Постановка запросов как профессиональный навык,M04-L06,6,Сборка личной библиотеки запросов преподавателя,assignment_intro,45,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L01,1,Подготовка плана занятия и конспекта с помощью ИИ,mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L02,2,Адаптация учебного материала под уровень студентов,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L03,3,Создание учебных заданий и тестовых вопросов,mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L04,4,Критерии оценивания и обратная связь,mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L05,5,Задание с обязательным использованием ИИ студентами: методическая модель,video,45,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L06,6,Защита от поверхностной генерации и механического копирования,mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M05,5,ИИ в учебной и методической работе,M05-L07,7,"Учебный визуал, презентация и инфографика с помощью ИИ",assignment_intro,40,view_required_resources AND mark_completed,LessonProgress.completed
+M06,6,ИИ в научной и аналитической работе,M06-L01,1,ИИ как помощник при формулировании исследовательского вопроса,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M06,6,ИИ в научной и аналитической работе,M06-L02,2,"Структура статьи, тезисов и аналитической записки",mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M06,6,ИИ в научной и аналитической работе,M06-L03,3,"Работа с аннотациями, тезисами и аргументацией",mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M06,6,ИИ в научной и аналитической работе,M06-L04,4,"Источники, библиография и риск недостоверных ссылок",video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M06,6,ИИ в научной и аналитической работе,M06-L05,5,Декларация использования ИИ и академическая добросовестность,assignment_intro,40,view_required_resources AND mark_completed,LessonProgress.completed
+M07,7,"Документы, коммуникация и повседневная профессиональная рутина",M07-L01,1,"Письма, служебные записки, отчеты и инструкции",mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M07,7,"Документы, коммуникация и повседневная профессиональная рутина",M07-L02,2,"Сокращение, структурирование и резюме больших текстов",video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M07,7,"Документы, коммуникация и повседневная профессиональная рутина",M07-L03,3,"Регламенты, памятки и контрольные списки",mixed,40,view_required_resources AND mark_completed,LessonProgress.completed
+M07,7,"Документы, коммуникация и повседневная профессиональная рутина",M07-L04,4,Планирование регулярных задач и персональная продуктивность,video,35,view_required_resources AND mark_completed,LessonProgress.completed
+M07,7,"Документы, коммуникация и повседневная профессиональная рутина",M07-L05,5,"Презентации, схемы и рабочие шаблоны",assignment_intro,40,view_required_resources AND mark_completed,LessonProgress.completed
+M08,8,"Риски, этика, безопасность и итоговый проект",M08-L01,1,"Персональные данные, конфиденциальная информация и внутренние документы",video,40,view_required_resources AND mark_completed,LessonProgress.completed
+M08,8,"Риски, этика, безопасность и итоговый проект",M08-L02,2,"Авторство, прозрачность применения ИИ и академическая добросовестность",mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M08,8,"Риски, этика, безопасность и итоговый проект",M08-L03,3,Чек-лист безопасного применения ИИ в преподавательской практике,mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M08,8,"Риски, этика, безопасность и итоговый проект",M08-L04,4,"Сборка итогового проекта: дисциплина, терминология, задания, РПМ",assignment_intro,50,view_required_resources AND mark_completed,LessonProgress.completed
+M08,8,"Риски, этика, безопасность и итоговый проект",M08-L05,5,Критерии оценивания итогового проекта и подготовка защиты,mixed,45,view_required_resources AND mark_completed,LessonProgress.completed
+M08,8,"Риски, этика, безопасность и итоговый проект",M08-L06,6,Асинхронная видео-защита: структура выступления и ответы на вопросы,assignment_intro,45,view_required_resources AND mark_completed,LessonProgress.completed

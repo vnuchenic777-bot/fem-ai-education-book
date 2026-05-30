@@ -1,0 +1,22 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "c2f4f94dabcf8dde173d5a6dfddc9de0848fdc6853f8fdeb2787dd172466bd3b"
+  },
+  {
+    "file": "branch_04_lesson_map.md",
+    "sha256": "7bd148412fdf9aa2aa49f9d9a9568ddc04a533be4257f501356234324f68dd37"
+  },
+  {
+    "file": "data/branch_04_lesson_map.json",
+    "sha256": "318272a543cc9558d6fe4dbdb2bf081c7daaef4b75004acf142212b3822bd45d"
+  },
+  {
+    "file": "data/branch_04_lesson_map.yaml",
+    "sha256": "667b51ee17b0b158245ef8e0477c7e92f2f745036d59aea0b4d9255517292aa0"
+  },
+  {
+    "file": "toc_fragment.yml",
+    "sha256": "d73f40059c17c40693effb56657782a58740c3540149f5bb4047a372b7b1caf5"
+  }
+]

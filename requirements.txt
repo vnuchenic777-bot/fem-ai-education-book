@@ -1,0 +1,12 @@
+jupyter-book<2
+notebook
+ipykernel
+nbformat
+nbclient
+pandas
+numpy
+matplotlib
+networkx
+pyyaml
+qrcode
+pillow

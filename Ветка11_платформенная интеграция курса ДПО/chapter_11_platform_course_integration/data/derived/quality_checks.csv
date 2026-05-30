@@ -1,0 +1,8 @@
+check,passed,details
+Сумма часов = 72,True,sum=72
+Количество модулей = 8,True,modules=8
+Количество компетенций = 10,True,competencies=10
+Каждый модуль имеет уроки,True,lessons_count > 0
+Каждый модуль имеет оценочные элементы,True,assessments_count > 0
+Итоговый проект присутствует,True,type=final_project
+Certificate requirements есть,True,certificate_requirements

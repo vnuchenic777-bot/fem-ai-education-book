@@ -1,0 +1,25 @@
+{
+  "package": "jupyter_book_branch_7_chapter",
+  "files": [
+    {
+      "path": "branch_7_module_development.md",
+      "purpose": "основная Jupyter Book-совместимая Markdown-глава"
+    },
+    {
+      "path": "data/branch_7_module_development.yaml",
+      "purpose": "структурированные таблицы, матрицы и перечни для человека и автоматизации"
+    },
+    {
+      "path": "data/branch_7_module_development.json",
+      "purpose": "машинно-читаемая версия для инженерных сред"
+    },
+    {
+      "path": "toc_fragment.yml",
+      "purpose": "фрагмент для подключения главы в _toc.yml"
+    },
+    {
+      "path": "README.md",
+      "purpose": "описание назначения папки и порядка подключения"
+    }
+  ]
+}

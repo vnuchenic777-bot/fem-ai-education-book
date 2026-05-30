@@ -1,0 +1,11 @@
+jupyter_book_toc_fragment:
+  recommended_target: _toc.yml -> chapters
+  entry:
+    file: chapters/ai_mandatory_assignments_tz
+    title: 'ТЗ: задания с обязательным использованием ИИ студентами'
+example_usage:
+  format: jb-book
+  root: intro
+  chapters:
+  - file: chapters/ai_mandatory_assignments_tz
+    title: 'ТЗ: задания с обязательным использованием ИИ студентами'

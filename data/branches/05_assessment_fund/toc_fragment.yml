@@ -1,0 +1,7 @@
+- file: branches/branch_05_fos/main_chapter
+  title: Ветка 5. Фонд оценочных средств
+  sections:
+    - file: branches/branch_05_fos/notebook_01
+      title: Матрица компетенций и форм контроля
+    - file: branches/branch_05_fos/notebook_02
+      title: Жизненный цикл проверки и техническая модель

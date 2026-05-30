@@ -1,0 +1,97 @@
+{
+  "issuedCertificate": {
+    "id": "cert_01HZZ_SAMPLE",
+    "certificateTemplateId": "tmpl_01HZZ_SAMPLE",
+    "organizationId": "org_fem_spbgtitu",
+    "userId": "user_ivanov_i_i",
+    "courseRunId": "run_dpo_ai_2026_01",
+    "enrollmentId": "enr_ivanov_dpo_ai_2026_01",
+    "documentType": "certificate",
+    "registrationNumber": "FEM-DPO-AI-2026-0001",
+    "issuedAt": "2026-12-20T00:00:00.000Z",
+    "hours": 72,
+    "competencies": [
+      {
+        "code": "ПК-ИИ-1",
+        "name": "Концептуальная грамотность об ИИ",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-2",
+        "name": "Постановка запросов как профессиональный навык",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-3",
+        "name": "Критическая проверка ответов ИИ",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-4",
+        "name": "Применение ИИ в подготовке учебных материалов",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-5",
+        "name": "Проектирование заданий с обязательным использованием ИИ студентами",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-6",
+        "name": "Применение ИИ в научной и аналитической работе",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-7",
+        "name": "Применение ИИ в документообороте и повседневной профессиональной рутине",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-8",
+        "name": "Многомодальный ИИ для создания визуальных, аудио-, видео- и презентационных материалов",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-9",
+        "name": "Безопасность, этика и правовые границы применения ИИ",
+        "status": "mastered"
+      },
+      {
+        "code": "ПК-ИИ-10",
+        "name": "ИИ-лидерство в собственной дисциплине",
+        "status": "mastered"
+      }
+    ],
+    "status": "issued",
+    "storageObjectId": "stor_cert_pdf_0001",
+    "fileHash": "sha256:example_file_hash_to_be_replaced_by_real_hash",
+    "signedByUserId": "user_dean_or_authorized_person",
+    "signatureMetadata": {
+      "signatureType": "to_be_approved",
+      "signedAt": "2026-12-20T00:00:00.000Z"
+    },
+    "verificationCode": "ver_8Yp3qX2n9RkLmQ7sT0aB",
+    "verificationUrl": "https://example.org/certificates/verify/ver_8Yp3qX2n9RkLmQ7sT0aB"
+  },
+  "publicVerificationResponse": {
+    "valid": true,
+    "status": "issued",
+    "holderName": "Иван Иванов",
+    "courseTitle": "ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания принципов до практического применения",
+    "hours": 72,
+    "issuedAt": "2026-12-20T00:00:00.000Z",
+    "issuer": "ФЭМ СПБГТИ(ТУ)",
+    "registrationNumber": "FEM-DPO-AI-2026-0001"
+  },
+  "privateFieldsNotForPublicPage": [
+    "userId",
+    "email",
+    "phone",
+    "storageKey",
+    "fileHash",
+    "signatureMetadata",
+    "internalAuditMetadata",
+    "ipAddress",
+    "userAgent"
+  ]
+}

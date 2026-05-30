@@ -1,0 +1,3193 @@
+chapter:
+  id: branch_04_lesson_map
+  title: Ветка 4. Карта уроков и микролекций
+  course_title: 'ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания принципов до практического
+    применения'
+  version: v0.1
+  status: chapter_for_jupyter_book
+  language: ru
+  format: MyST Markdown + YAML + JSON
+  source_branch: BRANCH_04_LESSON_MAP_TZ
+course:
+  title: 'ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания принципов до практического применения'
+  program_type: ДПО / программа повышения квалификации
+  total_academic_hours: 72
+  academic_hour_minutes: 45
+  total_workload_minutes: 3240
+  delivery_format: асинхронный дистанционный курс в web/PWA-платформе
+  video_policy: короткие видеолекции преимущественно 5–15 минут; один урок содержит 1–3 микролекции
+  target_audience: преподаватели с разным уровнем цифровой подготовки
+  main_goal: сформировать у преподавателей способность понимать возможности и ограничения ИИ-инструментов, формулировать задачи,
+    проверять результаты, применять ИИ в учебной, методической, научной, организационной и повседневной работе, а также проектировать
+    задания с обязательным использованием ИИ студентами
+methodical_model:
+  unit_chain:
+  - CourseTemplate
+  - CourseModule
+  - Lesson
+  - Microlecture
+  - CourseResource
+  - PracticalAction
+  - AssessmentItem
+  - LessonProgress
+  lesson_required_fields:
+  - module
+  - lesson_id
+  - title
+  - workload_minutes
+  - goal
+  - key_questions
+  - microlectures
+  - learner_practical_action
+  - materials
+  - platform_fixed_result
+  - competencies
+  assessment_principle: каждая компетенция подтверждается артефактом и тестом или практической проверкой
+competencies:
+- code: ПК-ИИ-1
+  title: Концептуальная грамотность об ИИ
+- code: ПК-ИИ-2
+  title: Постановка запросов как профессиональный навык
+- code: ПК-ИИ-3
+  title: Критическая проверка ответов ИИ
+- code: ПК-ИИ-4
+  title: Применение ИИ в подготовке учебных материалов
+- code: ПК-ИИ-5
+  title: Проектирование заданий с обязательным использованием ИИ студентами
+- code: ПК-ИИ-6
+  title: Применение ИИ в научной и аналитической работе
+- code: ПК-ИИ-7
+  title: Применение ИИ в документообороте и повседневной профессиональной рутине
+- code: ПК-ИИ-8
+  title: Многомодальный ИИ для создания визуальных, аудио-, видео- и презентационных материалов
+- code: ПК-ИИ-9
+  title: Безопасность, этика и правовые границы применения ИИ
+- code: ПК-ИИ-10
+  title: ИИ-лидерство в собственной дисциплине
+modules:
+- id: M01
+  order_index: 1
+  title: 'Введение: зачем преподавателю ИИ'
+  academic_hours: 6
+  workload_minutes: 270
+  primary_competencies: ПК-ИИ-1
+  lessons_count: 4
+  lessons:
+  - id: M01-L01
+    order_index: 1
+    title: ИИ в реальной преподавательской практике
+    workload_minutes: 60
+    lesson_type: mixed
+    goal: показать, какие профессиональные действия преподавателя меняются под влиянием ИИ-инструментов
+    key_questions: &id001
+    - какие действия преподавателя уже можно усилить ИИ
+    - почему ИИ не является субъектом педагогического решения
+    - какие риски возникают при некритичном использовании
+    microlectures:
+    - id: M01-L01-V01
+      title: ИИ как изменение профессионального инструментария
+      duration_minutes: 10
+    - id: M01-L01-V02
+      title: Типичные страхи и завышенные ожидания
+      duration_minutes: 8
+    - id: M01-L01-V03
+      title: Роль преподавателя как автора решения
+      duration_minutes: 7
+    learner_practical_action: составить список 5 регулярных задач преподавателя, которые потенциально можно упростить с помощью
+      ИИ
+    materials: &id002
+    - шаблон «Карта задач преподавателя»
+    - краткий конспект урока
+    - пример заполненной карты
+    platform_fixed_result: lesson_progress + text_note
+    assessment_item_id: null
+    competencies: &id003
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M01-L02
+    order_index: 2
+    title: 'ИИ: инструмент, помощник и границы ответственности'
+    workload_minutes: 60
+    lesson_type: mixed
+    goal: зафиксировать профессиональную ответственность преподавателя за результат применения ИИ
+    key_questions: &id004
+    - что остается за преподавателем
+    - почему нельзя переносить ответственность на инструмент
+    - как объяснять студентам границы применения ИИ
+    microlectures:
+    - id: M01-L02-V01
+      title: ИИ как помощник, а не автор решения
+      duration_minutes: 9
+    - id: M01-L02-V02
+      title: Ответственность за содержание, оценку и обратную связь
+      duration_minutes: 10
+    learner_practical_action: разделить 5 задач из предыдущего урока на действия ИИ и действия преподавателя
+    materials: &id005
+    - таблица «ИИ помогает / преподаватель отвечает»
+    - чек-лист границ ответственности
+    platform_fixed_result: lesson_progress + checklist
+    assessment_item_id: null
+    competencies: &id006
+    - ПК-ИИ-1
+    - ПК-ИИ-9
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M01-L03
+    order_index: 3
+    title: 'Слабый и сильный запрос: первое сравнение'
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: показать зависимость качества результата от постановки задачи
+    key_questions: &id007
+    - почему общий запрос дает общий ответ
+    - какие элементы делают запрос профессиональным
+    - как первый опыт промптинга связан с будущей библиотекой запросов
+    microlectures:
+    - id: M01-L03-V01
+      title: Почему слабый запрос дает слабый результат
+      duration_minutes: 8
+    - id: M01-L03-V02
+      title: Пять элементов уточненного запроса
+      duration_minutes: 12
+    - id: M01-L03-V03
+      title: Разбор примера «до / после»
+      duration_minutes: 10
+    learner_practical_action: переписать один слабый запрос в сильный и объяснить внесенные изменения
+    materials: &id008
+    - шаблон сравнения «слабый запрос / сильный запрос»
+    - пример разбора
+    platform_fixed_result: 'assessment_item: reflection_m01_l03'
+    assessment_item_id: reflection_m01_l03
+    competencies: &id009
+    - ПК-ИИ-1
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M01-L04
+    order_index: 4
+    title: Личная карта применения ИИ в работе преподавателя
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: завершить модуль созданием первичного практического артефакта
+    key_questions: &id010
+    - какие задачи подходят для первого применения
+    - какие задачи требуют осторожности
+    - как выбрать безопасную и проверяемую задачу
+    microlectures:
+    - id: M01-L04-V01
+      title: Как выбрать первые задачи для ИИ
+      duration_minutes: 9
+    - id: M01-L04-V02
+      title: Что считать хорошим первым результатом
+      duration_minutes: 8
+    learner_practical_action: подготовить личную карту задач для ИИ и выбрать 2 задачи для дальнейшей работы в курсе
+    materials: &id011
+    - итоговый шаблон модуля 1
+    - пример хорошего результата
+    - список типичных ошибок
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_1_part1 + quiz_m01'
+    assessment_item_id: artifact_pk_ai_1_part1
+    competencies: &id012
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M02
+  order_index: 2
+  title: Как устроены нейронные сети на понятном уровне
+  academic_hours: 8
+  workload_minutes: 360
+  primary_competencies: ПК-ИИ-1
+  lessons_count: 5
+  lessons:
+  - id: M02-L01
+    order_index: 1
+    title: 'Перцептрон Розенблатта: историческая и учебная модель'
+    workload_minutes: 70
+    lesson_type: mixed
+    goal: дать понятную точку входа в нейросетевую логику без избыточной математики
+    key_questions: &id013
+    - зачем начинать с перцептрона
+    - что такое входы и веса
+    - почему модель принимает решение по признакам
+    microlectures:
+    - id: M02-L01-V01
+      title: Почему перцептрон важен для понимания ИИ
+      duration_minutes: 11
+    - id: M02-L01-V02
+      title: Входы, веса и решение модели
+      duration_minutes: 12
+    learner_practical_action: описать на бытовом или дисциплинарном примере, как набор признаков приводит к решению
+    materials: &id014
+    - схема перцептрона
+    - конспект с терминами
+    - мини-глоссарий
+    platform_fixed_result: lesson_progress + short_answer
+    assessment_item_id: null
+    competencies: &id015
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M02-L02
+    order_index: 2
+    title: 'Обучение модели: ошибка, корректировка, повторение'
+    workload_minutes: 70
+    lesson_type: mixed
+    goal: объяснить обучение как последовательное изменение параметров на основе ошибок
+    key_questions: &id016
+    - что значит «модель обучается»
+    - почему обучение требует примеров
+    - как ошибка влияет на корректировку
+    microlectures:
+    - id: M02-L02-V01
+      title: Обучение как исправление ошибки
+      duration_minutes: 10
+    - id: M02-L02-V02
+      title: Почему модель зависит от данных
+      duration_minutes: 12
+    learner_practical_action: составить схему «пример - ошибка - корректировка - новый результат»
+    materials: &id017
+    - шаблон схемы обучения
+    - пример заполнения
+    platform_fixed_result: lesson_progress + file_upload_optional
+    assessment_item_id: null
+    competencies: &id018
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M02-L03
+    order_index: 3
+    title: От простых сетей к современным моделям
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: показать связь между базовой идеей нейросети и современными моделями
+    key_questions: &id019
+    - почему современные модели сложнее перцептрона
+    - что сохраняется в общей логике
+    - почему нельзя считать модель сознательной
+    microlectures:
+    - id: M02-L03-V01
+      title: Многослойные сети на понятном уровне
+      duration_minutes: 12
+    - id: M02-L03-V02
+      title: Что модель делает и чего не делает
+      duration_minutes: 10
+    learner_practical_action: написать короткое объяснение отличия модели от человека
+    materials: &id020
+    - конспект
+    - сравнительная таблица «модель / человек»
+    platform_fixed_result: lesson_progress + reflection
+    assessment_item_id: null
+    competencies: &id021
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M02-L04
+    order_index: 4
+    title: Почему ИИ ошибается
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: сформировать понимание вероятностной природы ответа и типовых причин ошибок
+    key_questions: &id022
+    - почему уверенный ответ может быть ошибочным
+    - что зависит от данных и постановки задачи
+    - как это объяснять студентам
+    microlectures:
+    - id: M02-L04-V01
+      title: Вероятностная природа результата
+      duration_minutes: 11
+    - id: M02-L04-V02
+      title: Типовые причины ошибок ИИ
+      duration_minutes: 13
+    learner_practical_action: разобрать один пример ошибочного вывода и указать возможные причины ошибки
+    materials: &id023
+    - лист анализа ошибки
+    - пример
+    platform_fixed_result: 'assessment_item: practice_m02_l04'
+    assessment_item_id: practice_m02_l04
+    competencies: &id024
+    - ПК-ИИ-1
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M02-L05
+    order_index: 5
+    title: Объяснение ИИ без технического жаргона
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: подготовить итоговый артефакт концептуальной грамотности
+    key_questions: &id025
+    - как объяснить ИИ коллеге
+    - как не упростить до ложного объяснения
+    - как связать объяснение с дисциплиной
+    microlectures:
+    - id: M02-L05-V01
+      title: Как говорить об ИИ без мистификации
+      duration_minutes: 10
+    - id: M02-L05-V02
+      title: Структура короткого объяснения
+      duration_minutes: 8
+    learner_practical_action: подготовить текст или план видео 3–5 минут «что такое ИИ и почему его не нужно бояться»
+    materials: &id026
+    - шаблон артефакта ПК-ИИ-1
+    - рубрика оценивания
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_1 + quiz_m02'
+    assessment_item_id: artifact_pk_ai_1
+    competencies: &id027
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M03
+  order_index: 3
+  title: Большие языковые модели и генеративный ИИ
+  academic_hours: 8
+  workload_minutes: 360
+  primary_competencies: ПК-ИИ-1, ПК-ИИ-3, ПК-ИИ-8
+  lessons_count: 5
+  lessons:
+  - id: M03-L01
+    order_index: 1
+    title: 'Языковая модель: токены, контекст, генерация'
+    workload_minutes: 70
+    lesson_type: mixed
+    goal: объяснить базовую логику больших языковых моделей
+    key_questions: &id028
+    - что такое токен
+    - что такое контекст
+    - почему модель генерирует вероятное продолжение
+    microlectures:
+    - id: M03-L01-V01
+      title: Токены и контекст
+      duration_minutes: 12
+    - id: M03-L01-V02
+      title: Генерация как вероятностное продолжение
+      duration_minutes: 11
+    learner_practical_action: разобрать один ответ ИИ как последовательность смысловых продолжений
+    materials: &id029
+    - конспект
+    - схема «запрос - контекст - ответ»
+    platform_fixed_result: lesson_progress + short_answer
+    assessment_item_id: null
+    competencies: &id030
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M03-L02
+    order_index: 2
+    title: Сильные стороны языковых моделей
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: показать задачи, где языковые модели особенно полезны преподавателю
+    key_questions: &id031
+    - структурирование текста
+    - переформулирование
+    - сравнение вариантов
+    - создание черновиков
+    microlectures:
+    - id: M03-L02-V01
+      title: Где языковая модель помогает преподавателю
+      duration_minutes: 10
+    - id: M03-L02-V02
+      title: Черновик не равен готовому материалу
+      duration_minutes: 9
+    learner_practical_action: выбрать 3 преподавательские задачи и указать допустимый способ применения языковой модели
+    materials: &id032
+    - таблица применимости
+    - примеры задач
+    platform_fixed_result: lesson_progress + checklist
+    assessment_item_id: null
+    competencies: &id033
+    - ПК-ИИ-1
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M03-L03
+    order_index: 3
+    title: 'Галлюцинации: уверенный текст без основания'
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: научить распознавать ситуации, где ответ ИИ требует проверки
+    key_questions: &id034
+    - что такое галлюцинация
+    - почему стиль не доказывает достоверность
+    - какие утверждения проверяются в первую очередь
+    microlectures:
+    - id: M03-L03-V01
+      title: Что такое галлюцинация
+      duration_minutes: 12
+    - id: M03-L03-V02
+      title: Как выделять проверяемые утверждения
+      duration_minutes: 12
+    learner_practical_action: выделить в тексте ИИ минимум 3 проверяемых утверждения
+    materials: &id035
+    - текст для анализа
+    - лист разметки утверждений
+    platform_fixed_result: 'assessment_item: practice_m03_l03'
+    assessment_item_id: practice_m03_l03
+    competencies: &id036
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M03-L04
+    order_index: 4
+    title: Проверка фактов и источников
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: сформировать процедуру проверки результата ИИ
+    key_questions: &id037
+    - как проверять числа, даты, названия и ссылки
+    - какие источники использовать
+    - что делать с недоказуемыми утверждениями
+    microlectures:
+    - id: M03-L04-V01
+      title: Процедура проверки фактов
+      duration_minutes: 13
+    - id: M03-L04-V02
+      title: 'Правда, ошибка, недоказуемо: классификация результата'
+      duration_minutes: 10
+    learner_practical_action: проверить выделенные утверждения и классифицировать их
+    materials: &id038
+    - шаблон проверки фактов
+    - пример классификации
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_3'
+    assessment_item_id: artifact_pk_ai_3
+    competencies: &id039
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M03-L05
+    order_index: 5
+    title: 'Многомодальный ИИ: текст, изображение, звук, видео'
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: дать обзор многомодальных сценариев без ухода в отдельный модуль
+    key_questions: &id040
+    - какие типы материалов может создавать ИИ
+    - когда визуал помогает обучению
+    - как не подменить содержание внешним эффектом
+    microlectures:
+    - id: M03-L05-V01
+      title: Что такое многомодальный ИИ
+      duration_minutes: 9
+    - id: M03-L05-V02
+      title: 'Учебный визуал: польза и ограничения'
+      duration_minutes: 10
+    learner_practical_action: создать простую схему или визуальный план к теме своей дисциплины
+    materials: &id041
+    - шаблон визуального запроса
+    - критерии учебной пригодности визуала
+    platform_fixed_result: 'assessment_item: practice_pk_ai_8_part1 + quiz_m03'
+    assessment_item_id: practice_pk_ai_8_part1
+    competencies: &id042
+    - ПК-ИИ-8
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M04
+  order_index: 4
+  title: Постановка запросов как профессиональный навык
+  academic_hours: 10
+  workload_minutes: 450
+  primary_competencies: ПК-ИИ-2, ПК-ИИ-1
+  lessons_count: 5
+  lessons:
+  - id: M04-L01
+    order_index: 1
+    title: Структура профессионального запроса
+    workload_minutes: 90
+    lesson_type: mixed
+    goal: сформировать базовую модель постановки задачи ИИ-инструменту
+    key_questions: &id043
+    - какие элементы должны быть в запросе
+    - как задавать роль, контекст и формат
+    - зачем нужны критерии качества
+    microlectures:
+    - id: M04-L01-V01
+      title: Цель, роль, контекст
+      duration_minutes: 10
+    - id: M04-L01-V02
+      title: Ограничения и формат результата
+      duration_minutes: 12
+    - id: M04-L01-V03
+      title: Критерии качества ответа
+      duration_minutes: 10
+    learner_practical_action: 'создать 3 запроса по модели: задача, контекст, ограничения, формат, критерии'
+    materials: &id044
+    - карточка профессионального запроса
+    - пример заполнения
+    platform_fixed_result: lesson_progress + draft_prompts
+    assessment_item_id: null
+    competencies: &id045
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M04-L02
+    order_index: 2
+    title: 'Итерации: как улучшать ответ ИИ'
+    workload_minutes: 90
+    lesson_type: mixed_with_assessment
+    goal: научить дорабатывать запрос и ответ через последовательные уточнения
+    key_questions: &id046
+    - как понять, что ответ слабый
+    - какие уточнения задавать
+    - когда остановить итерации
+    microlectures:
+    - id: M04-L02-V01
+      title: Почему первый ответ редко является финальным
+      duration_minutes: 8
+    - id: M04-L02-V02
+      title: Типы уточняющих запросов
+      duration_minutes: 12
+    - id: M04-L02-V03
+      title: Критика ответа как этап работы
+      duration_minutes: 11
+    learner_practical_action: показать 3 итерации улучшения одного запроса
+    materials: &id047
+    - журнал итераций
+    - пример «первый ответ - правки - итог»
+    platform_fixed_result: 'assessment_item: practice_m04_l02'
+    assessment_item_id: practice_m04_l02
+    competencies: &id048
+    - ПК-ИИ-2
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M04-L03
+    order_index: 3
+    title: Запросы для учебных и методических задач
+    workload_minutes: 90
+    lesson_type: mixed
+    goal: перенести навык постановки запроса в подготовку занятий и материалов
+    key_questions: &id049
+    - как запрос зависит от аудитории студентов
+    - как задавать уровень сложности
+    - как просить критерии оценивания
+    microlectures:
+    - id: M04-L03-V01
+      title: Запрос к плану занятия
+      duration_minutes: 10
+    - id: M04-L03-V02
+      title: Запрос к учебному заданию
+      duration_minutes: 11
+    - id: M04-L03-V03
+      title: Запрос к критериям оценивания
+      duration_minutes: 10
+    learner_practical_action: 'создать 4 запроса для учебной задачи: план, пример, задание, критерии'
+    materials: &id050
+    - пакет шаблонов учебных запросов
+    platform_fixed_result: lesson_progress + prompt_set
+    assessment_item_id: null
+    competencies: &id051
+    - ПК-ИИ-2
+    - ПК-ИИ-4
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M04-L04
+    order_index: 4
+    title: Запросы для научной, аналитической и административной работы
+    workload_minutes: 90
+    lesson_type: mixed
+    goal: расширить библиотеку запросов на разные профессиональные контексты
+    key_questions: &id052
+    - как формулировать запрос к анализу текста
+    - как работать со структурой документа
+    - какие ограничения задавать для служебного текста
+    microlectures:
+    - id: M04-L04-V01
+      title: Запросы для аналитической работы
+      duration_minutes: 10
+    - id: M04-L04-V02
+      title: Запросы для документов и коммуникации
+      duration_minutes: 10
+    - id: M04-L04-V03
+      title: Запросы с запретом на выдуманные факты
+      duration_minutes: 9
+    learner_practical_action: 'создать 4 запроса: аналитический, научный, документный, коммуникационный'
+    materials: &id053
+    - шаблон профессиональной библиотеки запросов
+    platform_fixed_result: lesson_progress + prompt_set
+    assessment_item_id: null
+    competencies: &id054
+    - ПК-ИИ-2
+    - ПК-ИИ-6
+    - ПК-ИИ-7
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M04-L05
+    order_index: 5
+    title: Личная библиотека запросов преподавателя
+    workload_minutes: 90
+    lesson_type: mixed_with_assessment
+    goal: завершить модуль созданием проверяемого артефакта ПК-ИИ-2
+    key_questions: &id055
+    - какие запросы включить в библиотеку
+    - как описать условия применения
+    - как показать слабый и сильный вариант
+    microlectures:
+    - id: M04-L05-V01
+      title: Как оформить библиотеку запросов
+      duration_minutes: 8
+    - id: M04-L05-V02
+      title: Типичные ошибки в библиотеке запросов
+      duration_minutes: 9
+    learner_practical_action: собрать 10–15 запросов и описать 3 примера улучшения слабого запроса
+    materials: &id056
+    - шаблон библиотеки запросов
+    - рубрика ПК-ИИ-2
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_2 + quiz_m04'
+    assessment_item_id: artifact_pk_ai_2
+    competencies: &id057
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M05
+  order_index: 5
+  title: ИИ в учебной и методической работе
+  academic_hours: 10
+  workload_minutes: 450
+  primary_competencies: ПК-ИИ-4, ПК-ИИ-5, ПК-ИИ-2, ПК-ИИ-3, ПК-ИИ-8
+  lessons_count: 6
+  lessons:
+  - id: M05-L01
+    order_index: 1
+    title: ИИ в подготовке занятия
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: показать методически корректное применение ИИ при проектировании занятия
+    key_questions: &id058
+    - как описать цель занятия
+    - как получить структуру, не потеряв авторскую позицию
+    - что обязательно проверяет преподаватель
+    microlectures:
+    - id: M05-L01-V01
+      title: План занятия с ИИ-помощником
+      duration_minutes: 10
+    - id: M05-L01-V02
+      title: Авторская правка преподавателя
+      duration_minutes: 9
+    learner_practical_action: подготовить черновой план занятия 90 минут и отметить элементы, созданные с помощью ИИ
+    materials: &id059
+    - шаблон плана занятия
+    - пример журнала использования ИИ
+    platform_fixed_result: lesson_progress + draft_plan
+    assessment_item_id: null
+    competencies: &id060
+    - ПК-ИИ-4
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M05-L02
+    order_index: 2
+    title: 'Учебные материалы: конспекты, примеры, задания'
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: научить использовать ИИ для подготовки материалов без механического копирования
+    key_questions: &id061
+    - как адаптировать текст под уровень студентов
+    - как проверять примеры
+    - как сохранять методическую цель
+    microlectures:
+    - id: M05-L02-V01
+      title: 'Конспект и пример: где помогает ИИ'
+      duration_minutes: 9
+    - id: M05-L02-V02
+      title: Адаптация под уровень студентов
+      duration_minutes: 10
+    learner_practical_action: создать фрагмент учебного материала и указать правки преподавателя
+    materials: &id062
+    - шаблон журнала правок
+    - пример материала
+    platform_fixed_result: lesson_progress + material_fragment
+    assessment_item_id: null
+    competencies: &id063
+    - ПК-ИИ-4
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M05-L03
+    order_index: 3
+    title: Тесты и критерии оценивания с помощью ИИ
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: научить готовить тесты и критерии без потери контроля качества
+    key_questions: &id064
+    - как формулировать проверяемый вопрос
+    - как избегать двусмысленных вариантов
+    - как задавать критерии оценивания
+    microlectures:
+    - id: M05-L03-V01
+      title: 'Генерация тестовых вопросов: ограничения'
+      duration_minutes: 10
+    - id: M05-L03-V02
+      title: Критерии оценивания как часть задания
+      duration_minutes: 11
+    learner_practical_action: подготовить 5 тестовых вопросов и критерии к одному открытому заданию
+    materials: &id065
+    - шаблон тестового вопроса
+    - шаблон критериев
+    platform_fixed_result: 'assessment_item: practice_m05_l03'
+    assessment_item_id: practice_m05_l03
+    competencies: &id066
+    - ПК-ИИ-4
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M05-L04
+    order_index: 4
+    title: Задание с обязательным использованием ИИ студентами
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: сформировать базовую модель задания, где ИИ является необходимым элементом выполнения
+    key_questions: &id067
+    - чем обязательное использование отличается от разрешенного
+    - как оценивать процесс, а не только ответ
+    - что должен показать студент
+    microlectures:
+    - id: M05-L04-V01
+      title: Что такое задание с обязательным использованием ИИ
+      duration_minutes: 12
+    - id: M05-L04-V02
+      title: Журнал запросов и вклад студента
+      duration_minutes: 12
+    learner_practical_action: разработать формулировку задания для своей дисциплины
+    materials: &id068
+    - шаблон задания с обязательным использованием ИИ
+    - пример задания
+    platform_fixed_result: lesson_progress + ai_mandatory_task_draft
+    assessment_item_id: null
+    competencies: &id069
+    - ПК-ИИ-5
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M05-L05
+    order_index: 5
+    title: Защита от поверхностной генерации
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: научить проектировать задание так, чтобы механическое копирование ответа не давало результата
+    key_questions: &id070
+    - как требовать итерации
+    - как требовать проверку фактов
+    - как задавать вопросы для защиты
+    microlectures:
+    - id: M05-L05-V01
+      title: Поверхностная генерация как методическая проблема
+      duration_minutes: 9
+    - id: M05-L05-V02
+      title: Механизмы защиты в задании
+      duration_minutes: 12
+    learner_practical_action: добавить к заданию требования к журналу запросов, проверке и защите логики
+    materials: &id071
+    - чек-лист защиты задания
+    - рубрика оценивания
+    platform_fixed_result: 'assessment_item: practice_m05_l05'
+    assessment_item_id: practice_m05_l05
+    competencies: &id072
+    - ПК-ИИ-5
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M05-L06
+    order_index: 6
+    title: Фрагмент занятия и задание для РПМ
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: собрать итоговый артефакт модуля 5
+    key_questions: &id073
+    - как связать занятие и задание
+    - как прописать критерии
+    - как подготовить материал для переноса в РПМ
+    microlectures:
+    - id: M05-L06-V01
+      title: Как собрать фрагмент занятия
+      duration_minutes: 9
+    - id: M05-L06-V02
+      title: Как подготовить задание для будущей РПМ
+      duration_minutes: 10
+    learner_practical_action: оформить фрагмент занятия и пилотное задание с обязательным использованием ИИ
+    materials: &id074
+    - итоговый шаблон модуля 5
+    - рубрика ПК-ИИ-4/5
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_4_5 + quiz_m05'
+    assessment_item_id: artifact_pk_ai_4_5
+    competencies: &id075
+    - ПК-ИИ-4
+    - ПК-ИИ-5
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M06
+  order_index: 6
+  title: ИИ в научной и аналитической работе
+  academic_hours: 8
+  workload_minutes: 360
+  primary_competencies: ПК-ИИ-6, ПК-ИИ-2, ПК-ИИ-3
+  lessons_count: 5
+  lessons:
+  - id: M06-L01
+    order_index: 1
+    title: ИИ как помощник в научной и аналитической работе
+    workload_minutes: 70
+    lesson_type: mixed
+    goal: показать допустимые сценарии применения ИИ в исследовательской и аналитической практике
+    key_questions: &id076
+    - какие задачи можно поручать ИИ
+    - где начинается подмена авторской работы
+    - почему источники требуют проверки
+    microlectures:
+    - id: M06-L01-V01
+      title: Допустимые роли ИИ в научной работе
+      duration_minutes: 11
+    - id: M06-L01-V02
+      title: Авторская позиция и машинная помощь
+      duration_minutes: 10
+    learner_practical_action: классифицировать 5 сценариев применения ИИ как допустимые, условно допустимые или недопустимые
+    materials: &id077
+    - сценарные карточки
+    - чек-лист добросовестности
+    platform_fixed_result: lesson_progress + scenario_answers
+    assessment_item_id: null
+    competencies: &id078
+    - ПК-ИИ-6
+    - ПК-ИИ-9
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M06-L02
+    order_index: 2
+    title: Исследовательский вопрос и структура текста
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: научить использовать ИИ для структурирования научного или аналитического текста
+    key_questions: &id079
+    - как уточнить исследовательский вопрос
+    - как построить структуру статьи
+    - как не принять структуру без проверки
+    microlectures:
+    - id: M06-L02-V01
+      title: Формулирование исследовательского вопроса
+      duration_minutes: 10
+    - id: M06-L02-V02
+      title: Структура статьи или аналитической записки
+      duration_minutes: 12
+    learner_practical_action: подготовить структуру научного текста или аналитической записки
+    materials: &id080
+    - шаблон структуры
+    - пример
+    platform_fixed_result: 'assessment_item: practice_m06_l02'
+    assessment_item_id: practice_m06_l02
+    competencies: &id081
+    - ПК-ИИ-6
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M06-L03
+    order_index: 3
+    title: Аннотация, тезисы и аргументация
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: показать работу ИИ с краткими научными жанрами и аргументацией
+    key_questions: &id082
+    - как использовать ИИ при подготовке аннотации
+    - как проверять логические переходы
+    - что нельзя отдавать на автомат
+    microlectures:
+    - id: M06-L03-V01
+      title: 'Аннотация и тезисы: помощь и ограничения'
+      duration_minutes: 10
+    - id: M06-L03-V02
+      title: Проверка аргументации
+      duration_minutes: 11
+    learner_practical_action: подготовить аннотацию или тезисы и проверить логические связки
+    materials: &id083
+    - шаблон аннотации
+    - лист проверки аргументации
+    platform_fixed_result: lesson_progress + text_fragment
+    assessment_item_id: null
+    competencies: &id084
+    - ПК-ИИ-6
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M06-L04
+    order_index: 4
+    title: Источники, ссылки и фактологическая проверка
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: сформировать процедуру работы с источниками без доверия сгенерированным ссылкам
+    key_questions: &id085
+    - почему ИИ может выдумывать источники
+    - как проверять библиографию
+    - как отделить идею от факта
+    microlectures:
+    - id: M06-L04-V01
+      title: Риск выдуманных источников
+      duration_minutes: 10
+    - id: M06-L04-V02
+      title: Проверка источников вручную
+      duration_minutes: 12
+    learner_practical_action: проверить 3–5 источников или утверждений, предложенных ИИ
+    materials: &id086
+    - таблица проверки источников
+    - пример классификации
+    platform_fixed_result: 'assessment_item: practice_m06_l04'
+    assessment_item_id: practice_m06_l04
+    competencies: &id087
+    - ПК-ИИ-3
+    - ПК-ИИ-6
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M06-L05
+    order_index: 5
+    title: Декларация использования ИИ в научной работе
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: оформить итоговый артефакт научного модуля
+    key_questions: &id088
+    - что указывать в декларации
+    - как разделить личный вклад и помощь ИИ
+    - как объяснить это студентам
+    microlectures:
+    - id: M06-L05-V01
+      title: Зачем нужна декларация использования ИИ
+      duration_minutes: 8
+    - id: M06-L05-V02
+      title: Структура декларации
+      duration_minutes: 9
+    learner_practical_action: подготовить структуру текста и декларацию использования ИИ
+    materials: &id089
+    - шаблон декларации
+    - рубрика ПК-ИИ-6
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_6 + quiz_m06'
+    assessment_item_id: artifact_pk_ai_6
+    competencies: &id090
+    - ПК-ИИ-6
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M07
+  order_index: 7
+  title: Документы, коммуникация и повседневная рутина
+  academic_hours: 8
+  workload_minutes: 360
+  primary_competencies: ПК-ИИ-7, ПК-ИИ-2, ПК-ИИ-8
+  lessons_count: 5
+  lessons:
+  - id: M07-L01
+    order_index: 1
+    title: ИИ в служебной коммуникации
+    workload_minutes: 70
+    lesson_type: mixed
+    goal: показать применение ИИ для писем, уведомлений и кратких сообщений без потери смысла
+    key_questions: &id091
+    - как улучшать ясность письма
+    - что нельзя передавать во внешний сервис
+    - как сохранять официальный стиль
+    microlectures:
+    - id: M07-L01-V01
+      title: 'Письмо и служебное сообщение: где помогает ИИ'
+      duration_minutes: 9
+    - id: M07-L01-V02
+      title: Границы передачи информации
+      duration_minutes: 10
+    learner_practical_action: переработать одно служебное письмо или уведомление
+    materials: &id092
+    - шаблон письма
+    - чек-лист конфиденциальности
+    platform_fixed_result: lesson_progress + document_fragment
+    assessment_item_id: null
+    competencies: &id093
+    - ПК-ИИ-7
+    - ПК-ИИ-9
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M07-L02
+    order_index: 2
+    title: Служебные записки, отчеты и инструкции
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: научить перерабатывать рабочие документы с помощью ИИ
+    key_questions: &id094
+    - как структурировать документ
+    - как сокращать без потери обязательных сведений
+    - как проверять итоговую версию
+    microlectures:
+    - id: M07-L02-V01
+      title: Структурирование рабочего документа
+      duration_minutes: 11
+    - id: M07-L02-V02
+      title: Сокращение и уточнение без потери смысла
+      duration_minutes: 10
+    learner_practical_action: выбрать рабочий документ и подготовить улучшенную версию
+    materials: &id095
+    - шаблон «до/после»
+    - пример документа
+    platform_fixed_result: 'assessment_item: practice_m07_l02'
+    assessment_item_id: practice_m07_l02
+    competencies: &id096
+    - ПК-ИИ-7
+    - ПК-ИИ-2
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M07-L03
+    order_index: 3
+    title: Обработка больших текстов и резюме документов
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: сформировать навык получения кратких резюме и перечней действий с проверкой полноты
+    key_questions: &id097
+    - какие сведения нельзя потерять
+    - как задавать формат резюме
+    - как проверить краткую версию
+    microlectures:
+    - id: M07-L03-V01
+      title: Резюме большого текста
+      duration_minutes: 10
+    - id: M07-L03-V02
+      title: Контроль полноты после сокращения
+      duration_minutes: 10
+    learner_practical_action: сделать краткое резюме документа и проверить, какие сведения были сохранены или потеряны
+    materials: &id098
+    - шаблон проверки резюме
+    - чек-лист полноты
+    platform_fixed_result: lesson_progress + summary_check
+    assessment_item_id: null
+    competencies: &id099
+    - ПК-ИИ-7
+    - ПК-ИИ-3
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M07-L04
+    order_index: 4
+    title: Презентации, схемы и визуальные материалы для работы
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: показать применение многомодального ИИ в презентационных и организационных материалах
+    key_questions: &id100
+    - как формулировать запрос к слайдам
+    - как проверять визуальную читаемость
+    - как не подменить содержание оформлением
+    microlectures:
+    - id: M07-L04-V01
+      title: Презентация как структура аргумента
+      duration_minutes: 9
+    - id: M07-L04-V02
+      title: Визуальная ясность и ограничения генерации
+      duration_minutes: 10
+    learner_practical_action: подготовить мини-презентацию или схему к рабочей теме
+    materials: &id101
+    - шаблон презентационного запроса
+    - критерии визуальной ясности
+    platform_fixed_result: 'assessment_item: practice_pk_ai_8_part2'
+    assessment_item_id: practice_pk_ai_8_part2
+    competencies: &id102
+    - ПК-ИИ-8
+    - ПК-ИИ-7
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M07-L05
+    order_index: 5
+    title: Шаблоны запросов для профессиональной рутины
+    workload_minutes: 70
+    lesson_type: mixed_with_assessment
+    goal: завершить модуль созданием повторно применимого административного шаблона
+    key_questions: &id103
+    - какие регулярные задачи можно шаблонизировать
+    - как задать ограничения
+    - как проверять результат
+    microlectures:
+    - id: M07-L05-V01
+      title: Регулярная задача как шаблон запроса
+      duration_minutes: 10
+    - id: M07-L05-V02
+      title: Как поддерживать библиотеку документов и запросов
+      duration_minutes: 8
+    learner_practical_action: оформить один переработанный документ и один шаблон запроса для регулярной задачи
+    materials: &id104
+    - итоговый шаблон модуля 7
+    - рубрика ПК-ИИ-7
+    platform_fixed_result: 'assessment_item: artifact_pk_ai_7_8 + quiz_m07'
+    assessment_item_id: artifact_pk_ai_7_8
+    competencies: &id105
+    - ПК-ИИ-7
+    - ПК-ИИ-8
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+- id: M08
+  order_index: 8
+  title: Риски, этика, безопасность и итоговый проект
+  academic_hours: 14
+  workload_minutes: 630
+  primary_competencies: ПК-ИИ-9, ПК-ИИ-10, все предыдущие
+  lessons_count: 7
+  lessons:
+  - id: M08-L01
+    order_index: 1
+    title: Правовые и организационные границы применения ИИ
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: систематизировать ограничения применения ИИ без выдумывания нормативных требований
+    key_questions: &id106
+    - какие вопросы требуют проверки по официальным источникам
+    - какие ограничения задает образовательная организация
+    - почему правовой блок связан с проектированием заданий
+    microlectures:
+    - id: M08-L01-V01
+      title: 'Правовые границы: что требует проверки'
+      duration_minutes: 10
+    - id: M08-L01-V02
+      title: Локальные правила организации и ответственность преподавателя
+      duration_minutes: 10
+    learner_practical_action: выделить в своей практике 3 ситуации, где нужны правовые или локальные уточнения
+    materials: &id107
+    - карта правовых вопросов
+    - чек-лист уточнений
+    platform_fixed_result: lesson_progress + checklist
+    assessment_item_id: null
+    competencies: &id108
+    - ПК-ИИ-9
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M08-L02
+    order_index: 2
+    title: Персональные данные и конфиденциальная информация
+    workload_minutes: 75
+    lesson_type: mixed_with_assessment
+    goal: 'сформировать безопасную процедуру решения: можно ли применять ИИ к задаче'
+    key_questions: &id109
+    - какие данные нельзя передавать без оценки допустимости
+    - как обезличивать данные
+    - что фиксировать в инструкции студентам
+    microlectures:
+    - id: M08-L02-V01
+      title: Персональные данные в образовательной практике
+      duration_minutes: 11
+    - id: M08-L02-V02
+      title: Обезличивание и запреты передачи данных
+      duration_minutes: 12
+    learner_practical_action: заполнить чек-лист допустимости применения ИИ для 3 рабочих ситуаций
+    materials: &id110
+    - чек-лист безопасного применения ИИ
+    - пример анализа
+    platform_fixed_result: 'assessment_item: practice_m08_l02'
+    assessment_item_id: practice_m08_l02
+    competencies: &id111
+    - ПК-ИИ-9
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M08-L03
+    order_index: 3
+    title: Авторство, прозрачность и академическая добросовестность
+    workload_minutes: 75
+    lesson_type: mixed
+    goal: показать, как объяснять применение ИИ студентам и фиксировать вклад человека
+    key_questions: &id112
+    - что является авторским вкладом
+    - как требовать прозрачность использования ИИ
+    - как отличать помощь от подмены работы
+    microlectures:
+    - id: M08-L03-V01
+      title: Авторство и вклад человека
+      duration_minutes: 10
+    - id: M08-L03-V02
+      title: Прозрачность использования ИИ студентом
+      duration_minutes: 10
+    learner_practical_action: сформулировать требования к раскрытию использования ИИ в студенческом задании
+    materials: &id113
+    - шаблон требований к прозрачности
+    - пример формулировки
+    platform_fixed_result: lesson_progress + policy_fragment
+    assessment_item_id: null
+    competencies: &id114
+    - ПК-ИИ-9
+    - ПК-ИИ-5
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M08-L04
+    order_index: 4
+    title: 'Итоговый проект: структура и требования'
+    workload_minutes: 90
+    lesson_type: mixed_with_assessment
+    goal: объяснить состав итогового проекта и критерии его приемки
+    key_questions: &id115
+    - какие части входят в проект
+    - как проект связан с дисциплиной
+    - как будет проходить защита
+    microlectures:
+    - id: M08-L04-V01
+      title: Состав итогового проекта
+      duration_minutes: 12
+    - id: M08-L04-V02
+      title: Как связать проект с реальной дисциплиной
+      duration_minutes: 10
+    - id: M08-L04-V03
+      title: Критерии приемки проекта
+      duration_minutes: 10
+    learner_practical_action: выбрать дисциплину и заполнить паспорт итогового проекта
+    materials: &id116
+    - паспорт итогового проекта
+    - рубрика ПК-ИИ-10
+    platform_fixed_result: 'assessment_item: final_project_passport'
+    assessment_item_id: final_project_passport
+    competencies: &id117
+    - ПК-ИИ-10
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M08-L05
+    order_index: 5
+    title: Словарь терминологии ИИ применительно к дисциплине
+    workload_minutes: 105
+    lesson_type: mixed_with_assessment
+    goal: подготовить первую часть итогового проекта
+    key_questions: &id118
+    - какие термины нужны студентам
+    - как связать общую ИИ-терминологию с дисциплиной
+    - как избежать слишком общих определений
+    microlectures:
+    - id: M08-L05-V01
+      title: Как выбрать термины для дисциплины
+      duration_minutes: 9
+    - id: M08-L05-V02
+      title: Структура словаря терминов
+      duration_minutes: 8
+    learner_practical_action: создать 10–20 терминов с пояснением применения в дисциплине
+    materials: &id119
+    - шаблон словаря
+    - пример
+    platform_fixed_result: 'assessment_item: final_project_part_1'
+    assessment_item_id: final_project_part_1
+    competencies: &id120
+    - ПК-ИИ-10
+    - ПК-ИИ-1
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M08-L06
+    order_index: 6
+    title: Задания с обязательным использованием ИИ и план занятия
+    workload_minutes: 105
+    lesson_type: mixed_with_assessment
+    goal: подготовить центральную часть итогового проекта
+    key_questions: &id121
+    - как связать задания с результатами дисциплины
+    - как встроить задания в занятие
+    - какие критерии оценивания нужны
+    microlectures:
+    - id: M08-L06-V01
+      title: Два-три задания с обязательным использованием ИИ
+      duration_minutes: 12
+    - id: M08-L06-V02
+      title: План практического или лабораторного занятия
+      duration_minutes: 10
+    - id: M08-L06-V03
+      title: Критерии оценивания студенческих работ
+      duration_minutes: 11
+    learner_practical_action: подготовить 2–3 задания, план занятия и критерии оценивания
+    materials: &id122
+    - шаблон заданий
+    - шаблон плана занятия
+    - рубрика
+    platform_fixed_result: 'assessment_item: final_project_part_2'
+    assessment_item_id: final_project_part_2
+    competencies: &id123
+    - ПК-ИИ-10
+    - ПК-ИИ-5
+    - ПК-ИИ-4
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  - id: M08-L07
+    order_index: 7
+    title: Предложение по обновлению РПМ и асинхронная защита
+    workload_minutes: 105
+    lesson_type: mixed_with_assessment
+    goal: завершить итоговый проект и подготовить защиту
+    key_questions: &id124
+    - как оформить предложение по РПМ
+    - как описать риски и меры снижения
+    - как записать видео-защиту
+    microlectures:
+    - id: M08-L07-V01
+      title: Фрагмент обновления РПМ
+      duration_minutes: 10
+    - id: M08-L07-V02
+      title: Риски и способы снижения
+      duration_minutes: 10
+    - id: M08-L07-V03
+      title: Асинхронная видео-защита проекта
+      duration_minutes: 12
+    learner_practical_action: собрать полный итоговый проект, записать видео-презентацию 10–15 минут и подготовить ответы
+      на вопросы
+    materials: &id125
+    - итоговый шаблон проекта
+    - чек-лист видео-защиты
+    - рубрика итоговой оценки
+    platform_fixed_result: 'assessment_item: final_project_submission + final_defense + quiz_m08'
+    assessment_item_id: final_project_submission
+    competencies: &id126
+    - ПК-ИИ-9
+    - ПК-ИИ-10
+    completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат
+      в платформе
+    authoring_status: to_be_developed
+  module_completion_rule: все уроки завершены, обязательный артефакт сдан, тест или практическая проверка пройдены
+lessons_flat:
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L01
+  lesson_order: 1
+  lesson_title: ИИ в реальной преподавательской практике
+  workload_minutes: 60
+  lesson_type: mixed
+  goal: показать, какие профессиональные действия преподавателя меняются под влиянием ИИ-инструментов
+  key_questions: *id001
+  microlectures_count: 3
+  microlectures_total_minutes: 25
+  learner_practical_action: составить список 5 регулярных задач преподавателя, которые потенциально можно упростить с помощью
+    ИИ
+  materials: *id002
+  platform_fixed_result: lesson_progress + text_note
+  assessment_item_id: null
+  competencies: *id003
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L02
+  lesson_order: 2
+  lesson_title: 'ИИ: инструмент, помощник и границы ответственности'
+  workload_minutes: 60
+  lesson_type: mixed
+  goal: зафиксировать профессиональную ответственность преподавателя за результат применения ИИ
+  key_questions: *id004
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: разделить 5 задач из предыдущего урока на действия ИИ и действия преподавателя
+  materials: *id005
+  platform_fixed_result: lesson_progress + checklist
+  assessment_item_id: null
+  competencies: *id006
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L03
+  lesson_order: 3
+  lesson_title: 'Слабый и сильный запрос: первое сравнение'
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: показать зависимость качества результата от постановки задачи
+  key_questions: *id007
+  microlectures_count: 3
+  microlectures_total_minutes: 30
+  learner_practical_action: переписать один слабый запрос в сильный и объяснить внесенные изменения
+  materials: *id008
+  platform_fixed_result: 'assessment_item: reflection_m01_l03'
+  assessment_item_id: reflection_m01_l03
+  competencies: *id009
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L04
+  lesson_order: 4
+  lesson_title: Личная карта применения ИИ в работе преподавателя
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: завершить модуль созданием первичного практического артефакта
+  key_questions: *id010
+  microlectures_count: 2
+  microlectures_total_minutes: 17
+  learner_practical_action: подготовить личную карту задач для ИИ и выбрать 2 задачи для дальнейшей работы в курсе
+  materials: *id011
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_1_part1 + quiz_m01'
+  assessment_item_id: artifact_pk_ai_1_part1
+  competencies: *id012
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L01
+  lesson_order: 1
+  lesson_title: 'Перцептрон Розенблатта: историческая и учебная модель'
+  workload_minutes: 70
+  lesson_type: mixed
+  goal: дать понятную точку входа в нейросетевую логику без избыточной математики
+  key_questions: *id013
+  microlectures_count: 2
+  microlectures_total_minutes: 23
+  learner_practical_action: описать на бытовом или дисциплинарном примере, как набор признаков приводит к решению
+  materials: *id014
+  platform_fixed_result: lesson_progress + short_answer
+  assessment_item_id: null
+  competencies: *id015
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L02
+  lesson_order: 2
+  lesson_title: 'Обучение модели: ошибка, корректировка, повторение'
+  workload_minutes: 70
+  lesson_type: mixed
+  goal: объяснить обучение как последовательное изменение параметров на основе ошибок
+  key_questions: *id016
+  microlectures_count: 2
+  microlectures_total_minutes: 22
+  learner_practical_action: составить схему «пример - ошибка - корректировка - новый результат»
+  materials: *id017
+  platform_fixed_result: lesson_progress + file_upload_optional
+  assessment_item_id: null
+  competencies: *id018
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L03
+  lesson_order: 3
+  lesson_title: От простых сетей к современным моделям
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: показать связь между базовой идеей нейросети и современными моделями
+  key_questions: *id019
+  microlectures_count: 2
+  microlectures_total_minutes: 22
+  learner_practical_action: написать короткое объяснение отличия модели от человека
+  materials: *id020
+  platform_fixed_result: lesson_progress + reflection
+  assessment_item_id: null
+  competencies: *id021
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L04
+  lesson_order: 4
+  lesson_title: Почему ИИ ошибается
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: сформировать понимание вероятностной природы ответа и типовых причин ошибок
+  key_questions: *id022
+  microlectures_count: 2
+  microlectures_total_minutes: 24
+  learner_practical_action: разобрать один пример ошибочного вывода и указать возможные причины ошибки
+  materials: *id023
+  platform_fixed_result: 'assessment_item: practice_m02_l04'
+  assessment_item_id: practice_m02_l04
+  competencies: *id024
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L05
+  lesson_order: 5
+  lesson_title: Объяснение ИИ без технического жаргона
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: подготовить итоговый артефакт концептуальной грамотности
+  key_questions: *id025
+  microlectures_count: 2
+  microlectures_total_minutes: 18
+  learner_practical_action: подготовить текст или план видео 3–5 минут «что такое ИИ и почему его не нужно бояться»
+  materials: *id026
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_1 + quiz_m02'
+  assessment_item_id: artifact_pk_ai_1
+  competencies: *id027
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L01
+  lesson_order: 1
+  lesson_title: 'Языковая модель: токены, контекст, генерация'
+  workload_minutes: 70
+  lesson_type: mixed
+  goal: объяснить базовую логику больших языковых моделей
+  key_questions: *id028
+  microlectures_count: 2
+  microlectures_total_minutes: 23
+  learner_practical_action: разобрать один ответ ИИ как последовательность смысловых продолжений
+  materials: *id029
+  platform_fixed_result: lesson_progress + short_answer
+  assessment_item_id: null
+  competencies: *id030
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L02
+  lesson_order: 2
+  lesson_title: Сильные стороны языковых моделей
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: показать задачи, где языковые модели особенно полезны преподавателю
+  key_questions: *id031
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: выбрать 3 преподавательские задачи и указать допустимый способ применения языковой модели
+  materials: *id032
+  platform_fixed_result: lesson_progress + checklist
+  assessment_item_id: null
+  competencies: *id033
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L03
+  lesson_order: 3
+  lesson_title: 'Галлюцинации: уверенный текст без основания'
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: научить распознавать ситуации, где ответ ИИ требует проверки
+  key_questions: *id034
+  microlectures_count: 2
+  microlectures_total_minutes: 24
+  learner_practical_action: выделить в тексте ИИ минимум 3 проверяемых утверждения
+  materials: *id035
+  platform_fixed_result: 'assessment_item: practice_m03_l03'
+  assessment_item_id: practice_m03_l03
+  competencies: *id036
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L04
+  lesson_order: 4
+  lesson_title: Проверка фактов и источников
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: сформировать процедуру проверки результата ИИ
+  key_questions: *id037
+  microlectures_count: 2
+  microlectures_total_minutes: 23
+  learner_practical_action: проверить выделенные утверждения и классифицировать их
+  materials: *id038
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_3'
+  assessment_item_id: artifact_pk_ai_3
+  competencies: *id039
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L05
+  lesson_order: 5
+  lesson_title: 'Многомодальный ИИ: текст, изображение, звук, видео'
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: дать обзор многомодальных сценариев без ухода в отдельный модуль
+  key_questions: *id040
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: создать простую схему или визуальный план к теме своей дисциплины
+  materials: *id041
+  platform_fixed_result: 'assessment_item: practice_pk_ai_8_part1 + quiz_m03'
+  assessment_item_id: practice_pk_ai_8_part1
+  competencies: *id042
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L01
+  lesson_order: 1
+  lesson_title: Структура профессионального запроса
+  workload_minutes: 90
+  lesson_type: mixed
+  goal: сформировать базовую модель постановки задачи ИИ-инструменту
+  key_questions: *id043
+  microlectures_count: 3
+  microlectures_total_minutes: 32
+  learner_practical_action: 'создать 3 запроса по модели: задача, контекст, ограничения, формат, критерии'
+  materials: *id044
+  platform_fixed_result: lesson_progress + draft_prompts
+  assessment_item_id: null
+  competencies: *id045
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L02
+  lesson_order: 2
+  lesson_title: 'Итерации: как улучшать ответ ИИ'
+  workload_minutes: 90
+  lesson_type: mixed_with_assessment
+  goal: научить дорабатывать запрос и ответ через последовательные уточнения
+  key_questions: *id046
+  microlectures_count: 3
+  microlectures_total_minutes: 31
+  learner_practical_action: показать 3 итерации улучшения одного запроса
+  materials: *id047
+  platform_fixed_result: 'assessment_item: practice_m04_l02'
+  assessment_item_id: practice_m04_l02
+  competencies: *id048
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L03
+  lesson_order: 3
+  lesson_title: Запросы для учебных и методических задач
+  workload_minutes: 90
+  lesson_type: mixed
+  goal: перенести навык постановки запроса в подготовку занятий и материалов
+  key_questions: *id049
+  microlectures_count: 3
+  microlectures_total_minutes: 31
+  learner_practical_action: 'создать 4 запроса для учебной задачи: план, пример, задание, критерии'
+  materials: *id050
+  platform_fixed_result: lesson_progress + prompt_set
+  assessment_item_id: null
+  competencies: *id051
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L04
+  lesson_order: 4
+  lesson_title: Запросы для научной, аналитической и административной работы
+  workload_minutes: 90
+  lesson_type: mixed
+  goal: расширить библиотеку запросов на разные профессиональные контексты
+  key_questions: *id052
+  microlectures_count: 3
+  microlectures_total_minutes: 29
+  learner_practical_action: 'создать 4 запроса: аналитический, научный, документный, коммуникационный'
+  materials: *id053
+  platform_fixed_result: lesson_progress + prompt_set
+  assessment_item_id: null
+  competencies: *id054
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L05
+  lesson_order: 5
+  lesson_title: Личная библиотека запросов преподавателя
+  workload_minutes: 90
+  lesson_type: mixed_with_assessment
+  goal: завершить модуль созданием проверяемого артефакта ПК-ИИ-2
+  key_questions: *id055
+  microlectures_count: 2
+  microlectures_total_minutes: 17
+  learner_practical_action: собрать 10–15 запросов и описать 3 примера улучшения слабого запроса
+  materials: *id056
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_2 + quiz_m04'
+  assessment_item_id: artifact_pk_ai_2
+  competencies: *id057
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L01
+  lesson_order: 1
+  lesson_title: ИИ в подготовке занятия
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: показать методически корректное применение ИИ при проектировании занятия
+  key_questions: *id058
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: подготовить черновой план занятия 90 минут и отметить элементы, созданные с помощью ИИ
+  materials: *id059
+  platform_fixed_result: lesson_progress + draft_plan
+  assessment_item_id: null
+  competencies: *id060
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L02
+  lesson_order: 2
+  lesson_title: 'Учебные материалы: конспекты, примеры, задания'
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: научить использовать ИИ для подготовки материалов без механического копирования
+  key_questions: *id061
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: создать фрагмент учебного материала и указать правки преподавателя
+  materials: *id062
+  platform_fixed_result: lesson_progress + material_fragment
+  assessment_item_id: null
+  competencies: *id063
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L03
+  lesson_order: 3
+  lesson_title: Тесты и критерии оценивания с помощью ИИ
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: научить готовить тесты и критерии без потери контроля качества
+  key_questions: *id064
+  microlectures_count: 2
+  microlectures_total_minutes: 21
+  learner_practical_action: подготовить 5 тестовых вопросов и критерии к одному открытому заданию
+  materials: *id065
+  platform_fixed_result: 'assessment_item: practice_m05_l03'
+  assessment_item_id: practice_m05_l03
+  competencies: *id066
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L04
+  lesson_order: 4
+  lesson_title: Задание с обязательным использованием ИИ студентами
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: сформировать базовую модель задания, где ИИ является необходимым элементом выполнения
+  key_questions: *id067
+  microlectures_count: 2
+  microlectures_total_minutes: 24
+  learner_practical_action: разработать формулировку задания для своей дисциплины
+  materials: *id068
+  platform_fixed_result: lesson_progress + ai_mandatory_task_draft
+  assessment_item_id: null
+  competencies: *id069
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L05
+  lesson_order: 5
+  lesson_title: Защита от поверхностной генерации
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: научить проектировать задание так, чтобы механическое копирование ответа не давало результата
+  key_questions: *id070
+  microlectures_count: 2
+  microlectures_total_minutes: 21
+  learner_practical_action: добавить к заданию требования к журналу запросов, проверке и защите логики
+  materials: *id071
+  platform_fixed_result: 'assessment_item: practice_m05_l05'
+  assessment_item_id: practice_m05_l05
+  competencies: *id072
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L06
+  lesson_order: 6
+  lesson_title: Фрагмент занятия и задание для РПМ
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: собрать итоговый артефакт модуля 5
+  key_questions: *id073
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: оформить фрагмент занятия и пилотное задание с обязательным использованием ИИ
+  materials: *id074
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_4_5 + quiz_m05'
+  assessment_item_id: artifact_pk_ai_4_5
+  competencies: *id075
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L01
+  lesson_order: 1
+  lesson_title: ИИ как помощник в научной и аналитической работе
+  workload_minutes: 70
+  lesson_type: mixed
+  goal: показать допустимые сценарии применения ИИ в исследовательской и аналитической практике
+  key_questions: *id076
+  microlectures_count: 2
+  microlectures_total_minutes: 21
+  learner_practical_action: классифицировать 5 сценариев применения ИИ как допустимые, условно допустимые или недопустимые
+  materials: *id077
+  platform_fixed_result: lesson_progress + scenario_answers
+  assessment_item_id: null
+  competencies: *id078
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L02
+  lesson_order: 2
+  lesson_title: Исследовательский вопрос и структура текста
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: научить использовать ИИ для структурирования научного или аналитического текста
+  key_questions: *id079
+  microlectures_count: 2
+  microlectures_total_minutes: 22
+  learner_practical_action: подготовить структуру научного текста или аналитической записки
+  materials: *id080
+  platform_fixed_result: 'assessment_item: practice_m06_l02'
+  assessment_item_id: practice_m06_l02
+  competencies: *id081
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L03
+  lesson_order: 3
+  lesson_title: Аннотация, тезисы и аргументация
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: показать работу ИИ с краткими научными жанрами и аргументацией
+  key_questions: *id082
+  microlectures_count: 2
+  microlectures_total_minutes: 21
+  learner_practical_action: подготовить аннотацию или тезисы и проверить логические связки
+  materials: *id083
+  platform_fixed_result: lesson_progress + text_fragment
+  assessment_item_id: null
+  competencies: *id084
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L04
+  lesson_order: 4
+  lesson_title: Источники, ссылки и фактологическая проверка
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: сформировать процедуру работы с источниками без доверия сгенерированным ссылкам
+  key_questions: *id085
+  microlectures_count: 2
+  microlectures_total_minutes: 22
+  learner_practical_action: проверить 3–5 источников или утверждений, предложенных ИИ
+  materials: *id086
+  platform_fixed_result: 'assessment_item: practice_m06_l04'
+  assessment_item_id: practice_m06_l04
+  competencies: *id087
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L05
+  lesson_order: 5
+  lesson_title: Декларация использования ИИ в научной работе
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: оформить итоговый артефакт научного модуля
+  key_questions: *id088
+  microlectures_count: 2
+  microlectures_total_minutes: 17
+  learner_practical_action: подготовить структуру текста и декларацию использования ИИ
+  materials: *id089
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_6 + quiz_m06'
+  assessment_item_id: artifact_pk_ai_6
+  competencies: *id090
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L01
+  lesson_order: 1
+  lesson_title: ИИ в служебной коммуникации
+  workload_minutes: 70
+  lesson_type: mixed
+  goal: показать применение ИИ для писем, уведомлений и кратких сообщений без потери смысла
+  key_questions: *id091
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: переработать одно служебное письмо или уведомление
+  materials: *id092
+  platform_fixed_result: lesson_progress + document_fragment
+  assessment_item_id: null
+  competencies: *id093
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L02
+  lesson_order: 2
+  lesson_title: Служебные записки, отчеты и инструкции
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: научить перерабатывать рабочие документы с помощью ИИ
+  key_questions: *id094
+  microlectures_count: 2
+  microlectures_total_minutes: 21
+  learner_practical_action: выбрать рабочий документ и подготовить улучшенную версию
+  materials: *id095
+  platform_fixed_result: 'assessment_item: practice_m07_l02'
+  assessment_item_id: practice_m07_l02
+  competencies: *id096
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L03
+  lesson_order: 3
+  lesson_title: Обработка больших текстов и резюме документов
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: сформировать навык получения кратких резюме и перечней действий с проверкой полноты
+  key_questions: *id097
+  microlectures_count: 2
+  microlectures_total_minutes: 20
+  learner_practical_action: сделать краткое резюме документа и проверить, какие сведения были сохранены или потеряны
+  materials: *id098
+  platform_fixed_result: lesson_progress + summary_check
+  assessment_item_id: null
+  competencies: *id099
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L04
+  lesson_order: 4
+  lesson_title: Презентации, схемы и визуальные материалы для работы
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: показать применение многомодального ИИ в презентационных и организационных материалах
+  key_questions: *id100
+  microlectures_count: 2
+  microlectures_total_minutes: 19
+  learner_practical_action: подготовить мини-презентацию или схему к рабочей теме
+  materials: *id101
+  platform_fixed_result: 'assessment_item: practice_pk_ai_8_part2'
+  assessment_item_id: practice_pk_ai_8_part2
+  competencies: *id102
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L05
+  lesson_order: 5
+  lesson_title: Шаблоны запросов для профессиональной рутины
+  workload_minutes: 70
+  lesson_type: mixed_with_assessment
+  goal: завершить модуль созданием повторно применимого административного шаблона
+  key_questions: *id103
+  microlectures_count: 2
+  microlectures_total_minutes: 18
+  learner_practical_action: оформить один переработанный документ и один шаблон запроса для регулярной задачи
+  materials: *id104
+  platform_fixed_result: 'assessment_item: artifact_pk_ai_7_8 + quiz_m07'
+  assessment_item_id: artifact_pk_ai_7_8
+  competencies: *id105
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L01
+  lesson_order: 1
+  lesson_title: Правовые и организационные границы применения ИИ
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: систематизировать ограничения применения ИИ без выдумывания нормативных требований
+  key_questions: *id106
+  microlectures_count: 2
+  microlectures_total_minutes: 20
+  learner_practical_action: выделить в своей практике 3 ситуации, где нужны правовые или локальные уточнения
+  materials: *id107
+  platform_fixed_result: lesson_progress + checklist
+  assessment_item_id: null
+  competencies: *id108
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L02
+  lesson_order: 2
+  lesson_title: Персональные данные и конфиденциальная информация
+  workload_minutes: 75
+  lesson_type: mixed_with_assessment
+  goal: 'сформировать безопасную процедуру решения: можно ли применять ИИ к задаче'
+  key_questions: *id109
+  microlectures_count: 2
+  microlectures_total_minutes: 23
+  learner_practical_action: заполнить чек-лист допустимости применения ИИ для 3 рабочих ситуаций
+  materials: *id110
+  platform_fixed_result: 'assessment_item: practice_m08_l02'
+  assessment_item_id: practice_m08_l02
+  competencies: *id111
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L03
+  lesson_order: 3
+  lesson_title: Авторство, прозрачность и академическая добросовестность
+  workload_minutes: 75
+  lesson_type: mixed
+  goal: показать, как объяснять применение ИИ студентам и фиксировать вклад человека
+  key_questions: *id112
+  microlectures_count: 2
+  microlectures_total_minutes: 20
+  learner_practical_action: сформулировать требования к раскрытию использования ИИ в студенческом задании
+  materials: *id113
+  platform_fixed_result: lesson_progress + policy_fragment
+  assessment_item_id: null
+  competencies: *id114
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L04
+  lesson_order: 4
+  lesson_title: 'Итоговый проект: структура и требования'
+  workload_minutes: 90
+  lesson_type: mixed_with_assessment
+  goal: объяснить состав итогового проекта и критерии его приемки
+  key_questions: *id115
+  microlectures_count: 3
+  microlectures_total_minutes: 32
+  learner_practical_action: выбрать дисциплину и заполнить паспорт итогового проекта
+  materials: *id116
+  platform_fixed_result: 'assessment_item: final_project_passport'
+  assessment_item_id: final_project_passport
+  competencies: *id117
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L05
+  lesson_order: 5
+  lesson_title: Словарь терминологии ИИ применительно к дисциплине
+  workload_minutes: 105
+  lesson_type: mixed_with_assessment
+  goal: подготовить первую часть итогового проекта
+  key_questions: *id118
+  microlectures_count: 2
+  microlectures_total_minutes: 17
+  learner_practical_action: создать 10–20 терминов с пояснением применения в дисциплине
+  materials: *id119
+  platform_fixed_result: 'assessment_item: final_project_part_1'
+  assessment_item_id: final_project_part_1
+  competencies: *id120
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L06
+  lesson_order: 6
+  lesson_title: Задания с обязательным использованием ИИ и план занятия
+  workload_minutes: 105
+  lesson_type: mixed_with_assessment
+  goal: подготовить центральную часть итогового проекта
+  key_questions: *id121
+  microlectures_count: 3
+  microlectures_total_minutes: 33
+  learner_practical_action: подготовить 2–3 задания, план занятия и критерии оценивания
+  materials: *id122
+  platform_fixed_result: 'assessment_item: final_project_part_2'
+  assessment_item_id: final_project_part_2
+  competencies: *id123
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L07
+  lesson_order: 7
+  lesson_title: Предложение по обновлению РПМ и асинхронная защита
+  workload_minutes: 105
+  lesson_type: mixed_with_assessment
+  goal: завершить итоговый проект и подготовить защиту
+  key_questions: *id124
+  microlectures_count: 3
+  microlectures_total_minutes: 32
+  learner_practical_action: собрать полный итоговый проект, записать видео-презентацию 10–15 минут и подготовить ответы на
+    вопросы
+  materials: *id125
+  platform_fixed_result: 'assessment_item: final_project_submission + final_defense + quiz_m08'
+  assessment_item_id: final_project_submission
+  competencies: *id126
+  completion_rule: просмотреть микролекции, открыть материалы, выполнить практическое действие и зафиксировать результат в
+    платформе
+microlectures_flat:
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L01
+  lesson_title: ИИ в реальной преподавательской практике
+  microlecture_id: M01-L01-V01
+  microlecture_title: ИИ как изменение профессионального инструментария
+  duration_minutes: 10
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L01
+  lesson_title: ИИ в реальной преподавательской практике
+  microlecture_id: M01-L01-V02
+  microlecture_title: Типичные страхи и завышенные ожидания
+  duration_minutes: 8
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L01
+  lesson_title: ИИ в реальной преподавательской практике
+  microlecture_id: M01-L01-V03
+  microlecture_title: Роль преподавателя как автора решения
+  duration_minutes: 7
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L02
+  lesson_title: 'ИИ: инструмент, помощник и границы ответственности'
+  microlecture_id: M01-L02-V01
+  microlecture_title: ИИ как помощник, а не автор решения
+  duration_minutes: 9
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L02
+  lesson_title: 'ИИ: инструмент, помощник и границы ответственности'
+  microlecture_id: M01-L02-V02
+  microlecture_title: Ответственность за содержание, оценку и обратную связь
+  duration_minutes: 10
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L03
+  lesson_title: 'Слабый и сильный запрос: первое сравнение'
+  microlecture_id: M01-L03-V01
+  microlecture_title: Почему слабый запрос дает слабый результат
+  duration_minutes: 8
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L03
+  lesson_title: 'Слабый и сильный запрос: первое сравнение'
+  microlecture_id: M01-L03-V02
+  microlecture_title: Пять элементов уточненного запроса
+  duration_minutes: 12
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L03
+  lesson_title: 'Слабый и сильный запрос: первое сравнение'
+  microlecture_id: M01-L03-V03
+  microlecture_title: Разбор примера «до / после»
+  duration_minutes: 10
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L04
+  lesson_title: Личная карта применения ИИ в работе преподавателя
+  microlecture_id: M01-L04-V01
+  microlecture_title: Как выбрать первые задачи для ИИ
+  duration_minutes: 9
+  purpose: null
+- module_id: M01
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L04
+  lesson_title: Личная карта применения ИИ в работе преподавателя
+  microlecture_id: M01-L04-V02
+  microlecture_title: Что считать хорошим первым результатом
+  duration_minutes: 8
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L01
+  lesson_title: 'Перцептрон Розенблатта: историческая и учебная модель'
+  microlecture_id: M02-L01-V01
+  microlecture_title: Почему перцептрон важен для понимания ИИ
+  duration_minutes: 11
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L01
+  lesson_title: 'Перцептрон Розенблатта: историческая и учебная модель'
+  microlecture_id: M02-L01-V02
+  microlecture_title: Входы, веса и решение модели
+  duration_minutes: 12
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L02
+  lesson_title: 'Обучение модели: ошибка, корректировка, повторение'
+  microlecture_id: M02-L02-V01
+  microlecture_title: Обучение как исправление ошибки
+  duration_minutes: 10
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L02
+  lesson_title: 'Обучение модели: ошибка, корректировка, повторение'
+  microlecture_id: M02-L02-V02
+  microlecture_title: Почему модель зависит от данных
+  duration_minutes: 12
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L03
+  lesson_title: От простых сетей к современным моделям
+  microlecture_id: M02-L03-V01
+  microlecture_title: Многослойные сети на понятном уровне
+  duration_minutes: 12
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L03
+  lesson_title: От простых сетей к современным моделям
+  microlecture_id: M02-L03-V02
+  microlecture_title: Что модель делает и чего не делает
+  duration_minutes: 10
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L04
+  lesson_title: Почему ИИ ошибается
+  microlecture_id: M02-L04-V01
+  microlecture_title: Вероятностная природа результата
+  duration_minutes: 11
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L04
+  lesson_title: Почему ИИ ошибается
+  microlecture_id: M02-L04-V02
+  microlecture_title: Типовые причины ошибок ИИ
+  duration_minutes: 13
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L05
+  lesson_title: Объяснение ИИ без технического жаргона
+  microlecture_id: M02-L05-V01
+  microlecture_title: Как говорить об ИИ без мистификации
+  duration_minutes: 10
+  purpose: null
+- module_id: M02
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L05
+  lesson_title: Объяснение ИИ без технического жаргона
+  microlecture_id: M02-L05-V02
+  microlecture_title: Структура короткого объяснения
+  duration_minutes: 8
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L01
+  lesson_title: 'Языковая модель: токены, контекст, генерация'
+  microlecture_id: M03-L01-V01
+  microlecture_title: Токены и контекст
+  duration_minutes: 12
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L01
+  lesson_title: 'Языковая модель: токены, контекст, генерация'
+  microlecture_id: M03-L01-V02
+  microlecture_title: Генерация как вероятностное продолжение
+  duration_minutes: 11
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L02
+  lesson_title: Сильные стороны языковых моделей
+  microlecture_id: M03-L02-V01
+  microlecture_title: Где языковая модель помогает преподавателю
+  duration_minutes: 10
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L02
+  lesson_title: Сильные стороны языковых моделей
+  microlecture_id: M03-L02-V02
+  microlecture_title: Черновик не равен готовому материалу
+  duration_minutes: 9
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L03
+  lesson_title: 'Галлюцинации: уверенный текст без основания'
+  microlecture_id: M03-L03-V01
+  microlecture_title: Что такое галлюцинация
+  duration_minutes: 12
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L03
+  lesson_title: 'Галлюцинации: уверенный текст без основания'
+  microlecture_id: M03-L03-V02
+  microlecture_title: Как выделять проверяемые утверждения
+  duration_minutes: 12
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L04
+  lesson_title: Проверка фактов и источников
+  microlecture_id: M03-L04-V01
+  microlecture_title: Процедура проверки фактов
+  duration_minutes: 13
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L04
+  lesson_title: Проверка фактов и источников
+  microlecture_id: M03-L04-V02
+  microlecture_title: 'Правда, ошибка, недоказуемо: классификация результата'
+  duration_minutes: 10
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L05
+  lesson_title: 'Многомодальный ИИ: текст, изображение, звук, видео'
+  microlecture_id: M03-L05-V01
+  microlecture_title: Что такое многомодальный ИИ
+  duration_minutes: 9
+  purpose: null
+- module_id: M03
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L05
+  lesson_title: 'Многомодальный ИИ: текст, изображение, звук, видео'
+  microlecture_id: M03-L05-V02
+  microlecture_title: 'Учебный визуал: польза и ограничения'
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L01
+  lesson_title: Структура профессионального запроса
+  microlecture_id: M04-L01-V01
+  microlecture_title: Цель, роль, контекст
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L01
+  lesson_title: Структура профессионального запроса
+  microlecture_id: M04-L01-V02
+  microlecture_title: Ограничения и формат результата
+  duration_minutes: 12
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L01
+  lesson_title: Структура профессионального запроса
+  microlecture_id: M04-L01-V03
+  microlecture_title: Критерии качества ответа
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L02
+  lesson_title: 'Итерации: как улучшать ответ ИИ'
+  microlecture_id: M04-L02-V01
+  microlecture_title: Почему первый ответ редко является финальным
+  duration_minutes: 8
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L02
+  lesson_title: 'Итерации: как улучшать ответ ИИ'
+  microlecture_id: M04-L02-V02
+  microlecture_title: Типы уточняющих запросов
+  duration_minutes: 12
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L02
+  lesson_title: 'Итерации: как улучшать ответ ИИ'
+  microlecture_id: M04-L02-V03
+  microlecture_title: Критика ответа как этап работы
+  duration_minutes: 11
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L03
+  lesson_title: Запросы для учебных и методических задач
+  microlecture_id: M04-L03-V01
+  microlecture_title: Запрос к плану занятия
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L03
+  lesson_title: Запросы для учебных и методических задач
+  microlecture_id: M04-L03-V02
+  microlecture_title: Запрос к учебному заданию
+  duration_minutes: 11
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L03
+  lesson_title: Запросы для учебных и методических задач
+  microlecture_id: M04-L03-V03
+  microlecture_title: Запрос к критериям оценивания
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L04
+  lesson_title: Запросы для научной, аналитической и административной работы
+  microlecture_id: M04-L04-V01
+  microlecture_title: Запросы для аналитической работы
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L04
+  lesson_title: Запросы для научной, аналитической и административной работы
+  microlecture_id: M04-L04-V02
+  microlecture_title: Запросы для документов и коммуникации
+  duration_minutes: 10
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L04
+  lesson_title: Запросы для научной, аналитической и административной работы
+  microlecture_id: M04-L04-V03
+  microlecture_title: Запросы с запретом на выдуманные факты
+  duration_minutes: 9
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L05
+  lesson_title: Личная библиотека запросов преподавателя
+  microlecture_id: M04-L05-V01
+  microlecture_title: Как оформить библиотеку запросов
+  duration_minutes: 8
+  purpose: null
+- module_id: M04
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L05
+  lesson_title: Личная библиотека запросов преподавателя
+  microlecture_id: M04-L05-V02
+  microlecture_title: Типичные ошибки в библиотеке запросов
+  duration_minutes: 9
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L01
+  lesson_title: ИИ в подготовке занятия
+  microlecture_id: M05-L01-V01
+  microlecture_title: План занятия с ИИ-помощником
+  duration_minutes: 10
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L01
+  lesson_title: ИИ в подготовке занятия
+  microlecture_id: M05-L01-V02
+  microlecture_title: Авторская правка преподавателя
+  duration_minutes: 9
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L02
+  lesson_title: 'Учебные материалы: конспекты, примеры, задания'
+  microlecture_id: M05-L02-V01
+  microlecture_title: 'Конспект и пример: где помогает ИИ'
+  duration_minutes: 9
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L02
+  lesson_title: 'Учебные материалы: конспекты, примеры, задания'
+  microlecture_id: M05-L02-V02
+  microlecture_title: Адаптация под уровень студентов
+  duration_minutes: 10
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L03
+  lesson_title: Тесты и критерии оценивания с помощью ИИ
+  microlecture_id: M05-L03-V01
+  microlecture_title: 'Генерация тестовых вопросов: ограничения'
+  duration_minutes: 10
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L03
+  lesson_title: Тесты и критерии оценивания с помощью ИИ
+  microlecture_id: M05-L03-V02
+  microlecture_title: Критерии оценивания как часть задания
+  duration_minutes: 11
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L04
+  lesson_title: Задание с обязательным использованием ИИ студентами
+  microlecture_id: M05-L04-V01
+  microlecture_title: Что такое задание с обязательным использованием ИИ
+  duration_minutes: 12
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L04
+  lesson_title: Задание с обязательным использованием ИИ студентами
+  microlecture_id: M05-L04-V02
+  microlecture_title: Журнал запросов и вклад студента
+  duration_minutes: 12
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L05
+  lesson_title: Защита от поверхностной генерации
+  microlecture_id: M05-L05-V01
+  microlecture_title: Поверхностная генерация как методическая проблема
+  duration_minutes: 9
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L05
+  lesson_title: Защита от поверхностной генерации
+  microlecture_id: M05-L05-V02
+  microlecture_title: Механизмы защиты в задании
+  duration_minutes: 12
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L06
+  lesson_title: Фрагмент занятия и задание для РПМ
+  microlecture_id: M05-L06-V01
+  microlecture_title: Как собрать фрагмент занятия
+  duration_minutes: 9
+  purpose: null
+- module_id: M05
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L06
+  lesson_title: Фрагмент занятия и задание для РПМ
+  microlecture_id: M05-L06-V02
+  microlecture_title: Как подготовить задание для будущей РПМ
+  duration_minutes: 10
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L01
+  lesson_title: ИИ как помощник в научной и аналитической работе
+  microlecture_id: M06-L01-V01
+  microlecture_title: Допустимые роли ИИ в научной работе
+  duration_minutes: 11
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L01
+  lesson_title: ИИ как помощник в научной и аналитической работе
+  microlecture_id: M06-L01-V02
+  microlecture_title: Авторская позиция и машинная помощь
+  duration_minutes: 10
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L02
+  lesson_title: Исследовательский вопрос и структура текста
+  microlecture_id: M06-L02-V01
+  microlecture_title: Формулирование исследовательского вопроса
+  duration_minutes: 10
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L02
+  lesson_title: Исследовательский вопрос и структура текста
+  microlecture_id: M06-L02-V02
+  microlecture_title: Структура статьи или аналитической записки
+  duration_minutes: 12
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L03
+  lesson_title: Аннотация, тезисы и аргументация
+  microlecture_id: M06-L03-V01
+  microlecture_title: 'Аннотация и тезисы: помощь и ограничения'
+  duration_minutes: 10
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L03
+  lesson_title: Аннотация, тезисы и аргументация
+  microlecture_id: M06-L03-V02
+  microlecture_title: Проверка аргументации
+  duration_minutes: 11
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L04
+  lesson_title: Источники, ссылки и фактологическая проверка
+  microlecture_id: M06-L04-V01
+  microlecture_title: Риск выдуманных источников
+  duration_minutes: 10
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L04
+  lesson_title: Источники, ссылки и фактологическая проверка
+  microlecture_id: M06-L04-V02
+  microlecture_title: Проверка источников вручную
+  duration_minutes: 12
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L05
+  lesson_title: Декларация использования ИИ в научной работе
+  microlecture_id: M06-L05-V01
+  microlecture_title: Зачем нужна декларация использования ИИ
+  duration_minutes: 8
+  purpose: null
+- module_id: M06
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L05
+  lesson_title: Декларация использования ИИ в научной работе
+  microlecture_id: M06-L05-V02
+  microlecture_title: Структура декларации
+  duration_minutes: 9
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L01
+  lesson_title: ИИ в служебной коммуникации
+  microlecture_id: M07-L01-V01
+  microlecture_title: 'Письмо и служебное сообщение: где помогает ИИ'
+  duration_minutes: 9
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L01
+  lesson_title: ИИ в служебной коммуникации
+  microlecture_id: M07-L01-V02
+  microlecture_title: Границы передачи информации
+  duration_minutes: 10
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L02
+  lesson_title: Служебные записки, отчеты и инструкции
+  microlecture_id: M07-L02-V01
+  microlecture_title: Структурирование рабочего документа
+  duration_minutes: 11
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L02
+  lesson_title: Служебные записки, отчеты и инструкции
+  microlecture_id: M07-L02-V02
+  microlecture_title: Сокращение и уточнение без потери смысла
+  duration_minutes: 10
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L03
+  lesson_title: Обработка больших текстов и резюме документов
+  microlecture_id: M07-L03-V01
+  microlecture_title: Резюме большого текста
+  duration_minutes: 10
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L03
+  lesson_title: Обработка больших текстов и резюме документов
+  microlecture_id: M07-L03-V02
+  microlecture_title: Контроль полноты после сокращения
+  duration_minutes: 10
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L04
+  lesson_title: Презентации, схемы и визуальные материалы для работы
+  microlecture_id: M07-L04-V01
+  microlecture_title: Презентация как структура аргумента
+  duration_minutes: 9
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L04
+  lesson_title: Презентации, схемы и визуальные материалы для работы
+  microlecture_id: M07-L04-V02
+  microlecture_title: Визуальная ясность и ограничения генерации
+  duration_minutes: 10
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L05
+  lesson_title: Шаблоны запросов для профессиональной рутины
+  microlecture_id: M07-L05-V01
+  microlecture_title: Регулярная задача как шаблон запроса
+  duration_minutes: 10
+  purpose: null
+- module_id: M07
+  module_title: Документы, коммуникация и повседневная рутина
+  lesson_id: M07-L05
+  lesson_title: Шаблоны запросов для профессиональной рутины
+  microlecture_id: M07-L05-V02
+  microlecture_title: Как поддерживать библиотеку документов и запросов
+  duration_minutes: 8
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L01
+  lesson_title: Правовые и организационные границы применения ИИ
+  microlecture_id: M08-L01-V01
+  microlecture_title: 'Правовые границы: что требует проверки'
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L01
+  lesson_title: Правовые и организационные границы применения ИИ
+  microlecture_id: M08-L01-V02
+  microlecture_title: Локальные правила организации и ответственность преподавателя
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L02
+  lesson_title: Персональные данные и конфиденциальная информация
+  microlecture_id: M08-L02-V01
+  microlecture_title: Персональные данные в образовательной практике
+  duration_minutes: 11
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L02
+  lesson_title: Персональные данные и конфиденциальная информация
+  microlecture_id: M08-L02-V02
+  microlecture_title: Обезличивание и запреты передачи данных
+  duration_minutes: 12
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L03
+  lesson_title: Авторство, прозрачность и академическая добросовестность
+  microlecture_id: M08-L03-V01
+  microlecture_title: Авторство и вклад человека
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L03
+  lesson_title: Авторство, прозрачность и академическая добросовестность
+  microlecture_id: M08-L03-V02
+  microlecture_title: Прозрачность использования ИИ студентом
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L04
+  lesson_title: 'Итоговый проект: структура и требования'
+  microlecture_id: M08-L04-V01
+  microlecture_title: Состав итогового проекта
+  duration_minutes: 12
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L04
+  lesson_title: 'Итоговый проект: структура и требования'
+  microlecture_id: M08-L04-V02
+  microlecture_title: Как связать проект с реальной дисциплиной
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L04
+  lesson_title: 'Итоговый проект: структура и требования'
+  microlecture_id: M08-L04-V03
+  microlecture_title: Критерии приемки проекта
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L05
+  lesson_title: Словарь терминологии ИИ применительно к дисциплине
+  microlecture_id: M08-L05-V01
+  microlecture_title: Как выбрать термины для дисциплины
+  duration_minutes: 9
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L05
+  lesson_title: Словарь терминологии ИИ применительно к дисциплине
+  microlecture_id: M08-L05-V02
+  microlecture_title: Структура словаря терминов
+  duration_minutes: 8
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L06
+  lesson_title: Задания с обязательным использованием ИИ и план занятия
+  microlecture_id: M08-L06-V01
+  microlecture_title: Два-три задания с обязательным использованием ИИ
+  duration_minutes: 12
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L06
+  lesson_title: Задания с обязательным использованием ИИ и план занятия
+  microlecture_id: M08-L06-V02
+  microlecture_title: План практического или лабораторного занятия
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L06
+  lesson_title: Задания с обязательным использованием ИИ и план занятия
+  microlecture_id: M08-L06-V03
+  microlecture_title: Критерии оценивания студенческих работ
+  duration_minutes: 11
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L07
+  lesson_title: Предложение по обновлению РПМ и асинхронная защита
+  microlecture_id: M08-L07-V01
+  microlecture_title: Фрагмент обновления РПМ
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L07
+  lesson_title: Предложение по обновлению РПМ и асинхронная защита
+  microlecture_id: M08-L07-V02
+  microlecture_title: Риски и способы снижения
+  duration_minutes: 10
+  purpose: null
+- module_id: M08
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L07
+  lesson_title: Предложение по обновлению РПМ и асинхронная защита
+  microlecture_id: M08-L07-V03
+  microlecture_title: Асинхронная видео-защита проекта
+  duration_minutes: 12
+  purpose: null
+assessment_items:
+- id: reflection_m01_l03
+  module_id: M01
+  lesson_id: M01-L03
+  type: reflection
+  title: 'Слабый и сильный запрос: первое сравнение'
+  competencies:
+  - ПК-ИИ-1
+  - ПК-ИИ-2
+  required: true
+  grading_mode: manual
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_1_part1
+  module_id: M01
+  lesson_id: M01-L04
+  type: assignment
+  title: Личная карта применения ИИ в работе преподавателя
+  competencies:
+  - ПК-ИИ-1
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m02_l04
+  module_id: M02
+  lesson_id: M02-L04
+  type: assignment
+  title: Почему ИИ ошибается
+  competencies:
+  - ПК-ИИ-1
+  - ПК-ИИ-3
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_1
+  module_id: M02
+  lesson_id: M02-L05
+  type: assignment
+  title: Объяснение ИИ без технического жаргона
+  competencies:
+  - ПК-ИИ-1
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m03_l03
+  module_id: M03
+  lesson_id: M03-L03
+  type: assignment
+  title: 'Галлюцинации: уверенный текст без основания'
+  competencies:
+  - ПК-ИИ-3
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_3
+  module_id: M03
+  lesson_id: M03-L04
+  type: assignment
+  title: Проверка фактов и источников
+  competencies:
+  - ПК-ИИ-3
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_pk_ai_8_part1
+  module_id: M03
+  lesson_id: M03-L05
+  type: assignment
+  title: 'Многомодальный ИИ: текст, изображение, звук, видео'
+  competencies:
+  - ПК-ИИ-8
+  - ПК-ИИ-1
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m04_l02
+  module_id: M04
+  lesson_id: M04-L02
+  type: assignment
+  title: 'Итерации: как улучшать ответ ИИ'
+  competencies:
+  - ПК-ИИ-2
+  - ПК-ИИ-3
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_2
+  module_id: M04
+  lesson_id: M04-L05
+  type: assignment
+  title: Личная библиотека запросов преподавателя
+  competencies:
+  - ПК-ИИ-2
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m05_l03
+  module_id: M05
+  lesson_id: M05-L03
+  type: assignment
+  title: Тесты и критерии оценивания с помощью ИИ
+  competencies:
+  - ПК-ИИ-4
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m05_l05
+  module_id: M05
+  lesson_id: M05-L05
+  type: assignment
+  title: Защита от поверхностной генерации
+  competencies:
+  - ПК-ИИ-5
+  - ПК-ИИ-3
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_4_5
+  module_id: M05
+  lesson_id: M05-L06
+  type: assignment
+  title: Фрагмент занятия и задание для РПМ
+  competencies:
+  - ПК-ИИ-4
+  - ПК-ИИ-5
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m06_l02
+  module_id: M06
+  lesson_id: M06-L02
+  type: assignment
+  title: Исследовательский вопрос и структура текста
+  competencies:
+  - ПК-ИИ-6
+  - ПК-ИИ-2
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m06_l04
+  module_id: M06
+  lesson_id: M06-L04
+  type: assignment
+  title: Источники, ссылки и фактологическая проверка
+  competencies:
+  - ПК-ИИ-3
+  - ПК-ИИ-6
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_6
+  module_id: M06
+  lesson_id: M06-L05
+  type: assignment
+  title: Декларация использования ИИ в научной работе
+  competencies:
+  - ПК-ИИ-6
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m07_l02
+  module_id: M07
+  lesson_id: M07-L02
+  type: assignment
+  title: Служебные записки, отчеты и инструкции
+  competencies:
+  - ПК-ИИ-7
+  - ПК-ИИ-2
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_pk_ai_8_part2
+  module_id: M07
+  lesson_id: M07-L04
+  type: assignment
+  title: Презентации, схемы и визуальные материалы для работы
+  competencies:
+  - ПК-ИИ-8
+  - ПК-ИИ-7
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: artifact_pk_ai_7_8
+  module_id: M07
+  lesson_id: M07-L05
+  type: assignment
+  title: Шаблоны запросов для профессиональной рутины
+  competencies:
+  - ПК-ИИ-7
+  - ПК-ИИ-8
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: practice_m08_l02
+  module_id: M08
+  lesson_id: M08-L02
+  type: assignment
+  title: Персональные данные и конфиденциальная информация
+  competencies:
+  - ПК-ИИ-9
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: final_project_passport
+  module_id: M08
+  lesson_id: M08-L04
+  type: final_project
+  title: 'Итоговый проект: структура и требования'
+  competencies:
+  - ПК-ИИ-10
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: final_project_part_1
+  module_id: M08
+  lesson_id: M08-L05
+  type: final_project
+  title: Словарь терминологии ИИ применительно к дисциплине
+  competencies:
+  - ПК-ИИ-10
+  - ПК-ИИ-1
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: final_project_part_2
+  module_id: M08
+  lesson_id: M08-L06
+  type: final_project
+  title: Задания с обязательным использованием ИИ и план занятия
+  competencies:
+  - ПК-ИИ-10
+  - ПК-ИИ-5
+  - ПК-ИИ-4
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+- id: final_project_submission
+  module_id: M08
+  lesson_id: M08-L07
+  type: final_project
+  title: Предложение по обновлению РПМ и асинхронная защита
+  competencies:
+  - ПК-ИИ-9
+  - ПК-ИИ-10
+  required: true
+  grading_mode: ai_assisted_with_human_confirmation
+  grade_scheme: rubric/pass_fail
+quality_criteria:
+- criterion: Методическая завершенность урока
+  check: у урока определены цель, ключевые вопросы, микролекции, практическое действие, материалы и фиксируемый результат
+  evidence: заполненная карточка Lesson в карте курса; отсутствие пустых обязательных полей
+- criterion: Проверяемость результата
+  check: результат урока фиксируется как LessonProgress, AssessmentItem, текстовая запись, файл, чек-лист, тест или артефакт
+  evidence: в поле platform_fixed_result указан тип результата и связь с AssessmentItem при необходимости
+- criterion: Связь с компетенциями
+  check: каждый урок связан минимум с одной компетенцией ПК-ИИ; обязательные артефакты связаны с компетенциями, которые они
+    подтверждают
+  evidence: поле competencies в Lesson и AssessmentItem
+- criterion: Соответствие асинхронному формату
+  check: видеолекции преимущественно находятся в диапазоне 5-15 минут; урок допускает самостоятельное прохождение без синхронного
+    занятия
+  evidence: поле duration_minutes у микролекций и описание материалов для самостоятельной работы
+- criterion: Совместимость с платформой
+  check: каждый элемент может быть перенесен в CourseTemplate, CourseModule, Lesson, CourseResource и AssessmentItem
+  evidence: наличие идентификаторов module_id, lesson_id, assessment_item_id и platform_fixed_result
+- criterion: Педагогическая применимость
+  check: практические действия связаны с реальной преподавательской, научной, методической или организационной работой слушателя
+  evidence: формулировка learner_practical_action и материалы урока
+typical_errors:
+- error: Подмена карты уроков перечнем тем
+  risk: урок не превращается в единицу платформы, не фиксируется прогресс и неясно, что должен сделать слушатель
+  prevention: для каждого урока задавать цель, микролекции, практическое действие и фиксируемый результат
+- error: Избыточно длинные видеолекции
+  risk: асинхронный курс становится трудным для прохождения, ухудшается управляемость внимания слушателя
+  prevention: делить содержание на микролекции 5-15 минут, группируя их внутри одного урока
+- error: Отсутствие связи с компетенциями
+  risk: невозможно доказать, какие профессиональные результаты формирует урок
+  prevention: у каждого урока и AssessmentItem указывать ПК-ИИ, которые формируются или подтверждаются
+- error: Практика без артефакта
+  risk: слушатель выполняет действие, но платформа не имеет проверяемого следа результата
+  prevention: 'заранее определять, что фиксируется: запись, файл, чек-лист, тест, попытка, артефакт'
+- error: Смешение учебного содержания и правового утверждения
+  risk: в курсе появляются неподтвержденные нормативные формулировки
+  prevention: все правовые положения выносить в раздел, требующий согласования с образовательной организацией
+- error: Формальное использование ИИ в заданиях
+  risk: задание сводится к генерации текста без проверки, исправления и объяснения вклада слушателя
+  prevention: требовать журнал запросов, итерации, проверку фактов, правки и рефлексию
+open_questions:
+- какой точный шаблон РПМ и учебно-тематического плана утвержден образовательной организацией для программ ДПО
+- какие финальные формулировки правовых документов и согласий будут применяться в платформе
+- какой порядок хранения видеоматериалов, работ слушателей и данных оценивания требуется внутренними правилами организации
+- можно ли слушателям скачивать материалы курса или доступ должен ограничиваться просмотром в платформе
+- какой шаблон электронного сертификата или удостоверения будет утвержден и кто подписывает документ
+- какой порядок донабора компетенций применяется при частичном освоении курса
+- какие дисциплины ФЭМ будут выбраны для пилотного переноса заданий с обязательным использованием ИИ в РПМ
+transfer_to_main_branch:
+- утвердить карту уроков как структуру CourseTemplate для курса ДПО на 72 часа
+- перенести идентификаторы модулей, уроков и AssessmentItem в инженерный пакет платформы
+- синхронизировать уроки с матрицей компетенций ПК-ИИ-1 - ПК-ИИ-10
+- использовать перечень AssessmentItem как основу будущего фонда оценочных средств
+- передать требования к платформенной фиксации результата в ветку разработки CourseResource, LessonProgress и AssignmentSubmission
+- использовать типичные ошибки и критерии качества при методической экспертизе материалов
+publication_potential:
+- topic: Методическая модель микролекционной карты курса ДПО по ИИ-инструментам для преподавателей
+  research_angle: описание перехода от компетентностной модели к платформенной структуре Lesson / AssessmentItem
+  possible_output: статья о проектировании цифрового курса повышения квалификации
+- topic: Проектирование заданий с обязательным использованием ИИ студентами
+  research_angle: модель предотвращения поверхностной генерации через журнал запросов, проверку фактов и рефлексию
+  possible_output: методическая статья для педагогического или управленческого журнала
+- topic: Платформенная фиксация результатов обучения в асинхронном ДПО
+  research_angle: связь LessonProgress, AssessmentItem, артефактов и компетенций в цифровой образовательной среде
+  possible_output: статья на стыке цифровой педагогики и проектирования образовательных систем
+- topic: Модель подготовки преподавателей к обновлению РПМ с учетом ИИ-инструментов
+  research_angle: курс ДПО как первый этап факультетской стратегии интеграции ИИ в образовательную деятельность
+  possible_output: публикация о цифровой трансформации методической работы факультета

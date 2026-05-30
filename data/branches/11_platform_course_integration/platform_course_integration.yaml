@@ -1,0 +1,1276 @@
+document: chapter_11_platform_course_integration
+version: v0.1
+created_at: '2026-05-29T15:30:19.381665+00:00'
+chapter_title: ТЗ платформенной интеграции курса ДПО «ИИ-инструменты в преподавательской,
+  научной и повседневной работе»
+scope:
+  branch: 11. Связь курса с платформой
+  purpose: Преобразование методической структуры курса ДПО на 72 часа в загрузочную
+    модель образовательной платформы.
+  not_in_scope:
+  - разработка всего продукта
+  - юридическое утверждение сертификата
+  - платежи
+  - публичная витрина курсов
+  - мобильные приложения
+source_files:
+- name: 00_README_FOR_ENGINEERING_AGENTS.md
+  sizeBytes: 2416
+- name: 11_PLATFORM_COURSE_STRUCTURE_DPO_AI.md
+  sizeBytes: 50006
+- name: 11_PLATFORM_IMPLEMENTATION_TASKS.md
+  sizeBytes: 5291
+- name: 11_PLATFORM_COURSE_STRUCTURE_DPO_AI.json
+  sizeBytes: 32730
+- name: 11_PLATFORM_COURSE_STRUCTURE_DPO_AI.yaml
+  sizeBytes: 24998
+- name: 11_PLATFORM_CONTENT_UPLOAD_MAP.csv
+  sizeBytes: 39109
+- name: 11_PLATFORM_LESSONS_MAP.csv
+  sizeBytes: 25198
+- name: 11_PLATFORM_ASSESSMENT_MAP.csv
+  sizeBytes: 14265
+- name: 11_PLATFORM_CONTENT_UPLOAD_MAP.jsonl
+  sizeBytes: 70057
+- name: 11_PLATFORM_IMPLEMENTATION_TASKS.jsonl
+  sizeBytes: 6340
+course_template:
+  organization_short_name: ФЭМ
+  organization_full_name: Факультет экономики и менеджмента СПБГТИ(ТУ)
+  title: 'ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания
+    принципов до практического применения'
+  short_title: ИИ-инструменты для преподавателя
+  level: dpo
+  estimated_hours: 72
+  visibility: organization
+  status_flow: &id001
+  - draft
+  - review
+  - published
+  - archived
+  completion_rule: all_required_lessons_completed AND all_required_assessments_passed
+    AND final_project_accepted AND all_competencies_confirmed
+competencies:
+- code: ПК-ИИ-1
+  title: Концептуальная грамотность об ИИ
+- code: ПК-ИИ-2
+  title: Постановка запросов как профессиональный навык
+- code: ПК-ИИ-3
+  title: Критическая проверка ответов ИИ
+- code: ПК-ИИ-4
+  title: Применение ИИ в подготовке учебных материалов
+- code: ПК-ИИ-5
+  title: Проектирование заданий с обязательным использованием ИИ студентами
+- code: ПК-ИИ-6
+  title: Применение ИИ в научной и аналитической работе
+- code: ПК-ИИ-7
+  title: Применение ИИ в документообороте и повседневной профессиональной рутине
+- code: ПК-ИИ-8
+  title: Многомодальный ИИ для создания визуальных, аудио-, видео- и презентационных
+    материалов
+- code: ПК-ИИ-9
+  title: Безопасность, этика и правовые границы применения ИИ
+- code: ПК-ИИ-10
+  title: ИИ-лидерство в собственной дисциплине
+modules:
+- module_id: M01
+  order_index: 1
+  title: 'Введение: зачем преподавателю ИИ'
+  estimated_hours: 6
+  competencies:
+  - ПК-ИИ-1
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 5
+  assessments_count: 2
+- module_id: M02
+  order_index: 2
+  title: Как устроены нейронные сети на понятном уровне
+  estimated_hours: 8
+  competencies:
+  - ПК-ИИ-1
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 5
+  assessments_count: 2
+- module_id: M03
+  order_index: 3
+  title: Большие языковые модели и генеративный ИИ
+  estimated_hours: 8
+  competencies:
+  - ПК-ИИ-1
+  - ПК-ИИ-3
+  - ПК-ИИ-8
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 6
+  assessments_count: 2
+- module_id: M04
+  order_index: 4
+  title: Постановка запросов как профессиональный навык
+  estimated_hours: 10
+  competencies:
+  - ПК-ИИ-2
+  - ПК-ИИ-1
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 6
+  assessments_count: 2
+- module_id: M05
+  order_index: 5
+  title: ИИ в учебной и методической работе
+  estimated_hours: 10
+  competencies:
+  - ПК-ИИ-4
+  - ПК-ИИ-5
+  - ПК-ИИ-2
+  - ПК-ИИ-3
+  - ПК-ИИ-8
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 7
+  assessments_count: 3
+- module_id: M06
+  order_index: 6
+  title: ИИ в научной и аналитической работе
+  estimated_hours: 8
+  competencies:
+  - ПК-ИИ-6
+  - ПК-ИИ-2
+  - ПК-ИИ-3
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 5
+  assessments_count: 2
+- module_id: M07
+  order_index: 7
+  title: Документы, коммуникация и повседневная профессиональная рутина
+  estimated_hours: 8
+  competencies:
+  - ПК-ИИ-7
+  - ПК-ИИ-2
+  - ПК-ИИ-8
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 5
+  assessments_count: 2
+- module_id: M08
+  order_index: 8
+  title: Риски, этика, безопасность и итоговый проект
+  estimated_hours: 14
+  competencies:
+  - ПК-ИИ-9
+  - ПК-ИИ-10
+  completion_rule: all_lessons_completed AND all_required_assessments_passed
+  lessons_count: 6
+  assessments_count: 4
+lessons:
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L01
+  lesson_order: 1
+  title: Навигация по курсу и логика образовательной платформы
+  lesson_type: mixed
+  estimated_minutes: 25
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L02
+  lesson_order: 2
+  title: Какие задачи преподавателя меняются при появлении ИИ-инструментов
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L03
+  lesson_order: 3
+  title: Страхи, мифы и профессиональная ответственность преподавателя
+  lesson_type: mixed
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L04
+  lesson_order: 4
+  title: 'Первая проба: слабый и уточненный запрос'
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  lesson_id: M01-L05
+  lesson_order: 5
+  title: Карта личных задач преподавателя для применения ИИ
+  lesson_type: assignment_intro
+  estimated_minutes: 30
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L01
+  lesson_order: 1
+  title: Перцептрон Розенблатта как понятная модель нейросети
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L02
+  lesson_order: 2
+  title: Входы, веса, порог и функция активации
+  lesson_type: video
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L03
+  lesson_order: 3
+  title: 'Обучение модели: ошибка, корректировка, повторение'
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L04
+  lesson_order: 4
+  title: От простых моделей к современным нейронным сетям
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  lesson_id: M02-L05
+  lesson_order: 5
+  title: Как объяснять нейросеть студентам без технического жаргона
+  lesson_type: assignment_intro
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L01
+  lesson_order: 1
+  title: 'Языковая модель: генерация вероятного продолжения текста'
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L02
+  lesson_order: 2
+  title: Токены, контекст и влияние формулировки запроса
+  lesson_type: mixed
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L03
+  lesson_order: 3
+  title: Сильные стороны и ограничения больших языковых моделей
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L04
+  lesson_order: 4
+  title: 'Галлюцинации: уверенный текст без фактического основания'
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L05
+  lesson_order: 5
+  title: 'Многомодальный ИИ: текст, изображение, аудио, видео, презентации'
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  lesson_id: M03-L06
+  lesson_order: 6
+  title: Практика проверки сгенерированного ответа
+  lesson_type: assignment_intro
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L01
+  lesson_order: 1
+  title: Запрос как профессиональная постановка задачи
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L02
+  lesson_order: 2
+  title: Роль, цель, контекст, исходные данные
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L03
+  lesson_order: 3
+  title: Ограничения, формат ответа и критерии качества
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L04
+  lesson_order: 4
+  title: 'Итерации: как улучшать слабый результат'
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L05
+  lesson_order: 5
+  title: Запросы для учебных, научных и административных задач
+  lesson_type: video
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  lesson_id: M04-L06
+  lesson_order: 6
+  title: Сборка личной библиотеки запросов преподавателя
+  lesson_type: assignment_intro
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L01
+  lesson_order: 1
+  title: Подготовка плана занятия и конспекта с помощью ИИ
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L02
+  lesson_order: 2
+  title: Адаптация учебного материала под уровень студентов
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L03
+  lesson_order: 3
+  title: Создание учебных заданий и тестовых вопросов
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L04
+  lesson_order: 4
+  title: Критерии оценивания и обратная связь
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L05
+  lesson_order: 5
+  title: 'Задание с обязательным использованием ИИ студентами: методическая модель'
+  lesson_type: video
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L06
+  lesson_order: 6
+  title: Защита от поверхностной генерации и механического копирования
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  lesson_id: M05-L07
+  lesson_order: 7
+  title: Учебный визуал, презентация и инфографика с помощью ИИ
+  lesson_type: assignment_intro
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L01
+  lesson_order: 1
+  title: ИИ как помощник при формулировании исследовательского вопроса
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L02
+  lesson_order: 2
+  title: Структура статьи, тезисов и аналитической записки
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L03
+  lesson_order: 3
+  title: Работа с аннотациями, тезисами и аргументацией
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L04
+  lesson_order: 4
+  title: Источники, библиография и риск недостоверных ссылок
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  lesson_id: M06-L05
+  lesson_order: 5
+  title: Декларация использования ИИ и академическая добросовестность
+  lesson_type: assignment_intro
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  lesson_id: M07-L01
+  lesson_order: 1
+  title: Письма, служебные записки, отчеты и инструкции
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  lesson_id: M07-L02
+  lesson_order: 2
+  title: Сокращение, структурирование и резюме больших текстов
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  lesson_id: M07-L03
+  lesson_order: 3
+  title: Регламенты, памятки и контрольные списки
+  lesson_type: mixed
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  lesson_id: M07-L04
+  lesson_order: 4
+  title: Планирование регулярных задач и персональная продуктивность
+  lesson_type: video
+  estimated_minutes: 35
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  lesson_id: M07-L05
+  lesson_order: 5
+  title: Презентации, схемы и рабочие шаблоны
+  lesson_type: assignment_intro
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L01
+  lesson_order: 1
+  title: Персональные данные, конфиденциальная информация и внутренние документы
+  lesson_type: video
+  estimated_minutes: 40
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L02
+  lesson_order: 2
+  title: Авторство, прозрачность применения ИИ и академическая добросовестность
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L03
+  lesson_order: 3
+  title: Чек-лист безопасного применения ИИ в преподавательской практике
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L04
+  lesson_order: 4
+  title: 'Сборка итогового проекта: дисциплина, терминология, задания, РПМ'
+  lesson_type: assignment_intro
+  estimated_minutes: 50
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L05
+  lesson_order: 5
+  title: Критерии оценивания итогового проекта и подготовка защиты
+  lesson_type: mixed
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  lesson_id: M08-L06
+  lesson_order: 6
+  title: 'Асинхронная видео-защита: структура выступления и ответы на вопросы'
+  lesson_type: assignment_intro
+  estimated_minutes: 45
+  completion_rule: view_required_resources AND mark_completed
+  progress_event: LessonProgress.completed
+assessments:
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  assessment_id: M01-A01
+  type: assignment
+  title: Личная карта задач для применения ИИ
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Документ или текстовая форма с перечнем 5-7 регулярных
+    задач и примером улучшения одного запроса
+  competencies:
+  - ПК-ИИ-1
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M01
+  module_order: 1
+  module_title: 'Введение: зачем преподавателю ИИ'
+  assessment_id: M01-Q01
+  type: quiz
+  title: Концептуальный тест модуля 1
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: '15 вопросов: назначение ИИ в преподавательской работе,
+    ответственность человека, границы применения'
+  competencies:
+  - ПК-ИИ-1
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  assessment_id: M02-A01
+  type: assignment
+  title: Пояснение принципа работы простой нейросети
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Текст, схема или короткое видео с объяснением нейросети
+    и примером из собственной дисциплины
+  competencies:
+  - ПК-ИИ-1
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M02
+  module_order: 2
+  module_title: Как устроены нейронные сети на понятном уровне
+  assessment_id: M02-Q01
+  type: quiz
+  title: Тест по основам нейросетевых моделей
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: '20 вопросов: входы, веса, обучение, вероятностная ошибка,
+    границы объяснения'
+  competencies:
+  - ПК-ИИ-1
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  assessment_id: M03-A01
+  type: assignment
+  title: Разметка и проверка сгенерированного ответа
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Таблица проверяемых утверждений, способов проверки, исправлений
+    и вывода о пригодности текста
+  competencies:
+  - ПК-ИИ-3
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M03
+  module_order: 3
+  module_title: Большие языковые модели и генеративный ИИ
+  assessment_id: M03-Q01
+  type: quiz
+  title: Тест на распознавание галлюцинаций и проверяемых утверждений
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: 10-15 ситуаций и сгенерированных утверждений; отметить,
+    что требует проверки и почему
+  competencies:
+  - ПК-ИИ-1
+  - ПК-ИИ-3
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  assessment_id: M04-A01
+  type: assignment
+  title: Личная библиотека запросов преподавателя
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: 10-15 запросов под регулярные задачи и 3 журнала улучшения
+    слабого запроса
+  competencies:
+  - ПК-ИИ-2
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M04
+  module_order: 4
+  module_title: Постановка запросов как профессиональный навык
+  assessment_id: M04-Q01
+  type: quiz
+  title: Практический тест по постановке запросов
+  grade_scheme: ai_assisted_rubric
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: '5 профессиональных задач: написать запрос, указать критерии
+    и обосновать структуру'
+  competencies:
+  - ПК-ИИ-2
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  assessment_id: M05-A01
+  type: assignment
+  title: Фрагмент занятия с использованием ИИ
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Фрагмент занятия на 90 минут с журналом использования
+    ИИ и правками преподавателя
+  competencies:
+  - ПК-ИИ-4
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  assessment_id: M05-A02
+  type: assignment
+  title: Задание с обязательным использованием ИИ студентами
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Формулировка задания, процесс выполнения, журнал запросов,
+    критерии оценивания и защитные механизмы
+  competencies:
+  - ПК-ИИ-5
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M05
+  module_order: 5
+  module_title: ИИ в учебной и методической работе
+  assessment_id: M05-Q01
+  type: quiz
+  title: Тест по типам учебных задач и AI-mandatory заданиям
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: 'Классификация заданий: обязательное использование ИИ,
+    допустимое использование ИИ, запрет использования ИИ'
+  competencies:
+  - ПК-ИИ-4
+  - ПК-ИИ-5
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  assessment_id: M06-A01
+  type: assignment
+  title: Структура научного или аналитического текста
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: План текста с декларацией использования ИИ и перечнем
+    источников, требующих ручной проверки
+  competencies:
+  - ПК-ИИ-6
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M06
+  module_order: 6
+  module_title: ИИ в научной и аналитической работе
+  assessment_id: M06-Q01
+  type: quiz
+  title: Сценарный тест по допустимому применению ИИ в научной работе
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: '8-10 ситуаций: выбрать допустимый способ применения
+    ИИ и обосновать ограничение'
+  competencies:
+  - ПК-ИИ-6
+  - ПК-ИИ-3
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  assessment_id: M07-A01
+  type: assignment
+  title: Переработанный рабочий документ и шаблон запроса
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Версия документа до/после, комментарий о принятых и отклоненных
+    правках, шаблон запроса
+  competencies:
+  - ПК-ИИ-7
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M07
+  module_order: 7
+  module_title: Документы, коммуникация и повседневная профессиональная рутина
+  assessment_id: M07-Q01
+  type: quiz
+  title: Практический тест по офисным и коммуникационным задачам
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Выбор инструмента, формата запроса и ограничений для
+    типовых административных задач
+  competencies:
+  - ПК-ИИ-7
+  - ПК-ИИ-2
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  assessment_id: M08-A01
+  type: assignment
+  title: Чек-лист безопасного применения ИИ
+  grade_scheme: rubric_pass_fail
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Чек-лист и анализ 3-5 преподавательских ситуаций с решением
+    о допустимости применения ИИ
+  competencies:
+  - ПК-ИИ-9
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  assessment_id: M08-Q01
+  type: quiz
+  title: Сценарный тест по безопасности и правовым границам
+  grade_scheme: auto_points
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: '10-15 ситуаций: выбор допустимой реакции и краткое обоснование'
+  competencies:
+  - ПК-ИИ-9
+  completion_rule: score_percent >= 70
+  progress_event: AssessmentAttempt.graded_passed
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  assessment_id: M08-F01
+  type: final_project
+  title: Итоговый проект интеграции ИИ в дисциплину или РПМ
+  grade_scheme: final_project_rubric
+  max_attempts: 2
+  is_required: true
+  expected_artifact_or_quiz: Словарь терминологии, 2-3 задания с обязательным использованием
+    ИИ, план занятия, предложение по обновлению РПМ, критерии, риски, рефлексия
+  competencies:
+  - ПК-ИИ-10
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+- module_id: M08
+  module_order: 8
+  module_title: Риски, этика, безопасность и итоговый проект
+  assessment_id: M08-D01
+  type: defense
+  title: Асинхронная видео-защита итогового проекта
+  grade_scheme: manual_pass_fail
+  max_attempts: 1
+  is_required: true
+  expected_artifact_or_quiz: Видео 10-15 минут и ответы на 3-5 вопросов преподавателя
+    курса
+  competencies:
+  - ПК-ИИ-10
+  completion_rule: accepted_submission
+  progress_event: AssessmentSubmission.accepted
+competency_bindings:
+- competency_code: ПК-ИИ-1
+  module_id: M01
+  assessment_id: M01-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-1
+  module_id: M01
+  assessment_id: M01-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-1
+  module_id: M02
+  assessment_id: M02-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-1
+  module_id: M02
+  assessment_id: M02-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-3
+  module_id: M03
+  assessment_id: M03-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-1
+  module_id: M03
+  assessment_id: M03-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-3
+  module_id: M03
+  assessment_id: M03-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-2
+  module_id: M04
+  assessment_id: M04-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-2
+  module_id: M04
+  assessment_id: M04-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-4
+  module_id: M05
+  assessment_id: M05-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-5
+  module_id: M05
+  assessment_id: M05-A02
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-4
+  module_id: M05
+  assessment_id: M05-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-5
+  module_id: M05
+  assessment_id: M05-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-6
+  module_id: M06
+  assessment_id: M06-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-6
+  module_id: M06
+  assessment_id: M06-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-3
+  module_id: M06
+  assessment_id: M06-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-7
+  module_id: M07
+  assessment_id: M07-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-7
+  module_id: M07
+  assessment_id: M07-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-2
+  module_id: M07
+  assessment_id: M07-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-9
+  module_id: M08
+  assessment_id: M08-A01
+  assessment_type: assignment
+  evidence: artifact
+- competency_code: ПК-ИИ-9
+  module_id: M08
+  assessment_id: M08-Q01
+  assessment_type: quiz
+  evidence: test
+- competency_code: ПК-ИИ-10
+  module_id: M08
+  assessment_id: M08-F01
+  assessment_type: final_project
+  evidence: artifact
+- competency_code: ПК-ИИ-10
+  module_id: M08
+  assessment_id: M08-D01
+  assessment_type: defense
+  evidence: artifact
+grade_schemes:
+  auto_points:
+    type: points
+    gradingMode: automatic
+    passScorePercent: 70
+    displayMode: score_and_status
+  rubric_pass_fail:
+    type: rubric
+    gradingMode: manual_or_ai_assisted_confirmed_by_human
+    displayMode: pass_fail_with_comment
+  ai_assisted_rubric:
+    type: rubric
+    gradingMode: ai_assisted_confirmed_by_human
+    displayMode: pass_fail_with_rubric
+  final_project_rubric:
+    type: rubric
+    gradingMode: manual_with_optional_ai_assisted_draft
+    displayMode: rubric_status_comment
+  manual_pass_fail:
+    type: pass_fail
+    gradingMode: manual
+    displayMode: pass_fail
+certificate_requirements:
+  hours: 72
+  requiredCompetencies:
+  - ПК-ИИ-1
+  - ПК-ИИ-2
+  - ПК-ИИ-3
+  - ПК-ИИ-4
+  - ПК-ИИ-5
+  - ПК-ИИ-6
+  - ПК-ИИ-7
+  - ПК-ИИ-8
+  - ПК-ИИ-9
+  - ПК-ИИ-10
+  condition: artifact_and_test_accepted_for_each_competency AND final_project_accepted
+    AND defense_accepted
+  issuedCertificateFields:
+  - certificateTemplateId
+  - organizationId
+  - userId
+  - courseRunId
+  - enrollmentId
+  - documentType
+  - registrationNumber
+  - issuedAt
+  - hours
+  - competencies
+  - status
+  - storageObjectId
+  - fileHash
+  - signedByUserId
+  - signatureMetadata
+  - verificationCode
+  - verificationUrl
+  legalNote: Юридический статус документа, подпись, печать, регистрационный номер
+    и порядок учета требуют отдельного согласования с образовательной организацией.
+api_contracts:
+  basePrefix: /api/v1
+  templateEndpoints:
+  - /course-templates
+  - /course-templates/:id
+  - /course-templates/:id/modules
+  - /modules/:id/lessons
+  - /lessons/:id/resources
+  - /course-templates/:id/assessment-items
+  runEndpoints:
+  - /course-runs
+  - /course-runs/:id
+  - /course-runs/:id/enrollments
+  - /course-runs/:id/progress
+  - /course-runs/:id/availability-rules
+  learningEndpoints:
+  - /learning/my-courses
+  - /learning/course-runs/:id
+  - /learning/lessons/:id
+  - /learning/lessons/:id/progress
+  assessmentEndpoints:
+  - /assessment-items/:id/start
+  - /assessment-attempts/:id/answers
+  - /assessment-attempts/:id/submit
+  - /submissions/:id
+  - /submissions/:id/reviews
+  - /submissions/:id/ai-review
+  certificateEndpoints:
+  - /course-runs/:id/certificates/generate
+  - /certificates/:id
+  - /certificates/verify/:verificationCode
+course_run_model:
+  entity: CourseRun
+  required_fields:
+  - courseTemplateId
+  - organizationId
+  - cohortId
+  - title
+  - startsAt
+  - endsAt
+  - timezone
+  - status
+  status_flow:
+  - planned
+  - active
+  - completed
+  - archived
+  availability_rule_targets:
+  - module
+  - lesson
+  - assessment
+progress_model:
+  lesson_progress:
+  - not_started
+  - in_progress
+  - completed
+  module_progress:
+  - not_started
+  - in_progress
+  - completed
+  enrollment_status:
+  - invited
+  - active
+  - completed
+  - failed
+  - withdrawn
+  completion_rule: all_required_lessons_completed AND all_required_assessments_passed
+    AND final_project_accepted AND all_competencies_confirmed
+submission_lifecycle:
+- draft
+- submitted
+- in_review
+- needs_revision
+- accepted
+- rejected
+course_template_lifecycle: *id001
+implementation_tasks:
+- area: backend
+  id: BE-01
+  epic: CourseTemplate
+  task: Создать/загрузить CourseTemplate курса ДПО 72 часа
+  acceptance: Шаблон имеет organizationId, title, estimatedHours=72, visibility=organization,
+    status=draft, version.
+- area: backend
+  id: BE-02
+  epic: CourseModule
+  task: Создать 8 CourseModule с orderIndex и estimatedHours
+  acceptance: Сумма estimatedHours по модулям = 72; completionRule задан для каждого
+    модуля.
+- area: backend
+  id: BE-03
+  epic: Lesson
+  task: Создать 45 Lesson с lessonType и estimatedMinutes
+  acceptance: Каждый урок привязан к модулю, имеет порядок, тип и правило завершения.
+- area: backend
+  id: BE-04
+  epic: CourseResource
+  task: Реализовать загрузку и привязку видео, PDF, презентаций, шаблонов запросов
+  acceptance: CourseResource связан с Lesson и StorageObject; файл не хранится в БД.
+- area: backend
+  id: BE-05
+  epic: AssessmentItem
+  task: Создать контрольные элементы по каждому модулю
+  acceptance: Все обязательные артефакты, тесты и итоговый проект созданы и связаны
+    с GradeScheme.
+- area: backend
+  id: BE-06
+  epic: QuizQuestion
+  task: 'Поддержать вопросы тестов: single_choice, multiple_choice, short_text, matching,
+    ordering'
+  acceptance: Автотесты могут быть запущены, отправлены и автоматически оценены.
+- area: backend
+  id: BE-07
+  epic: Submission
+  task: Реализовать AssignmentSubmission, SubmissionAttempt, AssignmentReview
+  acceptance: История попыток сохраняется; статусы draft/submitted/in_review/needs_revision/accepted/rejected
+    работают.
+- area: backend
+  id: BE-08
+  epic: Progress
+  task: Рассчитывать LessonProgress, ModuleProgress, Enrollment.progressPercent
+  acceptance: Слушатель и преподаватель видят корректный прогресс; модуль закрывается
+    только после уроков и обязательных оцениваний.
+- area: backend
+  id: BE-09
+  epic: CourseRun
+  task: Создать запуск курса для Cohort с AvailabilityRule
+  acceptance: Запуск использует CourseTemplate, даты в UTC, timezone=Europe/Moscow,
+    преподаватели назначены.
+- area: backend
+  id: BE-10
+  epic: Certificate
+  task: Подготовить генерацию IssuedCertificate для завершивших курс
+  acceptance: Сертификат создается только при подтверждении всех 10 компетенций и
+    итогового проекта; есть verificationCode.
+- area: backend
+  id: BE-11
+  epic: Access
+  task: Проверить контекстные права доступа
+  acceptance: Слушатель видит только назначенный CourseRun; преподаватель проверяет
+    только свои потоки; администратор управляет в своей организации.
+- area: backend
+  id: BE-12
+  epic: Audit
+  task: Логировать критические действия курса
+  acceptance: Публикация, дедлайны, оценки, сертификаты, назначения и изменения статусов
+    попадают в AuditLog.
+- area: frontend
+  id: FE-01
+  epic: MyCourses
+  task: Экран «Мои курсы»
+  acceptance: Показывает назначенный курс ДПО, прогресс, дедлайн, статус прохождения.
+- area: frontend
+  id: FE-02
+  epic: CourseRunPage
+  task: Страница запуска курса
+  acceptance: Показывает 8 модулей, часы, статус, обязательные задания, прогресс.
+- area: frontend
+  id: FE-03
+  epic: LessonPage
+  task: Страница урока
+  acceptance: Видео, конспект, материалы, кнопка завершения, переход к следующему
+    уроку.
+- area: frontend
+  id: FE-04
+  epic: Assessment
+  task: Экран задания/артефакта
+  acceptance: Инструкция, критерии, загрузка файла/текста, история попыток, комментарии
+    проверяющего.
+- area: frontend
+  id: FE-05
+  epic: Quiz
+  task: Экран теста
+  acceptance: Запуск попытки, сохранение ответов, отправка, отображение результата
+    и статуса.
+- area: frontend
+  id: FE-06
+  epic: TeacherReview
+  task: Кабинет проверки работ
+  acceptance: Преподаватель видит отправки, открывает попытку, оставляет комментарий,
+    ставит статус/баллы.
+- area: frontend
+  id: FE-07
+  epic: Progress
+  task: Визуализация прогресса
+  acceptance: Прогресс курса, модулей, уроков и оценочных элементов отображается согласованно.
+- area: frontend
+  id: FE-08
+  epic: FinalProject
+  task: Экран итогового проекта и видео-защиты
+  acceptance: Слушатель загружает проект и видео/ссылку; преподаватель проверяет по
+    рубрике.
+- area: frontend
+  id: FE-09
+  epic: Certificate
+  task: Экран документа об обучении
+  acceptance: После завершения показывается статус документа; при выдаче доступен
+    PDF/код проверки.
+quality_targets:
+  modules: 8
+  lessons: 45
+  assessments: 19
+  competencies: 10
+  hours: 72

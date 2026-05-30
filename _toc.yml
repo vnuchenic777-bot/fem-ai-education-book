@@ -1,0 +1,70 @@
+format: jb-book
+root: index
+
+parts:
+  - caption: Введение
+    chapters:
+      - file: book/00_intro/project_overview
+      - file: book/00_intro/research_context
+      - file: book/00_intro/glossary
+
+  - caption: Архитектура платформы
+    chapters:
+      - file: book/01_platform_architecture/product_vision
+      - file: book/01_platform_architecture/architecture_overview
+      - file: book/01_platform_architecture/data_model
+      - file: book/01_platform_architecture/api_model
+
+  - caption: Курс ДПО по ИИ-инструментам
+    chapters:
+      - file: book/02_dpo_course_design/course_concept
+        title: Концепция курса и проект РПМ
+      - file: book/02_dpo_course_design/competency_model
+        title: Матрица компетенций курса ДПО
+      - file: book/02_dpo_course_design/curriculum_plan
+        title: Учебный и учебно-тематический план
+      - file: book/02_dpo_course_design/lesson_map
+      - file: book/02_dpo_course_design/module_development
+      - file: book/02_dpo_course_design/final_project_model
+      - file: book/02_dpo_course_design/assessment_model
+      - file: book/02_dpo_course_design/notebook_01
+        title: "ФОС: матрица компетенций, модулей и контроля"
+      - file: book/02_dpo_course_design/notebook_02
+        title: "ФОС: жизненный цикл проверки и модель оценивания"
+
+  - caption: Интеграция ИИ в образовательную деятельность
+    chapters:
+      - file: book/03_ai_integration_strategy/faculty_ai_strategy
+      - file: book/03_ai_integration_strategy/ai_mandatory_assignments
+      - file: book/03_ai_integration_strategy/legal_ethics_security
+      - file: book/03_ai_integration_strategy/safe_ai_checklist
+      - file: book/03_ai_integration_strategy/rpm_update_model
+
+  - caption: Разработка платформы
+    chapters:
+      - file: book/04_platform_development/backend_foundation
+      - file: book/04_platform_development/pwa_strategy
+      - file: book/04_platform_development/roles_and_access
+      - file: book/04_platform_development/storage_model
+
+  - caption: Сертификат или удостоверение
+    chapters:
+      - file: book/05_certification/certificate_model
+      - file: book/05_certification/certificate_data_model
+      - file: book/05_certification/certificate_lifecycle
+      - file: book/05_certification/qr_verification_flow
+      - file: book/05_certification/implementation_spec
+
+  - caption: Научно-публикационный контур
+    chapters:
+      - file: book/06_research_articles/article_01_platform_concept
+      - file: book/06_research_articles/article_02_dpo_methodology
+      - file: book/06_research_articles/article_03_certification_model
+
+  - caption: Приложения
+    chapters:
+      - file: book/07_appendices/decisions_register
+      - file: book/07_appendices/technical_specs
+      - file: book/07_appendices/open_questions
+      - file: book/07_appendices/final_project_report_source
+      - file: book/07_appendices/bibliography

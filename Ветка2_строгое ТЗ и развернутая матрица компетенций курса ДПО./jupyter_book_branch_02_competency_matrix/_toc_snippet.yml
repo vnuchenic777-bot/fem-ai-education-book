@@ -1,0 +1,17 @@
+# Вставьте этот фрагмент в _toc.yml вашей Jupyter Book-книги.
+# Вариант для простой структуры:
+
+format: jb-book
+root: intro
+chapters:
+  - file: chapters/branch_02_competency_matrix
+    title: "Ветка 02. Матрица компетенций курса ДПО по ИИ"
+
+# Вариант для структуры с частями:
+# format: jb-book
+# root: intro
+# parts:
+#   - caption: "Методическое проектирование курса ДПО"
+#     chapters:
+#       - file: chapters/branch_02_competency_matrix
+#         title: "Матрица компетенций"

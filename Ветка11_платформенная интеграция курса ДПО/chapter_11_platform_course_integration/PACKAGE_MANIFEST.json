@@ -1,0 +1,80 @@
+{
+  "package": "chapter_11_platform_course_integration_jupyter_book_package.zip",
+  "chapter": "11. ТЗ платформенной интеграции курса ДПО",
+  "main_notebook": "11_platform_course_integration.ipynb",
+  "executed_notebook_preview": "11_platform_course_integration.executed.ipynb",
+  "structured_data": [
+    "data/platform_course_integration.yaml",
+    "data/platform_course_integration.json"
+  ],
+  "files": [
+    {
+      "name": "11_platform_course_integration.executed.ipynb",
+      "size_bytes": 452026
+    },
+    {
+      "name": "11_platform_course_integration.ipynb",
+      "size_bytes": 39104
+    },
+    {
+      "name": "CODE_CELLS.py",
+      "size_bytes": 20535
+    },
+    {
+      "name": "NOTEBOOK_CELL_STRUCTURE.md",
+      "size_bytes": 10247
+    },
+    {
+      "name": "README.md",
+      "size_bytes": 1393
+    },
+    {
+      "name": "data/assessment_map.csv",
+      "size_bytes": 14265
+    },
+    {
+      "name": "data/content_upload_map.csv",
+      "size_bytes": 39109
+    },
+    {
+      "name": "data/content_upload_map.jsonl",
+      "size_bytes": 70057
+    },
+    {
+      "name": "data/derived/assessments_summary.csv",
+      "size_bytes": 8919
+    },
+    {
+      "name": "data/derived/competency_coverage.csv",
+      "size_bytes": 274
+    },
+    {
+      "name": "data/derived/lessons_summary.csv",
+      "size_bytes": 12561
+    },
+    {
+      "name": "data/derived/modules_summary.csv",
+      "size_bytes": 1910
+    },
+    {
+      "name": "data/derived/quality_checks.csv",
+      "size_bytes": 499
+    },
+    {
+      "name": "data/implementation_tasks.jsonl",
+      "size_bytes": 6340
+    },
+    {
+      "name": "data/lessons_map.csv",
+      "size_bytes": 25198
+    },
+    {
+      "name": "data/platform_course_integration.json",
+      "size_bytes": 62010
+    },
+    {
+      "name": "data/platform_course_integration.yaml",
+      "size_bytes": 50196
+    }
+  ]
+}

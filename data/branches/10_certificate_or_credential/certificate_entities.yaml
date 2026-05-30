@@ -1,0 +1,263 @@
+metadata:
+  branch: '[ДПО ИИ] 10 — Сертификат или удостоверение'
+  course_title: 'ИИ-инструменты в преподавательской, научной и повседневной работе:
+    от понимания принципов до практического применения'
+  purpose: Модель документа об обучении для курса ДПО без утверждения юридического
+    статуса.
+  legal_boundary: Порядок выдачи, подписи, регистрации, хранения и учета должен быть
+    согласован с образовательной организацией.
+entities:
+  CertificateTemplate:
+    description: Шаблон сертификата или удостоверения. Определяет тип документа, версию
+      макета, статус и структуру отображения.
+    fields:
+    - name: id
+      type: uuid
+      required: true
+      public: false
+    - name: organizationId
+      type: uuid
+      required: true
+      public: false
+    - name: title
+      type: string
+      required: true
+      public: false
+    - name: documentType
+      type: 'enum: certificate | qualification_certificate | completion_statement'
+      required: true
+      public: false
+    - name: templateVersion
+      type: string
+      required: true
+      public: false
+    - name: layoutDefinition
+      type: json
+      required: true
+      public: false
+    - name: status
+      type: 'enum: draft | active | archived'
+      required: true
+      public: false
+    - name: createdAt
+      type: datetime
+      required: true
+      public: false
+    - name: updatedAt
+      type: datetime
+      required: true
+      public: false
+    relationships:
+    - target: Organization
+      type: belongs_to
+    - target: IssuedCertificate
+      type: has_many
+  IssuedCertificate:
+    description: Выданный документ об обучении. Хранит регистрационный номер, компетенции,
+      ссылку на файл, код проверки и статус.
+    fields:
+    - name: id
+      type: uuid
+      required: true
+      public: false
+    - name: certificateTemplateId
+      type: uuid
+      required: true
+      public: false
+    - name: organizationId
+      type: uuid
+      required: true
+      public: false
+    - name: userId
+      type: uuid
+      required: true
+      public: false
+    - name: courseRunId
+      type: uuid
+      required: true
+      public: false
+    - name: enrollmentId
+      type: uuid
+      required: true
+      public: false
+    - name: documentType
+      type: 'enum: certificate | qualification_certificate | completion_statement'
+      required: true
+      public: false
+    - name: registrationNumber
+      type: string
+      required: true
+      public: true
+    - name: issuedAt
+      type: datetime
+      required: false
+      public: true
+    - name: hours
+      type: integer
+      required: true
+      public: true
+    - name: competencies
+      type: json
+      required: true
+      public: true
+    - name: status
+      type: 'enum: draft | partial | issued | revoked | reissued'
+      required: true
+      public: true
+    - name: storageObjectId
+      type: uuid
+      required: false
+      public: false
+    - name: fileHash
+      type: string
+      required: false
+      public: false
+    - name: signedByUserId
+      type: uuid
+      required: false
+      public: false
+    - name: signatureMetadata
+      type: json
+      required: false
+      public: false
+    - name: verificationCode
+      type: string
+      required: true
+      public: false
+    - name: verificationUrl
+      type: string
+      required: true
+      public: true
+    relationships:
+    - target: CertificateTemplate
+      type: belongs_to
+    - target: Organization
+      type: belongs_to
+    - target: User
+      type: belongs_to
+    - target: CourseRun
+      type: belongs_to
+    - target: Enrollment
+      type: belongs_to
+    - target: StorageObject
+      type: references
+    - target: AuditLog
+      type: creates_events
+  StorageObject:
+    description: Запись о PDF-файле документа. Сам PDF хранится в файловом хранилище,
+      а не в таблице сертификатов.
+    fields:
+    - name: id
+      type: uuid
+      required: true
+      public: false
+    - name: organizationId
+      type: uuid
+      required: true
+      public: false
+    - name: bucket
+      type: string
+      required: true
+      public: false
+    - name: storageKey
+      type: string
+      required: true
+      public: false
+    - name: originalFileName
+      type: string
+      required: true
+      public: false
+    - name: mimeType
+      type: string
+      required: true
+      public: false
+    - name: sizeBytes
+      type: integer
+      required: true
+      public: false
+    - name: checksum
+      type: string
+      required: true
+      public: false
+    - name: visibility
+      type: 'enum: private | organization | public'
+      required: true
+      public: false
+    - name: createdByUserId
+      type: uuid
+      required: true
+      public: false
+    - name: createdAt
+      type: datetime
+      required: true
+      public: false
+    relationships:
+    - target: IssuedCertificate
+      type: referenced_by
+  AuditLog:
+    description: 'Журнал критических действий: генерация, выдача, отзыв, повторная
+      выдача и проверка документа.'
+    fields:
+    - name: id
+      type: uuid
+      required: true
+      public: false
+    - name: organizationId
+      type: uuid
+      required: true
+      public: false
+    - name: actorUserId
+      type: uuid
+      required: false
+      public: false
+    - name: action
+      type: string
+      required: true
+      public: false
+    - name: targetType
+      type: string
+      required: true
+      public: false
+    - name: targetId
+      type: uuid
+      required: true
+      public: false
+    - name: metadata
+      type: json
+      required: false
+      public: false
+    - name: createdAt
+      type: datetime
+      required: true
+      public: false
+    relationships:
+    - target: IssuedCertificate
+      type: tracks
+relationships:
+- source: User
+  target: Enrollment
+  label: enrolled_as
+- source: CourseRun
+  target: Enrollment
+  label: has
+- source: Enrollment
+  target: IssuedCertificate
+  label: results_in
+- source: CertificateTemplate
+  target: IssuedCertificate
+  label: generates
+- source: IssuedCertificate
+  target: StorageObject
+  label: pdf_file
+- source: IssuedCertificate
+  target: AuditLog
+  label: audit_events
+- source: IssuedCertificate
+  target: VerificationEndpoint
+  label: verified_by
+- source: Organization
+  target: CertificateTemplate
+  label: owns
+- source: Organization
+  target: IssuedCertificate
+  label: issues

@@ -1,0 +1,5 @@
+# Минимальный набор библиотек для выполнения ноутбука
+pandas
+matplotlib
+networkx
+pyyaml

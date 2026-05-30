@@ -1,0 +1,6 @@
+- caption: Ветка 10. Сертификат или удостоверение
+  chapters:
+    - file: 10_certificate_or_credential/certificate_model
+    - file: 10_certificate_or_credential/certificate_data_model
+    - file: 10_certificate_or_credential/certificate_lifecycle
+    - file: 10_certificate_or_credential/qr_verification_flow

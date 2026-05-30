@@ -1,0 +1,9 @@
+module_no,module_title,hours_total,lecture,practice,self_study,control,competencies,assessment_item
+1,Введение: зачем преподавателю ИИ,6,2,2,1,1,ПК-ИИ-1,M1_DIAGNOSTIC_AND_TASK_MAP
+2,Как устроены нейронные сети на понятном уровне,8,3,2,2,1,ПК-ИИ-1,M2_NEURAL_NETWORK_EXPLANATION
+3,Большие языковые модели и генеративный ИИ,8,3,2,2,1,"ПК-ИИ-1, ПК-ИИ-3, ПК-ИИ-8",M3_GENERATIVE_AI_VERIFICATION
+4,Постановка запросов как профессиональный навык,10,3,4,2,1,ПК-ИИ-2,M4_PROMPT_LIBRARY_AND_TEST
+5,ИИ в учебной и методической работе,10,3,4,2,1,"ПК-ИИ-4, ПК-ИИ-5",M5_AI_MANDATORY_ASSIGNMENT
+6,ИИ в научной и аналитической работе,8,2,3,2,1,ПК-ИИ-6,M6_RESEARCH_ANALYTIC_STRUCTURE
+7,"Документы, коммуникация и повседневная рутина",8,2,3,2,1,"ПК-ИИ-7, ПК-ИИ-8",M7_DOCUMENT_ROUTINE_AUTOMATION
+8,"Риски, этика, безопасность и итоговый проект",14,3,5,4,2,"ПК-ИИ-9, ПК-ИИ-10",M8_FINAL_PROJECT_AND_DEFENSE

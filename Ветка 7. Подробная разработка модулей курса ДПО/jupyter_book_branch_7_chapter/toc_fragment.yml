@@ -1,0 +1,9 @@
+# Фрагмент для подключения главы к Jupyter Book.
+# Если папка `jupyter_book_branch_7_chapter` размещена внутри `chapters/`, используйте путь ниже.
+
+- file: chapters/jupyter_book_branch_7_chapter/branch_7_module_development
+  title: "Ветка 7. Подробная разработка модулей курса ДПО"
+
+# Если файл главы лежит в корне книги, используйте:
+# - file: branch_7_module_development
+#   title: "Ветка 7. Подробная разработка модулей курса ДПО"

@@ -1,0 +1,5 @@
+format: jb-book
+root: intro
+chapters:
+  - file: stage_03_curriculum_plan_chapter
+    title: Ветка 3. Учебный и учебно-тематический план
