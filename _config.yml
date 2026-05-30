@@ -42,7 +42,7 @@ html:
   use_edit_page_button: true
 
 repository:
-  url: https://github.com/TODO_USERNAME/TODO_REPOSITORY
+  url: https://github.com/vnuchenic777-bot/fem-ai-education-book
   branch: main
 
 launch_buttons:

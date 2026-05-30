@@ -144,18 +144,17 @@ python -m http.server --directory _build/html 8000
 
 Workflow `.github/workflows/deploy-book.yml` настроен на публикацию `_build/html` через GitHub Actions при push в `main`.
 
+Репозиторий проекта: <https://github.com/vnuchenic777-bot/fem-ai-education-book>.
+
 Чтобы включить публикацию:
 
-1. Создать GitHub-репозиторий.
-2. Заменить `repository.url` в `_config.yml` на фактический URL.
-3. Отправить ветку `main` в GitHub.
-4. В GitHub открыть **Settings → Pages**.
-5. В **Build and deployment → Source** выбрать **GitHub Actions**.
-6. Запустить workflow push-ем или вручную через `workflow_dispatch`.
+1. Отправить ветку `main` в GitHub.
+2. В GitHub открыть **Settings → Pages**.
+3. В **Build and deployment → Source** выбрать **GitHub Actions**.
+4. Запустить workflow push-ем или вручную через `workflow_dispatch`.
 
 ## Что требует доработки
 
-- Заменить `TODO_USERNAME/TODO_REPOSITORY` на реальный URL GitHub-репозитория.
 - Расширить библиографию профильными научными статьями о цифровых образовательных экосистемах, learning analytics, компетентностном подходе и ИИ в высшем образовании.
 - Заполнить черновые разделы: PWA-стратегия, роли, хранение, backend-основание и научные статьи.
 - Согласовать с образовательной организацией юридический статус документа об обучении, порядок подписи, регистрации, хранения, отзыва и публичной проверки.

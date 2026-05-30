@@ -44,12 +44,12 @@ python -m http.server --directory _build/html 8000
 
 ## Публикация на GitHub Pages
 
-1. Создать репозиторий на GitHub.
-2. Заменить `repository.url` в `_config.yml` на фактический URL репозитория.
-3. Отправить ветку `main` на GitHub.
-4. В настройках репозитория открыть **Settings → Pages**.
-5. В поле **Build and deployment → Source** выбрать **GitHub Actions**.
-6. Дождаться выполнения workflow `Deploy Jupyter Book to GitHub Pages`.
+Репозиторий проекта: <https://github.com/vnuchenic777-bot/fem-ai-education-book>.
+
+1. Отправить ветку `main` на GitHub.
+2. В настройках репозитория открыть **Settings → Pages**.
+3. В поле **Build and deployment → Source** выбрать **GitHub Actions**.
+4. Дождаться выполнения workflow `Deploy Jupyter Book to GitHub Pages`.
 
 ## Важные ограничения
 
