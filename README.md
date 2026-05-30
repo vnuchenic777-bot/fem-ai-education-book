@@ -46,6 +46,8 @@ python -m http.server --directory _build/html 8000
 
 Репозиторий проекта: <https://github.com/vnuchenic777-bot/fem-ai-education-book>.
 
+Публичная HTML-версия книги: <https://vnuchenic777-bot.github.io/fem-ai-education-book/>.
+
 1. Отправить ветку `main` на GitHub.
 2. В настройках репозитория открыть **Settings → Pages**.
 3. В поле **Build and deployment → Source** выбрать **GitHub Actions**.
