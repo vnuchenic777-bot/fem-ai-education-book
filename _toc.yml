@@ -50,6 +50,7 @@ parts:
   - caption: Сертификат или удостоверение
     chapters:
       - file: book/05_certification/certificate_model
+      - file: book/05_certification/legal_status
       - file: book/05_certification/certificate_data_model
       - file: book/05_certification/certificate_lifecycle
       - file: book/05_certification/qr_verification_flow
@@ -65,6 +66,7 @@ parts:
     chapters:
       - file: book/07_appendices/decisions_register
       - file: book/07_appendices/technical_specs
+      - file: book/07_appendices/publication_scope
       - file: book/07_appendices/open_questions
       - file: book/07_appendices/final_project_report_source
       - file: book/07_appendices/bibliography
