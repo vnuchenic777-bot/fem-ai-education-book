@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "assets" / "diagrams" / "research_articles"
 COMPETENCIES_PATH = ROOT / "book" / "05_certification" / "data" / "competencies.yaml"
 SPEC_PATH = ROOT / "book" / "05_certification" / "implementation_spec.yaml"
+PLATFORM_INTEGRATION_PATH = ROOT / "data" / "branches" / "11_platform_course_integration" / "platform_course_integration.yaml"
 
 FONT = "Inter, Arial, 'Noto Sans', sans-serif"
 TEXT = "#1f2937"
@@ -154,6 +155,10 @@ class Svg:
 def load_competencies() -> list[dict]:
     data = yaml.safe_load(COMPETENCIES_PATH.read_text(encoding="utf-8"))
     return data["competencies"]
+
+
+def load_platform_integration() -> dict:
+    return yaml.safe_load(PLATFORM_INTEGRATION_PATH.read_text(encoding="utf-8"))
 
 
 def card(
@@ -341,6 +346,127 @@ def generate_competency_graph(competencies: list[dict]) -> None:
     svg.save(OUT_DIR / "competency_graph.svg")
 
 
+def generate_module_map(platform_data: dict) -> None:
+    svg = Svg(1600, 980)
+    svg.title(
+        "Карта модулей курса ДПО по ИИ-инструментам",
+        "Схема фиксирует апробационную конфигурацию программы: восемь модулей, 72 академических часа и связь модулей с компетенциями ПК-ИИ-1 — ПК-ИИ-10.",
+    )
+
+    modules = sorted(platform_data["modules"], key=lambda item: item["order_index"])
+    positions = [
+        (70, 175), (450, 175), (830, 175), (1210, 175),
+        (70, 430), (450, 430), (830, 430), (1210, 430),
+    ]
+    fills = ["#ecfeff", "#ecfeff", "#f0fdf4", "#f0fdf4", "#fff7ed", "#fff7ed", "#eef2ff", "#fff1f2"]
+    strokes = ["#0891b2", "#0891b2", "#16a34a", "#16a34a", "#ea580c", "#ea580c", "#4f46e5", "#dc2626"]
+
+    for idx, (module, (x, y)) in enumerate(zip(modules, positions)):
+        w, h = 320, 170
+        svg.rect(x, y, w, h, fill=fills[idx], stroke=strokes[idx], rx=8, sw=1.8)
+        svg.text(x + 24, y + 34, f"Модуль {module['order_index']}", size=18, weight=700, color="#111827")
+        svg.text(x + w - 24, y + 34, f"{module['estimated_hours']} ч", size=18, weight=700, color=strokes[idx], anchor="end")
+        svg.wrapped(x + 24, y + 68, module["title"], w - 48, size=16, line_height=21, weight=700, max_lines=3)
+        comp_text = ", ".join(module["competencies"])
+        svg.wrapped(x + 24, y + 136, comp_text, w - 48, size=14, line_height=18, color=MUTED, max_lines=2)
+
+    # Main sequence arrows, separated from cards so they do not touch text.
+    for x in [390, 770, 1150]:
+        svg.line(x, 260, x + 45, 260, stroke="#475569", sw=2.2)
+    svg.path("M1370 345 C1370 390, 230 390, 230 425", stroke="#475569", sw=2.0)
+    for x in [390, 770, 1150]:
+        svg.line(x, 515, x + 45, 515, stroke="#475569", sw=2.2)
+
+    svg.rect(90, 710, 1420, 118, fill="#f8fafc", stroke="#cbd5e1", rx=8)
+    svg.text(120, 746, "Логика прохождения", size=19, weight=700)
+    svg.wrapped(
+        120,
+        778,
+        "Последовательность движется от концептуального понимания ИИ и постановки запросов к профессиональным применениям, затем к безопасности, этике и итоговому проекту. Модуль 8 не отменяет предыдущие результаты, а собирает их в переносимую разработку для дисциплины слушателя.",
+        1340,
+        size=16,
+        line_height=23,
+    )
+    pill(svg, 120, 860, "72 часа", "#ecfeff", "#0891b2", "#155e75")
+    pill(svg, 225, 860, "8 модулей", "#f0fdf4", "#16a34a", "#166534")
+    pill(svg, 350, 860, "ПК-ИИ-1 — ПК-ИИ-10", "#eef2ff", "#4f46e5", "#3730a3")
+    pill(svg, 560, 860, "итоговый проект", "#fff7ed", "#ea580c", "#9a3412")
+
+    svg.text(1520, 940, "Источник: data/branches/11_platform_course_integration/platform_course_integration.yaml", size=13, color=MUTED, anchor="end")
+    svg.save(OUT_DIR / "module_map.svg")
+
+
+def generate_platform_data_model() -> None:
+    svg = Svg(1600, 1000)
+    svg.title(
+        "Публичная доменная модель данных платформы",
+        "Схема показывает только научно-публикуемый уровень доменной модели: сущности и связи, необходимые для курса ДПО, оценивания, цифрового следа и документа результата обучения.",
+    )
+
+    nodes = {
+        "access": (70, 180, 250, 118, "Access Control", "User, Role, Permission", "#f8fafc", "#64748b"),
+        "learning": (385, 180, 270, 118, "Learning", "CourseTemplate, Module, Lesson, Resource", "#ecfeff", "#0891b2"),
+        "run": (720, 180, 250, 118, "CourseRun", "конкретный запуск программы", "#f0fdf4", "#16a34a"),
+        "enrollment": (1035, 180, 250, 118, "Enrollment", "слушатель, доступ, прогресс", "#f0fdf4", "#16a34a"),
+        "assessment": (385, 420, 270, 118, "Assessment", "AssessmentItem, Submission, Grade, Rubric", "#fff7ed", "#ea580c"),
+        "competency": (720, 420, 250, 118, "Competency", "CompetencyEvidence, CompetencyResult", "#eef2ff", "#4f46e5"),
+        "certification": (1035, 420, 250, 118, "Certification", "CertificateTemplate, IssuedCertificate", "#fff1f2", "#dc2626"),
+        "storage": (720, 660, 250, 118, "Storage", "StorageObject, FileHash, AssetReference", "#f8fafc", "#64748b"),
+        "audit": (1035, 660, 250, 118, "Audit", "AuditLog, AuditEventType, ActorRef", "#f8fafc", "#64748b"),
+    }
+
+    for x, y, w, h, title, body, fill, stroke in nodes.values():
+        svg.rect(x, y, w, h, fill=fill, stroke=stroke, rx=8, sw=1.8)
+        svg.wrapped(x + w / 2, y + 36, title, w - 40, size=19, line_height=23, weight=700, anchor="middle", max_lines=1)
+        svg.wrapped(x + w / 2, y + 72, body, w - 38, size=14, line_height=19, color=TEXT, anchor="middle", max_lines=2)
+
+    def center(key: str) -> tuple[float, float]:
+        x, y, w, h, *_ = nodes[key]
+        return x + w / 2, y + h / 2
+
+    def connect(a: str, b: str, label: str | None = None, y_offset: int = 0, dash: str | None = None) -> None:
+        ax, ay = center(a)
+        bx, by = center(b)
+        if abs(ay - by) < 8:
+            sx = ax + (nodes[a][2] / 2 if bx > ax else -nodes[a][2] / 2)
+            ex = bx - (nodes[b][2] / 2 if bx > ax else -nodes[b][2] / 2)
+            sy = ey = ay + y_offset
+            svg.line(sx, sy, ex, ey, stroke="#334155", sw=2.0, dash=dash)
+            lx, ly = (sx + ex) / 2, sy - 12
+        else:
+            sx, sy = ax, ay + nodes[a][3] / 2
+            ex, ey = bx, by - nodes[b][3] / 2
+            mid = (sy + ey) / 2 + y_offset
+            svg.path(f"M{sx} {sy} C{sx} {mid}, {ex} {mid}, {ex} {ey}", stroke="#334155", sw=2.0, dash=dash)
+            lx, ly = (sx + ex) / 2, mid - 10
+        if label:
+            svg.text(lx, ly, label, size=13, color=MUTED, anchor="middle")
+
+    connect("access", "learning", "права на курс")
+    connect("learning", "run", "публикация запуска")
+    connect("run", "enrollment", "зачисление")
+    connect("learning", "assessment", "задания и рубрики", y_offset=-20)
+    connect("assessment", "competency", "доказательства")
+    connect("competency", "certification", "основание документа")
+    connect("certification", "storage", "PDF и файлы", dash="7 7")
+    connect("certification", "audit", "выдача, отзыв, проверка", dash="7 7")
+    connect("enrollment", "certification", "итоговый статус", y_offset=35)
+
+    svg.rect(70, 850, 1215, 86, fill="#fff1f2", stroke="#f43f5e", rx=8)
+    svg.text(100, 884, "Публичная граница модели данных", size=18, weight=700, color="#9f1239")
+    svg.wrapped(
+        100,
+        914,
+        "Диаграмма не раскрывает production-схему, персональные данные, ключи, внутренние URL, логи и инфраструктурные настройки. Она фиксирует только домены, связи и смысл цифрового следа для научного описания проекта.",
+        1145,
+        size=15,
+        line_height=21,
+        color="#4c0519",
+    )
+    svg.text(1520, 970, "Источник: book/01_platform_architecture/data_model.md", size=13, color=MUTED, anchor="end")
+    svg.save(OUT_DIR / "platform_data_model.svg")
+
+
 def generate_certificate_lifecycle() -> None:
     svg = Svg(1500, 840)
     svg.title(
@@ -460,10 +586,13 @@ def generate_qr_verification_flow() -> None:
 def generate_all() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     competencies = load_competencies()
+    platform_data = load_platform_integration()
     # SPEC_PATH is deliberately read so the script fails if the canonical spec is missing.
     yaml.safe_load(SPEC_PATH.read_text(encoding="utf-8"))
     generate_publication_contour()
     generate_competency_graph(competencies)
+    generate_module_map(platform_data)
+    generate_platform_data_model()
     generate_certificate_lifecycle()
     generate_qr_verification_flow()
 
