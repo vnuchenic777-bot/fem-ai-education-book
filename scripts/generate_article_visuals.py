@@ -183,22 +183,22 @@ def pill(svg: Svg, x: float, y: float, text: str, fill: str, stroke: str, color:
 
 
 def generate_publication_contour() -> None:
-    svg = Svg(1600, 980)
+    svg = Svg(1600, 960)
     svg.title(
         "Карта публикационного контура проекта",
         "Схема показывает, как проектные материалы, Jupyter Book, серия статей и публичная публикация на GitHub Pages образуют единый исследовательско-методический контур.",
     )
 
     columns = [
-        (60, "Проектная работа", "#ecfeff", "#0891b2"),
-        (390, "Исходные материалы", "#f0fdf4", "#16a34a"),
-        (720, "Jupyter Book", "#fff7ed", "#ea580c"),
-        (1040, "Серия статей", "#eff6ff", "#2563eb"),
-        (1340, "Публичный доступ", "#f8fafc", "#64748b"),
+        (72, "Проектная работа", "#ecfeff", "#0891b2"),
+        (373, "Исходные материалы", "#f0fdf4", "#16a34a"),
+        (674, "Jupyter Book", "#fff7ed", "#ea580c"),
+        (975, "Серия статей", "#eff6ff", "#2563eb"),
+        (1276, "Публичный доступ", "#f8fafc", "#64748b"),
     ]
     for x, title, fill, stroke in columns:
-        svg.rect(x, 145, 220, 46, fill=fill, stroke=stroke, rx=8)
-        svg.text(x + 110, 175, title, size=17, weight=700, color="#111827", anchor="middle")
+        svg.rect(x, 142, 252, 46, fill=fill, stroke=stroke, rx=8)
+        svg.text(x + 126, 172, title, size=17, weight=700, color="#111827", anchor="middle")
 
     project = [
         ("Платформа", "роли, доступ, данные, PWA"),
@@ -229,34 +229,50 @@ def generate_publication_contour() -> None:
         ("Рецензент", "видит источники и воспроизводимость"),
     ]
 
-    def stack(x: int, items: list[tuple[str, str]], fill: str, stroke: str, start_y: int = 225) -> None:
+    def contour_card(
+        x: int,
+        y: int,
+        title: str,
+        body: str,
+        fill: str,
+        stroke: str,
+        w: int = 252,
+        h: int = 88,
+    ) -> None:
+        svg.rect(x, y, w, h, fill=fill, stroke=stroke, rx=8, sw=1.7)
+        svg.wrapped(x + w / 2, y + 31, title, w - 36, size=18, line_height=22, weight=700, anchor="middle", max_lines=1)
+        svg.wrapped(x + w / 2, y + 59, body, w - 34, size=14, line_height=19, color=TEXT, anchor="middle", max_lines=2)
+
+    def stack(x: int, items: list[tuple[str, str]], fill: str, stroke: str, start_y: int = 218) -> None:
         for i, (title, body) in enumerate(items):
-            card(svg, x, start_y + i * 116, 260, 88, title, body, fill, stroke, body_size=14)
+            contour_card(x, start_y + i * 112, title, body, fill, stroke)
 
-    stack(40, project, "#f8fdff", "#67e8f9")
-    stack(370, materials, "#fbfffb", "#86efac")
-    stack(700, book, "#fffaf2", "#fdba74")
-    stack(1025, articles, "#f7fbff", "#93c5fd", start_y=250)
-    stack(1320, public, "#ffffff", "#cbd5e1", start_y=270)
+    stack(72, project, "#f8fdff", "#67e8f9")
+    stack(373, materials, "#fbfffb", "#86efac")
+    stack(674, book, "#fffaf2", "#fdba74")
+    stack(975, articles, "#f7fbff", "#93c5fd", start_y=274)
+    stack(1276, public, "#ffffff", "#cbd5e1", start_y=274)
 
-    for x in [315, 645, 975, 1280]:
-        svg.line(x, 460, x + 45, 460, stroke="#475569", sw=2.4)
+    centers = [198, 499, 800, 1101, 1402]
+    svg.text(800, 685, "основной поток подготовки публичной книги", size=15, weight=700, color="#334155", anchor="middle")
+    for left, right in zip(centers[:-1], centers[1:]):
+        svg.line(left + 126, 708, right - 126, 708, stroke="#475569", sw=2.4)
 
-    svg.path("M1155 608 C1110 760, 520 780, 170 672", stroke="#0f766e", sw=2.0, dash="7 7")
-    svg.text(650, 805, "обратная связь: уточнение статей, данных, визуализаций и открытых вопросов", size=15, color="#0f766e", anchor="middle")
+    svg.line(1402, 752, 198, 752, stroke="#0f766e", sw=2.0, dash="7 7")
+    svg.text(800, 779, "обратная связь: уточнение статей, данных, визуализаций и открытых вопросов", size=15, color="#0f766e", anchor="middle")
 
-    svg.rect(60, 855, 1480, 82, fill="#fff1f2", stroke="#f43f5e", rx=8)
-    svg.text(84, 887, "Граница открытой публикации", size=18, weight=700, color="#9f1239")
+    svg.rect(72, 818, 1456, 108, fill="#fff1f2", stroke="#f43f5e", rx=8)
+    svg.text(104, 853, "Граница открытой публикации", size=18, weight=700, color="#9f1239")
     svg.wrapped(
-        84,
-        916,
-        "В публичный контур не выносятся ключи доступа, персональные данные, закрытые материалы организации и юридические утверждения, не прошедшие отдельное согласование.",
-        1390,
+        104,
+        883,
+        "В публичный контур не выносятся ключи доступа, персональные данные и закрытые материалы организации. Юридические утверждения публикуются только после отдельного согласования.",
+        1388,
         size=16,
         line_height=22,
         color="#4c0519",
     )
-    svg.text(1540, 958, "Источник: проектная структура репозитория Jupyter Book, 2026", size=13, color=MUTED, anchor="end")
+    svg.text(1528, 945, "Источник: проектная структура репозитория Jupyter Book, 2026", size=13, color=MUTED, anchor="end")
     svg.save(OUT_DIR / "publication_contour_map.svg")
 
 
