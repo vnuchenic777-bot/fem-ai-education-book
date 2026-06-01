@@ -1,10 +1,14 @@
 # Publishing Status
 
-Дата проверки: 2026-05-30
+Дата проверки: 2026-06-01
 
 ## Обновление этапа
 
 Добавлены авторские метаданные, начальная библиография, академически отредактированные вводные и архитектурные главы, проектная позиция по юридическому статусу сертификата/удостоверения и рамка открытой публикации материалов.
+
+## Обновление от 2026-06-01
+
+Ветка 8 усилена воспроизводимой Jupyter-версией итогового проекта. Новый notebook `book/02_dpo_course_design/final_project_workbook.ipynb` подключен в раздел курса ДПО после текстовой спецификации `final_project_model.md`. Сопроводительная карточка сохранена как `book/02_dpo_course_design/final_project_workbook_notes.md`.
 
 ## Что собрано
 
@@ -34,7 +38,7 @@
 | 5. Фонд оценочных средств | подключена как Markdown-глава и две notebook-главы | `book/02_dpo_course_design/assessment_model.md` |
 | 6. Задания с обязательным использованием ИИ | подключена как Markdown-глава | `book/03_ai_integration_strategy/ai_mandatory_assignments.md` |
 | 7. Подробная разработка модулей | подключена как Markdown-глава | `book/02_dpo_course_design/module_development.md` |
-| 8. Итоговый проект | подключена как спецификация и приложение | `book/02_dpo_course_design/final_project_model.md` |
+| 8. Итоговый проект | подключена как спецификация, приложение и notebook-глава | `book/02_dpo_course_design/final_project_model.md`, `book/02_dpo_course_design/final_project_workbook.ipynb` |
 | 9. Право, этика, безопасность | подключена как главы стратегии | `book/03_ai_integration_strategy/legal_ethics_security.md` |
 | 10. Сертификат или удостоверение | подключена как отдельная часть книги | `book/05_certification/` |
 | 11. Платформенная интеграция курса | подключена как notebook-глава архитектуры | `book/01_platform_architecture/architecture_overview.ipynb` |
@@ -87,6 +91,7 @@
 - `book/02_dpo_course_design/course_concept.ipynb`;
 - `book/02_dpo_course_design/competency_model.ipynb`;
 - `book/02_dpo_course_design/curriculum_plan.ipynb`;
+- `book/02_dpo_course_design/final_project_workbook.ipynb`;
 - `book/02_dpo_course_design/notebook_01.ipynb`;
 - `book/02_dpo_course_design/notebook_02.ipynb`;
 - `book/05_certification/certificate_data_model.ipynb`;
@@ -113,7 +118,7 @@
 Результаты:
 
 - `scripts/validate_data.py`: OK, проверено 70 JSON и 80 YAML.
-- `scripts/check_book.py`: OK, проверено 40 TOC-целей.
+- `scripts/check_book.py`: OK, проверено 41 TOC-цель.
 - `jupyter-book build .`: OK, HTML создан в `_build/html`.
 
 ## Локальная сборка

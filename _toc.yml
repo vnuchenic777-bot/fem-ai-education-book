@@ -26,6 +26,8 @@ parts:
       - file: book/02_dpo_course_design/lesson_map
       - file: book/02_dpo_course_design/module_development
       - file: book/02_dpo_course_design/final_project_model
+      - file: book/02_dpo_course_design/final_project_workbook
+        title: "Итоговый проект: рабочая тетрадь"
       - file: book/02_dpo_course_design/assessment_model
       - file: book/02_dpo_course_design/notebook_01
         title: "ФОС: матрица компетенций, модулей и контроля"
