@@ -17,6 +17,14 @@
 - Рамка компетенций UNESCO для преподавателей используется как внешний ориентир при описании профессиональных компетенций работы с ИИ {cite}`unesco_ai_competency_teachers_2024`.
 - Принципы OECD по ИИ используются как общий ориентир доверенного, безопасного, прозрачного и подотчетного применения ИИ-систем {cite}`oecd_ai_principles_2024`.
 
+## Внешняя научная база статьи 01
+
+- Цифровая трансформация высшего образования и восприятие изменений преподавателями: {cite}`rogozin_teachers_digital_transformation_2022`.
+- Цифровая образовательная экосистема как сетевой и платформенный подход к организации образовательной среды: {cite}`suleymankadieva_digital_educational_ecosystem_2021`.
+- Повышение квалификации и развитие цифровых компетенций педагогов в условиях цифровой трансформации: {cite}`shirokolobova_digital_competencies_pd_2022,muller_ai_digital_competence_2025`.
+- Генеративный искусственный интеллект в высшем образовании и в работе преподавателя: {cite}`koshkina_genai_higher_education_2025,mukhlaeva_genai_transformations_2025,feshchenko_genai_teachers_experience_2025,dontsov_genai_teacher_work_2025`.
+- Учебная аналитика и цифровой след как основание для проектирования данных образовательной платформы: {cite}`boyarinov_learning_analytics_2025,krishtal_digital_footprint_satisfaction_2024,gorbatov_digital_footprint_individualization_2022`.
+
 ## Техническая публикация
 
 - Документация Jupyter Book используется для настройки `_config.yml`, `_toc.yml`, сборки и публикации книги как автоматически генерируемого HTML-ресурса {cite}`jupyterbook_config_v1,jupyterbook_toc_v1`.
