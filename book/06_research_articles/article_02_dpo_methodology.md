@@ -4,7 +4,7 @@ short_title: "Методология проектирования програм
 author: "Морозов Артём Михайлович"
 author_affiliation: "СПБГТИ(ТУ), кафедра бизнес-информатики"
 status: "draft"
-version: "0.5"
+version: "0.6"
 lang: "ru"
 publication_context: "научно-публикационный контур Jupyter Book"
 source_basis:
@@ -18,6 +18,7 @@ source_basis:
 external_literature: "data/branches/06_research_articles/article_02_dpo_methodology_v0_1/article_02_dpo_methodology_external_sources_v0_2.yaml"
 pilot_evaluation_plan: "data/branches/06_research_articles/article_02_dpo_methodology_v0_4/pilot_evaluation_plan.yaml"
 pilot_results_template: "data/branches/06_research_articles/article_02_dpo_methodology_v0_5/pilot_results_template.yaml"
+pilot_chart_script: "scripts/generate_pilot_result_charts.py"
 ---
 
 # Методология проектирования программ ДПО по ИИ-инструментам для преподавателей: компетенции, оценивание и цифровое сопровождение образовательного результата
@@ -25,7 +26,7 @@ pilot_results_template: "data/branches/06_research_articles/article_02_dpo_metho
 **УДК:** 378.046.4:004.8
 **Тип материала:** проект научной статьи для методологической и источниковедческой доработки
 **Автор:** Морозов Артём Михайлович, младший научный сотрудник, преподаватель курса «Введение в ИТ», кафедра бизнес-информатики, СПБГТИ(ТУ)
-**Статус:** черновая публикационная версия v0.5
+**Статус:** черновая публикационная версия v0.6
 
 ## Название статьи на английском языке
 
@@ -35,7 +36,7 @@ pilot_results_template: "data/branches/06_research_articles/article_02_dpo_metho
 
 В статье предлагается методология проектирования программ дополнительного профессионального образования по ИИ-инструментам для преподавателей. В отличие от подхода, при котором обучение строится вокруг обзора отдельных цифровых сервисов, предлагаемая модель исходит из профессиональных действий преподавателя, проверяемых компетенций, учебных артефактов, фонда оценочных средств и цифрового сопровождения образовательного результата. Методология описывается как универсализируемый каркас, применимый в образовательных организациях и структурных подразделениях, которым необходимо перейти от фрагментарного освоения ИИ-инструментов к управляемой системе подготовки преподавателей.
 
-В качестве апробационной конфигурации рассматривается программа повышения квалификации «ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания принципов до практического применения» объёмом 72 академических часа. Программа включает восемь модулей, десять профессиональных компетенций ПК-ИИ-1 — ПК-ИИ-10, карту уроков и микролекций, фонд оценочных средств, итоговый проект и модель переноса результатов в цифровую образовательную платформу. В версии v0.5 статья фиксирует допилотную журнальную редакцию: методический каркас уже подготовлен для запуска в приложении, а эмпирический слой должен быть добавлен после прохождения курса преподавателями в июле 2026 года. Для этого заранее заложен шаблон будущего раздела результатов пилотного запуска, включающий блоки для анализа активности, распределения оценок, качества итоговых проектов, обратной связи преподавателей и работы модели документа результата обучения. Обосновано, что образовательный результат в подобных программах должен подтверждаться не фактом просмотра материалов, а двухчастным доказательством: созданным профессиональным артефактом и тестовой или практической проверкой.
+В качестве апробационной конфигурации рассматривается программа повышения квалификации «ИИ-инструменты в преподавательской, научной и повседневной работе: от понимания принципов до практического применения» объёмом 72 академических часа. Программа включает восемь модулей, десять профессиональных компетенций ПК-ИИ-1 — ПК-ИИ-10, карту уроков и микролекций, фонд оценочных средств, итоговый проект и модель переноса результатов в цифровую образовательную платформу. В версии v0.6 статья фиксирует допилотную журнальную редакцию: методический каркас уже подготовлен для запуска в приложении, а эмпирический слой должен быть добавлен после прохождения курса преподавателями в июле 2026 года. Для этого заранее заложены шаблон будущего раздела результатов пилотного запуска и скрипт построения графиков по агрегированным данным: прогрессу по модулям, активности во времени, распределению оценок, подтверждению компетенций, готовности итоговых проектов и обратной связи преподавателей. Обосновано, что образовательный результат в подобных программах должен подтверждаться не фактом просмотра материалов, а двухчастным доказательством: созданным профессиональным артефактом и тестовой или практической проверкой.
 
 Сделан вывод, что методология проектирования программ ДПО по ИИ-инструментам должна строиться как связка «образовательная потребность — профессиональное действие — компетенция — модуль — задание — артефакт — оценивание — итоговый проект — цифровой след». Такая связка позволяет адаптировать модель к разным образовательным организациям, не теряя проверяемости результата, ответственности преподавателя и возможности последующего цифрового сопровождения обучения.
 
@@ -45,7 +46,7 @@ pilot_results_template: "data/branches/06_research_articles/article_02_dpo_metho
 
 The article proposes a methodology for designing continuing professional education programs on AI tools for teachers. Unlike approaches that organize training around a review of separate digital services, the proposed model starts from teachers' professional actions, verifiable competencies, learning artifacts, assessment tools, and digital support of learning outcomes. The methodology is described as a generalizable framework applicable to educational organizations and departments that need to move from fragmented use of AI tools to a controlled system of teacher professional development.
 
-The article uses a 72-hour professional development program, “AI Tools in Teaching, Research, and Everyday Professional Work: From Understanding Principles to Practical Application,” as a design case. The program includes eight modules, ten professional competencies, a lesson and microlecture map, an assessment model, a final project, and a model for transferring the results into a digital educational platform. Version 0.5 is positioned as a pre-pilot journal draft: the methodological framework is prepared for implementation in an application, while the empirical layer is expected to be added after teachers complete the course in July 2026. The article also provides a template for the future pilot results section, including placeholders for activity graphs, assessment distribution, final project analysis, teacher feedback, and the learning outcome document model. The article argues that learning outcomes in such programs should be confirmed not by viewing course materials, but by two-part evidence: a professional artifact and a test or practical assessment.
+The article uses a 72-hour professional development program, “AI Tools in Teaching, Research, and Everyday Professional Work: From Understanding Principles to Practical Application,” as a design case. The program includes eight modules, ten professional competencies, a lesson and microlecture map, an assessment model, a final project, and a model for transferring the results into a digital educational platform. Version 0.6 is positioned as a pre-pilot journal draft: the methodological framework is prepared for implementation in an application, while the empirical layer is expected to be added after teachers complete the course in July 2026. The article also provides a template for the future pilot results section and a reproducible chart-generation script for aggregated data on progress, activity, assessment, competency confirmation, final projects, and teacher feedback. The article argues that learning outcomes in such programs should be confirmed not by viewing course materials, but by two-part evidence: a professional artifact and a test or practical assessment.
 
 The article concludes that a methodology for designing continuing professional education programs on AI tools should be built as a chain of educational need, professional action, competency, module, assignment, artifact, assessment, final project, and digital trace. This chain makes it possible to adapt the model to different educational organizations while preserving verifiability, teacher responsibility, and digital support of learning outcomes.
 
@@ -290,6 +291,16 @@ The article concludes that a methodology for designing continuing professional e
 
 Данный раздел подготовлен как заготовка для будущей редакции статьи после завершения пилотного запуска курса. В текущей версии он не содержит фактических данных и не должен восприниматься как отчёт о результатах. Его назначение — заранее определить, какие сведения будут внесены в журнальную версию после обработки данных приложения, проверки корректности выгрузок и согласования публичного состава материалов.
 
+Для технической подготовки будущих иллюстраций создан скрипт `scripts/generate_pilot_result_charts.py`. После пилота он должен запускаться не на исходных пользовательских данных, а на заранее агрегированной YAML-выгрузке по шаблону `data/branches/06_research_articles/article_02_dpo_methodology_v0_5/pilot_aggregates_template.yaml`.
+
+```bash
+python scripts/generate_pilot_result_charts.py \
+  --input data/branches/06_research_articles/article_02_dpo_methodology_v0_5/pilot_aggregates_template.yaml \
+  --output-dir assets/diagrams/research_articles/pilot_results
+```
+
+Скрипт отказывается строить публичные графики, если в метаданных указано наличие персональных данных. Для проверки работоспособности предусмотрен отдельный синтетический пример; он маркируется как демонстрационный и не должен использоваться как эмпирический материал статьи.
+
 ### Общая характеристика пилота
 
 В будущей редакции здесь должны быть кратко описаны сроки пилота, состав группы в агрегированном виде, режим прохождения курса, версия платформы, состав доступных модулей и правила сбора данных. Если часть сведений относится к внутреннему контуру организации, она должна быть заменена обобщённой формулировкой.
@@ -434,7 +445,7 @@ The article concludes that a methodology for designing continuing professional e
 
 Апробационная конфигурация программы объёмом 72 часа показывает, как универсальная модель может быть развёрнута в конкретном проекте: через восемь модулей, десять компетенций ПК-ИИ-1 — ПК-ИИ-10, карту уроков, фонд оценочных средств, итоговый проект и платформенные сущности. При этом ценность модели состоит не в буквальном копировании всех параметров, а в переносимости самой логики проектирования. Образовательная организация может адаптировать объём, содержание и платформу, но должна сохранить проверяемую цепочку от профессионального действия преподавателя к подтверждённому образовательному результату.
 
-Допилотная редакция статьи фиксирует исходный каркас внедрения и структуру будущего эмпирического раздела. Следующая редакция должна быть дополнена результатами прохождения курса преподавателями: графиками активности, распределением оценок, анализом итоговых проектов, агрегированной обратной связью и выводами о том, какие элементы методологии требуют усиления перед масштабированием образовательной платформы.
+Допилотная редакция статьи фиксирует исходный каркас внедрения, структуру будущего эмпирического раздела и воспроизводимый технический контур построения графиков. Следующая редакция должна быть дополнена результатами прохождения курса преподавателями: графиками активности, распределением оценок, анализом итоговых проектов, агрегированной обратной связью и выводами о том, какие элементы методологии требуют усиления перед масштабированием образовательной платформы.
 
 ## Список использованных источников
 

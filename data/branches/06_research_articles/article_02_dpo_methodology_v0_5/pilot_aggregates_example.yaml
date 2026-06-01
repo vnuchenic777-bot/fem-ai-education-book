@@ -1,0 +1,208 @@
+metadata:
+  dataset_status: synthetic_example
+  contains_personal_data: false
+  publication_ready: false
+  pilot_period: "2026-07"
+  description: >
+    Синтетический пример для проверки генерации графиков. Значения не являются
+    результатами пилотного запуска и не должны использоваться в статье как
+    эмпирические данные.
+
+pilot_context:
+  pilot_start: "2026-07-01"
+  pilot_end: "2026-07-31"
+  participants_count_aggregated: 24
+  course_mode: асинхронный с итоговой защитой
+  platform_version_public: pilot-build
+  modules_available: 8
+  data_collection_boundary: агрегированные данные без персональных траекторий
+
+progress_by_module:
+  - module_id: M01
+    module_title: Введение
+    participants_started: 24
+    participants_completed: 23
+    completion_rate_percent: 95.8
+  - module_id: M02
+    module_title: Устройство ИИ
+    participants_started: 23
+    participants_completed: 21
+    completion_rate_percent: 87.5
+  - module_id: M03
+    module_title: Генеративный ИИ
+    participants_started: 22
+    participants_completed: 20
+    completion_rate_percent: 83.3
+  - module_id: M04
+    module_title: Постановка запросов
+    participants_started: 22
+    participants_completed: 19
+    completion_rate_percent: 79.2
+  - module_id: M05
+    module_title: Учебная работа
+    participants_started: 21
+    participants_completed: 18
+    completion_rate_percent: 75.0
+  - module_id: M06
+    module_title: Научная работа
+    participants_started: 20
+    participants_completed: 17
+    completion_rate_percent: 70.8
+  - module_id: M07
+    module_title: Документы и рутина
+    participants_started: 19
+    participants_completed: 17
+    completion_rate_percent: 70.8
+  - module_id: M08
+    module_title: Риски и проект
+    participants_started: 19
+    participants_completed: 16
+    completion_rate_percent: 66.7
+
+activity_timeline:
+  - date_or_week: 2026-W27
+    material_views_count: 140
+    submissions_count: 18
+    attempts_count: 24
+    feedback_events_count: 8
+  - date_or_week: 2026-W28
+    material_views_count: 188
+    submissions_count: 31
+    attempts_count: 43
+    feedback_events_count: 16
+  - date_or_week: 2026-W29
+    material_views_count: 216
+    submissions_count: 42
+    attempts_count: 57
+    feedback_events_count: 21
+  - date_or_week: 2026-W30
+    material_views_count: 162
+    submissions_count: 29
+    attempts_count: 36
+    feedback_events_count: 18
+  - date_or_week: 2026-W31
+    material_views_count: 110
+    submissions_count: 24
+    attempts_count: 30
+    feedback_events_count: 14
+
+final_grade_distribution:
+  - grade_band: 90-100
+    participants_count: 5
+    percentage: 20.8
+  - grade_band: 75-89
+    participants_count: 9
+    percentage: 37.5
+  - grade_band: 60-74
+    participants_count: 6
+    percentage: 25.0
+  - grade_band: до 60
+    participants_count: 2
+    percentage: 8.3
+  - grade_band: не завершили
+    participants_count: 2
+    percentage: 8.3
+
+competency_confirmation_matrix:
+  - competency_code: ПК-ИИ-1
+    competency_title: Концептуальная грамотность об ИИ
+    artifact_acceptance_rate_percent: 92
+    test_success_rate_percent: 88
+    revision_rate_percent: 12
+  - competency_code: ПК-ИИ-2
+    competency_title: Постановка запросов как профессиональный навык
+    artifact_acceptance_rate_percent: 86
+    test_success_rate_percent: 84
+    revision_rate_percent: 18
+  - competency_code: ПК-ИИ-3
+    competency_title: Критическая проверка ответов ИИ
+    artifact_acceptance_rate_percent: 80
+    test_success_rate_percent: 78
+    revision_rate_percent: 24
+  - competency_code: ПК-ИИ-4
+    competency_title: Применение ИИ в подготовке учебных материалов
+    artifact_acceptance_rate_percent: 82
+    test_success_rate_percent: 76
+    revision_rate_percent: 22
+  - competency_code: ПК-ИИ-5
+    competency_title: Проектирование заданий с обязательным использованием ИИ студентами
+    artifact_acceptance_rate_percent: 72
+    test_success_rate_percent: 74
+    revision_rate_percent: 32
+  - competency_code: ПК-ИИ-6
+    competency_title: Применение ИИ в научной и аналитической работе
+    artifact_acceptance_rate_percent: 76
+    test_success_rate_percent: 79
+    revision_rate_percent: 25
+  - competency_code: ПК-ИИ-7
+    competency_title: Применение ИИ в документообороте и повседневной профессиональной рутине
+    artifact_acceptance_rate_percent: 84
+    test_success_rate_percent: 81
+    revision_rate_percent: 16
+  - competency_code: ПК-ИИ-8
+    competency_title: Многомодальный ИИ
+    artifact_acceptance_rate_percent: 70
+    test_success_rate_percent: 72
+    revision_rate_percent: 34
+  - competency_code: ПК-ИИ-9
+    competency_title: Безопасность, этика и правовые границы применения ИИ
+    artifact_acceptance_rate_percent: 78
+    test_success_rate_percent: 82
+    revision_rate_percent: 20
+  - competency_code: ПК-ИИ-10
+    competency_title: ИИ-лидерство в собственной дисциплине
+    artifact_acceptance_rate_percent: 68
+    test_success_rate_percent: 70
+    revision_rate_percent: 36
+
+final_project_readiness_matrix:
+  - criterion: Привязка к дисциплине
+    fully_met_count: 16
+    partially_met_count: 5
+    not_met_count: 3
+  - criterion: AI-required задания
+    fully_met_count: 13
+    partially_met_count: 7
+    not_met_count: 4
+  - criterion: Критерии оценивания
+    fully_met_count: 12
+    partially_met_count: 8
+    not_met_count: 4
+  - criterion: Риски и ограничения
+    fully_met_count: 11
+    partially_met_count: 9
+    not_met_count: 4
+  - criterion: Рефлексия
+    fully_met_count: 15
+    partially_met_count: 6
+    not_met_count: 3
+
+feedback_likert_summary:
+  - question_id: usefulness
+    question_text_public: Полезность курса
+    rating_1_count: 0
+    rating_2_count: 1
+    rating_3_count: 4
+    rating_4_count: 9
+    rating_5_count: 10
+  - question_id: difficulty
+    question_text_public: Посильность заданий
+    rating_1_count: 1
+    rating_2_count: 3
+    rating_3_count: 6
+    rating_4_count: 8
+    rating_5_count: 6
+  - question_id: clarity
+    question_text_public: Понятность материалов
+    rating_1_count: 0
+    rating_2_count: 2
+    rating_3_count: 5
+    rating_4_count: 10
+    rating_5_count: 7
+  - question_id: platform
+    question_text_public: Удобство платформы
+    rating_1_count: 1
+    rating_2_count: 2
+    rating_3_count: 5
+    rating_4_count: 8
+    rating_5_count: 8

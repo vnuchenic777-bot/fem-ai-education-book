@@ -1,0 +1,31 @@
+metadata:
+  dataset_status: template
+  contains_personal_data: false
+  publication_ready: false
+  pilot_period: "2026-07"
+  description: >
+    Шаблон агрегированных данных пилотного запуска курса. Перед публикацией
+    данные должны быть проверены на отсутствие персональных данных, закрытых
+    материалов организации, служебных URL, ключей доступа и внутренних
+    идентификаторов.
+
+pilot_context:
+  pilot_start: null
+  pilot_end: null
+  participants_count_aggregated: null
+  course_mode: null
+  platform_version_public: null
+  modules_available: null
+  data_collection_boundary: null
+
+progress_by_module: []
+
+activity_timeline: []
+
+final_grade_distribution: []
+
+competency_confirmation_matrix: []
+
+final_project_readiness_matrix: []
+
+feedback_likert_summary: []
