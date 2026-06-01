@@ -1,0 +1,159 @@
+article: article_02_dpo_methodology
+version: "0.5"
+status: pre_pilot_results_template
+pilot_period: "2026-07"
+purpose: >
+  Шаблон будущего раздела результатов пилотного запуска курса ДПО по
+  ИИ-инструментам для преподавателей. Файл задаёт структуру анализа,
+  ожидаемые агрегированные показатели, визуализации и границы публичной
+  публикации. Он не содержит фактических данных пилота.
+
+publication_boundary:
+  public_mode:
+    - агрегированные показатели
+    - обезличенные таблицы
+    - графики без персональных траекторий
+    - тематическое обобщение обратной связи
+  prohibited_public_data:
+    - ФИО преподавателей и слушателей
+    - email, телефон, логин и внутренний идентификатор пользователя
+    - индивидуальные образовательные траектории без согласования
+    - ключи доступа, служебные URL и технические токены
+    - закрытые материалы организации
+    - юридические выводы о статусе документа результата обучения без отдельного согласования
+
+future_results_sections:
+  - id: pilot_context
+    title: Общая характеристика пилота
+    writing_goal: >
+      Описать сроки, формат, состав группы в агрегированном виде,
+      версию платформы, доступные модули и правила сбора данных.
+    required_fields:
+      - pilot_start
+      - pilot_end
+      - participants_count_aggregated
+      - course_mode
+      - platform_version_public
+      - modules_available
+      - data_collection_boundary
+
+  - id: activity_and_progress
+    title: Активность и прохождение курса
+    writing_goal: >
+      Показать движение преподавателей по модулям, темп прохождения,
+      периоды активности и учебные блоки, где возникали остановки.
+    expected_visuals:
+      - progress_by_module
+      - activity_timeline
+      - difficult_blocks_map
+
+  - id: assessment_distribution
+    title: Оценивание и распределение результатов
+    writing_goal: >
+      Проанализировать результаты тестов, статусы артефактов, повторные
+      попытки, итоговые оценки и подтверждение компетенций.
+    expected_visuals:
+      - final_grade_distribution
+      - attempts_by_assignment
+      - competency_confirmation_matrix
+
+  - id: final_project_analysis
+    title: Итоговые проекты преподавателей
+    writing_goal: >
+      Оценить перенос результатов курса в реальные дисциплины:
+      задания с обязательным использованием ИИ, критерии оценивания,
+      предложения по обновлению РПМ, риски и рефлексию преподавателей.
+    expected_outputs:
+      - final_project_readiness_matrix
+      - ai_mandatory_assignment_typology
+      - risk_and_mitigation_summary
+
+  - id: teacher_feedback
+    title: Обратная связь преподавателей
+    writing_goal: >
+      Обобщить оценку полезности курса, сложности заданий, понятности
+      материалов, удобства платформы и применимости результатов.
+    expected_visuals:
+      - feedback_likert_summary
+      - feedback_topic_map
+      - improvement_priority_table
+
+  - id: learning_document_check
+    title: Документ результата обучения
+    writing_goal: >
+      Описать методико-техническую проверку связи документа результата
+      обучения с итоговым статусом, компетенциями, завершением курса
+      и механизмом проверки без утверждения юридического статуса.
+    required_boundaries:
+      - не утверждать юридическую силу документа
+      - не раскрывать персональные данные
+      - отделять техническую работоспособность от организационного решения
+
+expected_visualizations:
+  - id: progress_by_module
+    title: Прогресс по модулям
+    chart_type: bar
+    required_aggregated_fields:
+      - module_id
+      - module_title
+      - participants_started
+      - participants_completed
+      - completion_rate_percent
+
+  - id: activity_timeline
+    title: Активность пользователей по времени
+    chart_type: line
+    required_aggregated_fields:
+      - date_or_week
+      - material_views_count
+      - submissions_count
+      - attempts_count
+      - feedback_events_count
+
+  - id: final_grade_distribution
+    title: Распределение итоговых результатов
+    chart_type: histogram_or_bar
+    required_aggregated_fields:
+      - grade_band
+      - participants_count
+      - percentage
+
+  - id: competency_confirmation_matrix
+    title: Подтверждение компетенций ПК-ИИ-1 — ПК-ИИ-10
+    chart_type: heatmap_or_matrix
+    required_aggregated_fields:
+      - competency_code
+      - competency_title
+      - artifact_acceptance_rate_percent
+      - test_success_rate_percent
+      - revision_rate_percent
+
+  - id: final_project_readiness_matrix
+    title: Готовность итоговых проектов к переносу в дисциплины
+    chart_type: matrix
+    required_aggregated_fields:
+      - criterion
+      - fully_met_count
+      - partially_met_count
+      - not_met_count
+
+  - id: feedback_likert_summary
+    title: Обратная связь преподавателей
+    chart_type: stacked_bar
+    required_aggregated_fields:
+      - question_id
+      - question_text_public
+      - rating_1_count
+      - rating_2_count
+      - rating_3_count
+      - rating_4_count
+      - rating_5_count
+
+post_pilot_writing_questions:
+  - Какие элементы методологии подтвердились в пилотном запуске?
+  - Какие модули и задания оказались наиболее сложными?
+  - Какие компетенции ПК-ИИ подтверждались устойчиво, а какие потребовали дополнительной поддержки?
+  - Какие итоговые проекты показали реальный перенос ИИ-инструментов в дисциплины преподавателей?
+  - Какие данные платформы оказались наиболее полезны для анализа образовательного результата?
+  - Какие ограничения пилота должны быть явно указаны в журнальной редакции?
+  - Какие изменения следует внести перед масштабированием курса и платформы?
