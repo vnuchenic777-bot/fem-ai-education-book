@@ -52,5 +52,7 @@ bibtex_bibfiles:
   - bibliography.bib
 
 sphinx:
+  extra_extensions:
+    - sphinxcontrib.mermaid
   config:
     language: ru

@@ -10,6 +10,8 @@
 
 Ветка 8 усилена воспроизводимой Jupyter-версией итогового проекта. Новый notebook `book/02_dpo_course_design/final_project_workbook.ipynb` подключен в раздел курса ДПО после текстовой спецификации `final_project_model.md`. Сопроводительная карточка сохранена как `book/02_dpo_course_design/final_project_workbook_notes.md`.
 
+Первая статья научно-публикационного контура обновлена до рабочей версии v0.3: публичный текст перенесен в `book/06_research_articles/article_01_platform_concept.md`, а исходный редакционный пакет сохранен в `data/branches/06_research_articles/article_01_platform_concept_v0_3/`.
+
 ## Что собрано
 
 Создан Jupyter Book-репозиторий для книги «Проектирование цифровой образовательной экосистемы факультета: методология, архитектура и реализация курса ДПО по ИИ-инструментам».
@@ -26,6 +28,7 @@
 - правила для будущих AI-агентов в `AGENTS.md`;
 - README с командами локального запуска;
 - библиографическая база `bibliography.bib`.
+- редакционный архив статьи 01 v0.3 в `data/branches/06_research_articles/article_01_platform_concept_v0_3/`.
 
 ## Подключенные ветки и материалы
 
@@ -42,6 +45,7 @@
 | 9. Право, этика, безопасность | подключена как главы стратегии | `book/03_ai_integration_strategy/legal_ethics_security.md` |
 | 10. Сертификат или удостоверение | подключена как отдельная часть книги | `book/05_certification/` |
 | 11. Платформенная интеграция курса | подключена как notebook-глава архитектуры | `book/01_platform_architecture/architecture_overview.ipynb` |
+| Статья 01. Концепция платформы | подключена как публикационная редакция v0.3 | `book/06_research_articles/article_01_platform_concept.md` |
 
 ## Ветка 10
 
@@ -63,7 +67,7 @@
 
 ## Библиография и источники
 
-В `bibliography.bib` добавлены 8 начальных источников:
+В `bibliography.bib` добавлены 10 начальных источников:
 
 - Федеральный закон № 273-ФЗ «Об образовании в Российской Федерации»;
 - приказ Минобрнауки России от 24.03.2025 № 266 по ДПО;
@@ -71,6 +75,7 @@
 - UNESCO Guidance for Generative AI in Education and Research;
 - UNESCO AI Competency Framework for Teachers;
 - OECD AI Principles;
+- Указ Президента Российской Федерации от 10.10.2019 № 490 о развитии искусственного интеллекта и Указ Президента Российской Федерации от 15.02.2024 № 124 о внесении изменений;
 - документация Jupyter Book по `_config.yml` и `_toc.yml`.
 
 Раздел `book/07_appendices/bibliography.md` теперь выводит полный список источников через Jupyter Book bibliography directive.
@@ -117,7 +122,7 @@
 
 Результаты:
 
-- `scripts/validate_data.py`: OK, проверено 70 JSON и 80 YAML.
+- `scripts/validate_data.py`: OK, проверено 70 JSON и 82 YAML.
 - `scripts/check_book.py`: OK, проверено 41 TOC-цель.
 - `jupyter-book build .`: OK, HTML создан в `_build/html`.
 

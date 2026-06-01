@@ -1,4 +1,5 @@
 jupyter-book<2
+sphinxcontrib-mermaid
 notebook
 ipykernel
 nbformat

@@ -1,0 +1,57 @@
+article_version: '0.3'
+citation_style: square_brackets
+standards_note: Bibliographic formatting is prepared in a ГОСТ-oriented draft style;
+  final formatting must follow the selected journal guidelines.
+sources:
+- id: 1
+  type: internal_project_document
+  title: 'Обзор проекта: проектирование цифровой образовательной экосистемы факультета'
+  file: project_overview.md
+  used_for: project object, author position, research context
+- id: 2
+  type: internal_project_document
+  title: 'Видение продукта: цифровая образовательная экосистема факультета'
+  file: PRODUCT_VISION.md
+  used_for: product model, users, access contour, boundaries, dissemination
+- id: 3
+  type: internal_project_document
+  title: 'Курс ДПО: ИИ-инструменты для преподавателя'
+  file: COURSE_DPO_AI_72H.md
+  used_for: first educational scenario and competencies
+- id: 4
+  type: internal_project_document
+  title: Архитектура цифровой образовательной платформы факультета
+  file: ARCHITECTURE.md
+  used_for: platform domains and architecture
+- id: 5
+  type: internal_project_document
+  title: Модель данных цифровой образовательной платформы факультета
+  file: DATA_MODEL.md
+  used_for: data entities and learning record
+- id: 6
+  type: internal_project_document
+  title: Оценивание и документы об обучении
+  file: ASSESSMENT_CERTIFICATION.md
+  used_for: certification, assessment, competencies evidence
+- id: 7
+  type: official_normative_source
+  title: Указ Президента Российской Федерации от 10.10.2019 № 490 «О развитии искусственного
+    интеллекта в Российской Федерации»
+  source: Официальное опубликование правовых актов
+  checked_url: https://publication.pravo.gov.ru/document/view/0001201910110003
+  checked_url_amendment_2024: https://publication.pravo.gov.ru/document/0001202402150063
+  used_for: strategic context of AI competencies
+- id: 8
+  type: editorial_requirements
+  title: Требования к подготовке аналитической научной статьи для российских научных
+    изданий
+  file: Вставленный текст.txt
+  used_for: article style and editorial constraints
+missing_for_journal_submission:
+- peer-reviewed Russian-language publications on digital transformation of higher
+  education
+- peer-reviewed Russian-language publications on educational ecosystems
+- Russian-language studies on AI in higher education and teacher training
+- official methodological recommendations on use of AI in educational organizations,
+  if available and verified
+- journal-specific author guidelines

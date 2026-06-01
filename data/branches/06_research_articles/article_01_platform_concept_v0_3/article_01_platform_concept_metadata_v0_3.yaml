@@ -1,0 +1,42 @@
+title_ru: 'Модель цифровой образовательной экосистемы факультета: проектирование платформы,
+  курса ДПО и механизма интеграции ИИ-инструментов в образовательный процесс'
+title_en: 'Model of a Faculty Digital Educational Ecosystem: Designing a Platform,
+  a Continuing Professional Education Course, and a Mechanism for Integrating Artificial
+  Intelligence Tools into the Educational Process'
+author: Морозов Артём Михайлович
+affiliation: СПБГТИ(ТУ), кафедра бизнес-информатики
+version: '0.3'
+status: draft_for_jupyter_book_and_further_journal_revision
+udc_proposed: 378.1:004:004.8
+keywords_ru:
+- цифровая образовательная экосистема
+- высшее образование
+- дополнительное профессиональное образование
+- искусственный интеллект
+- образовательная платформа
+- компетентностная модель
+- цифровой след обучения
+- Jupyter Book
+keywords_en:
+- digital educational ecosystem
+- higher education
+- continuing professional education
+- artificial intelligence
+- educational platform
+- competency model
+- learning records
+- Jupyter Book
+source_documents_used:
+- project_overview.md
+- PRODUCT_VISION.md
+- COURSE_DPO_AI_72H.md
+- ARCHITECTURE.md
+- DATA_MODEL.md
+- ASSESSMENT_CERTIFICATION.md
+- Вставленный текст.txt
+main_enhancement_in_v0_3: 'The product model was integrated more deeply: public shell
+  with closed educational access, user roles, first launch scenario, boundaries of
+  the first version, first target result, and long-term dissemination model.'
+journal_readiness: not_ready_without_external_literature_review
+required_next_step: collect and verify Russian scientific sources from eLIBRARY, CyberLeninka,
+  NEL, RSL catalogues and official university publications
