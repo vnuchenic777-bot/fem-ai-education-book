@@ -1,0 +1,69 @@
+article_version: "0.1"
+title: "Методико-техническая модель цифрового документа результата обучения в образовательной платформе ДПО"
+purpose: "Карта источников для первой полноценной редакции статьи 03."
+checked_at: "2026-06-01"
+citation_style: "square_brackets"
+positioning:
+  core_claim: "Документ результата обучения должен проектироваться как связанная запись платформы, а не как изолированный PDF-файл."
+  legal_boundary: "Статья не утверждает юридический статус сертификата или удостоверения; этот статус требует отдельного решения образовательной организации."
+internal_project_sources:
+  - id: 1
+    title: "Сертификат или удостоверение: модель документа об обучении"
+    file: "book/05_certification/certificate_model.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/05_certification/certificate_model.html"
+    used_for: "Общая модель документа, три уровня статуса, реквизиты, роли, QR-проверка, аудит и открытые вопросы."
+  - id: 2
+    title: "Юридический статус сертификата или удостоверения"
+    file: "book/05_certification/legal_status.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/05_certification/legal_status.html"
+    used_for: "Осторожная проектная позиция: документ об обучении / цифровой документ результата обучения до организационного утверждения."
+  - id: 3
+    title: "Модель данных сертификата"
+    file: "book/05_certification/certificate_data_model.ipynb"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/05_certification/certificate_data_model.html"
+    used_for: "CertificateTemplate, IssuedCertificate, StorageObject, AuditLog и публичный ответ проверки."
+  - id: 4
+    title: "Жизненный цикл сертификата"
+    file: "book/05_certification/certificate_lifecycle.ipynb"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/05_certification/certificate_lifecycle.html"
+    used_for: "Статусы draft, partial, issued, revoked, reissued и аудируемые переходы."
+  - id: 5
+    title: "QR-проверка подлинности"
+    file: "book/05_certification/qr_verification_flow.ipynb"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/05_certification/qr_verification_flow.html"
+    used_for: "QR-проверка, verificationCode, verificationUrl, минимизация публичного раскрытия данных."
+  - id: 6
+    title: "Implementation spec: сертификат или удостоверение"
+    file: "book/05_certification/implementation_spec.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/05_certification/implementation_spec.html"
+    used_for: "Связь Markdown-главы со структурированными YAML/JSON-спецификациями."
+  - id: 7
+    title: "Структурированные спецификации модели документа об обучении"
+    file: "book/05_certification/"
+    public_url: "https://github.com/vnuchenic777-bot/fem-ai-education-book/tree/main/book/05_certification"
+    used_for: "implementation_spec.yaml, implementation_spec.json, certificate_entities.yaml, certificate_api_contracts.json."
+normative_sources:
+  - id: 8
+    bibtex_key: "russian_education_law_273fz"
+    title: "Федеральный закон от 29.12.2012 № 273-ФЗ «Об образовании в Российской Федерации»"
+    url: "https://publication.pravo.gov.ru/document/0001201212300007"
+    used_for: "Общая рамка проверки образовательного статуса программы и документа."
+  - id: 9
+    bibtex_key: "minobrnauki_order_266_2025_dpo"
+    title: "Приказ Минобрнауки России от 24.03.2025 № 266"
+    url: "https://publication.pravo.gov.ru/document/0001202504230011"
+    used_for: "Актуальная рамка организации образовательной деятельности по дополнительным профессиональным программам."
+  - id: 10
+    bibtex_key: "personal_data_law_152fz"
+    title: "Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных»"
+    url: "https://pravo.gov.ru/proxy/ips/?docbody=&nd=102108261"
+    used_for: "Ограничение публичного раскрытия сведений при QR-проверке."
+  - id: 11
+    bibtex_key: "electronic_signature_law_63fz"
+    title: "Федеральный закон от 06.04.2011 № 63-ФЗ «Об электронной подписи»"
+    url: "https://www.nalog.gov.ru/rn77/about_fts/docs/4038321/"
+    used_for: "Рамка, которую необходимо учитывать при выборе способа электронной подписи или подтверждения электронного документа."
+next_editorial_steps:
+  - "Проверить формулировки с ответственными за ДПО и юридическое сопровождение образовательной организации."
+  - "Определить публичный минимум данных QR-проверки."
+  - "Подготовить отдельный внешний научный обзор по цифровым документам, микроквалификациям, верифицируемым цифровым удостоверениям и образовательным credentials."
