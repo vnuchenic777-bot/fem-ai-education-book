@@ -33,6 +33,12 @@
 - Оценивание результатов и эффективности программ ДПО педагогов: {cite}`sorokina_elinskaya_dpo_assessment_criteria_2020,vertyanova_dpo_effectiveness_evaluation_2021`.
 - Отношение преподавателей к ИИ, барьеры внедрения и практики применения ИИ в образовательном процессе вуза: {cite}`burganova_ai_attitudes_university_teachers_2025,andreeva_ai_barriers_dpo_2025,toktarova_ai_tools_university_process_2024,andreeva_tuchkevich_three_tasks_ai_teacher_2024`.
 
+## Внешняя научная и стандартизационная база статьи 03
+
+- Микроквалификации и короткие образовательные результаты рассматриваются через рамки UNESCO, OECD и Совета Европейского союза: {cite}`oliver_unesco_microcredentials_definition_2022,oecd_microcredentials_lifelong_learning_2023,council_eu_microcredentials_2022`.
+- Российский контекст гибкой профессиональной подготовки и сертификации компетенций педагогов используется как сопоставительный слой для методической части модели: {cite}`shestakova_flexible_professional_training_2024,kamka_certification_teacher_competencies_2025`.
+- Цифровые credentials, проверяемость, роли издателя, владельца и проверяющего, а также риски корреляции данных рассматриваются через W3C Verifiable Credentials, DID Core, Open Badges и Europass Digital Credentials: {cite}`w3c_verifiable_credentials_2_2025,w3c_did_core_2022,oneedtech_open_badges_3_2026,europass_european_digital_credentials`.
+
 ## Техническая публикация
 
 - Документация Jupyter Book используется для настройки `_config.yml`, `_toc.yml`, сборки и публикации книги как автоматически генерируемого HTML-ресурса {cite}`jupyterbook_config_v1,jupyterbook_toc_v1`.

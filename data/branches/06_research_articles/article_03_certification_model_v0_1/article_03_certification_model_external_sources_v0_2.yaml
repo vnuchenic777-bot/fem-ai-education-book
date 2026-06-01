@@ -1,0 +1,83 @@
+article:
+  id: article_03_certification_model
+  version: "0.2"
+  title: "Методико-техническая модель цифрового документа результата обучения в образовательной платформе ДПО"
+  purpose: "Внешний научный и стандартизационный слой для усиления статьи о цифровом документе результата обучения."
+  scope_note: "Источники используются как сравнительная и методико-техническая рамка. Они не заменяют российскую нормативную экспертизу статуса сертификата или удостоверения."
+  created_at: "2026-06-01"
+
+source_groups:
+  - group: "Микроквалификации и короткие образовательные результаты"
+    role_in_article: "Показывают, что цифровой документ результата обучения может рассматриваться не только как PDF, но и как подтверждение освоенного результата в системе непрерывного образования."
+    sources:
+      - key: oecd_microcredentials_lifelong_learning_2023
+        title: "Micro-credentials for lifelong learning and employability: Uses and possibilities"
+        organization: "OECD"
+        year: 2023
+        url: "https://www.oecd.org/en/publications/micro-credentials-for-lifelong-learning-and-employability_9c4b7b68-en.html"
+        use: "Поддерживает осторожную позицию: потенциал микроквалификаций значим, но доказательная база и признание требуют политики качества и прозрачности."
+      - key: council_eu_microcredentials_2022
+        title: "Council Recommendation of 16 June 2022 on a European approach to micro-credentials for lifelong learning and employability"
+        organization: "Council of the European Union"
+        year: 2022
+        url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022H0627(02)"
+        use: "Используется как пример стандартизированного описания результатов краткосрочного обучения, включая результаты, нагрузку и оценивание."
+      - key: oliver_unesco_microcredentials_definition_2022
+        title: "Towards a common definition of micro-credentials"
+        author: "Beverley Oliver"
+        organization: "UNESCO"
+        year: 2022
+        url: "https://unesdoc.unesco.org/ark:/48223/pf0000381668_eng"
+        use: "Помогает сформулировать связь между коротким образовательным опытом, результатами обучения, оцениванием и признанием."
+
+  - group: "Цифровые credentials и проверяемость"
+    role_in_article: "Дают язык для описания проверяемого цифрового документа: издатель, субъект, владелец, проверяющий, статус, доказательство и минимизация раскрытия данных."
+    sources:
+      - key: w3c_verifiable_credentials_2_2025
+        title: "Verifiable Credentials Data Model v2.0"
+        organization: "World Wide Web Consortium"
+        year: 2025
+        url: "https://www.w3.org/TR/vc-data-model/"
+        use: "Используется как технический ориентир для будущей совместимости модели с проверяемыми credentials; не означает, что текущая платформа уже реализует VC."
+      - key: w3c_did_core_2022
+        title: "Decentralized Identifiers (DIDs) v1.0"
+        organization: "World Wide Web Consortium"
+        year: 2022
+        url: "https://www.w3.org/TR/did-1.0/"
+        use: "Используется как справочная рамка для темы устойчивых идентификаторов и разделения идентификации, проверки и доверия."
+      - key: oneedtech_open_badges_3_2026
+        title: "Open Badges Specification"
+        organization: "1EdTech Consortium"
+        year: 2026
+        url: "https://www.imsglobal.org/spec/ob/v3p0/"
+        use: "Используется как образовательный формат цифровых бейджей и достижений, близкий к задаче публично проверяемого результата обучения."
+      - key: europass_european_digital_credentials
+        title: "European Digital Credentials"
+        organization: "European Commission"
+        year: 2026
+        url: "https://europass.europa.eu/en/european-digital-credentials"
+        use: "Используется как пример институционального сервиса цифровых образовательных credentials и их проверки."
+
+  - group: "Российский научно-методический контекст"
+    role_in_article: "Поддерживает связь модели с профессиональной подготовкой, гибкими форматами обучения и сертификацией компетенций педагогов."
+    sources:
+      - key: shestakova_flexible_professional_training_2024
+        title: "Гибкая профессиональная подготовка руководителей сферы образования: форматы и потенциал федерального университета"
+        author: "Шестакова А. Г."
+        journal: "Russian Journal of Education and Psychology"
+        year: 2024
+        url: "https://cyberleninka.ru/article/n/gibkaya-professionalnaya-podgotovka-rukovoditeley-sfery-obrazovaniya-formaty-i-potentsial-federalnogo-universiteta"
+        use: "Используется для обоснования гибких форматов профессиональной подготовки в российском образовательном контексте."
+      - key: kamka_certification_teacher_competencies_2025
+        title: "Механизмы реализации образовательной политики на примере апробации сертификации компетенций учителей профильной школы"
+        author: "Камка С. В."
+        journal: "Человек и образование"
+        year: 2025
+        url: "https://cyberleninka.ru/article/n/mehanizmy-realizatsii-obrazovatelnoy-politiki-na-primere-aprobatsii-sertifikatsii-kompetentsiy-uchiteley-profilnoy-shkoly"
+        use: "Используется как пример обсуждения сертификации компетенций педагогов и необходимости проверяемых оснований для подтверждения результата."
+
+editorial_decisions:
+  - "Не представлять W3C, Open Badges, Europass, OECD, UNESCO или рамку ЕС как обязательные нормы для российской программы ДПО."
+  - "Формулировать их как внешний сравнительный контур и источник технического языка для будущей совместимости."
+  - "Сохранять центральный юридический дисклеймер: официальный статус документа должен согласовываться с образовательной организацией."
+  - "Не утверждать, что QR-проверка сама по себе равна электронной подписи, удостоверению о повышении квалификации или юридически значимому документу."
