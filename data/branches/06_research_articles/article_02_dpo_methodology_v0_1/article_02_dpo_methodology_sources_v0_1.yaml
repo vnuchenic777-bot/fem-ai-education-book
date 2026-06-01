@@ -1,0 +1,63 @@
+article_version: "0.1"
+title: "Методология проектирования программ ДПО по ИИ-инструментам для преподавателей: компетенции, оценивание и цифровое сопровождение образовательного результата"
+purpose: "Карта источников для первой полноценной редакции статьи 02."
+checked_at: "2026-06-01"
+citation_style: "square_brackets"
+positioning:
+  local_case_role: "Апробационная конфигурация методологии, а не предел применимости статьи."
+  generalizable_claim: "Модель может адаптироваться к образовательным организациям и подразделениям с похожими задачами подготовки преподавателей к применению ИИ-инструментов."
+internal_project_sources:
+  - id: 1
+    title: "Концепция курса и проект РПМ: ИИ-инструменты для преподавателя"
+    file: "book/02_dpo_course_design/course_concept.ipynb"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/course_concept.html"
+    used_for: "Паспорт программы, общий замысел курса, 72 часа, связь РПМ с компетенциями и итоговым проектом."
+  - id: 2
+    title: "Матрица компетенций курса ДПО по ИИ-инструментам"
+    file: "book/02_dpo_course_design/competency_model.ipynb"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/competency_model.html"
+    used_for: "Коды и названия ПК-ИИ-1 — ПК-ИИ-10, проверяемость компетенций, двухчастное подтверждение освоения."
+  - id: 3
+    title: "Учебный и учебно-тематический план программы повышения квалификации"
+    file: "book/02_dpo_course_design/curriculum_plan.ipynb"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/curriculum_plan.html"
+    used_for: "72 часа, 8 модулей, учебно-тематический план, переход от плана к платформенным объектам."
+  - id: 4
+    title: "Карта уроков и микролекций курса ДПО"
+    file: "book/02_dpo_course_design/lesson_map.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/lesson_map.html"
+    used_for: "42 урока, 93 микролекции, связь урока с практическим действием и фиксируемым результатом."
+  - id: 5
+    title: "Подробная разработка модулей курса ДПО"
+    file: "book/02_dpo_course_design/module_development.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/module_development.html"
+    used_for: "Единый шаблон модуля, профессиональное действие, артефакт, проверка, критерии и связь с платформой."
+  - id: 6
+    title: "Фонд оценочных средств курса ДПО"
+    file: "book/02_dpo_course_design/assessment_model.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/assessment_model.html"
+    used_for: "Двухчастное подтверждение компетенции, статусы работ, ИИ-помощная проверка, сущности оценивания."
+  - id: 7
+    title: "Техническое задание на разработку этапа «Итоговый проект» курса ДПО по ИИ-инструментам"
+    file: "book/02_dpo_course_design/final_project_model.md"
+    public_url: "https://vnuchenic777-bot.github.io/fem-ai-education-book/book/02_dpo_course_design/final_project_model.html"
+    used_for: "Структура итогового проекта, связь с реальной дисциплиной, заданиями AI-mandatory, РПМ, критериями и рисками."
+external_sources_reused:
+  - bibtex_key: "rogozin_teachers_digital_transformation_2022"
+    used_for: "Контекст цифровой трансформации высшего образования и роли преподавателей."
+  - bibtex_key: "suleymankadieva_digital_educational_ecosystem_2021"
+    used_for: "Платформенная и экосистемная рамка цифрового образования."
+  - bibtex_key: "shirokolobova_digital_competencies_pd_2022"
+    used_for: "Повышение квалификации и формирование цифровых компетенций педагогов."
+  - bibtex_key: "koshkina_genai_higher_education_2025"
+    used_for: "Генеративный ИИ в высшем образовании."
+  - bibtex_key: "feshchenko_genai_teachers_experience_2025"
+    used_for: "Опыт преподавателей при внедрении генеративного ИИ."
+  - bibtex_key: "muller_ai_digital_competence_2025"
+    used_for: "ИИ-компетентность педагогов вуза."
+  - bibtex_key: "boyarinov_learning_analytics_2025"
+    used_for: "Учебная аналитика и цифровое сопровождение образовательного результата."
+next_editorial_steps:
+  - "Расширить внешний обзор литературы по ДПО преподавателей и ИИ-грамотности."
+  - "После пилотного запуска добавить эмпирические данные: прохождение, артефакты, доработки, типичные ошибки."
+  - "Перед журнальной подачей адаптировать объем и список источников к требованиям выбранного издания."
