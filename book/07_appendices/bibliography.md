@@ -25,6 +25,13 @@
 - Генеративный искусственный интеллект в высшем образовании и в работе преподавателя: {cite}`koshkina_genai_higher_education_2025,mukhlaeva_genai_transformations_2025,feshchenko_genai_teachers_experience_2025,dontsov_genai_teacher_work_2025`.
 - Учебная аналитика и цифровой след как основание для проектирования данных образовательной платформы: {cite}`boyarinov_learning_analytics_2025,krishtal_digital_footprint_satisfaction_2024,gorbatov_digital_footprint_individualization_2022`.
 
+## Внешняя научная база статьи 02
+
+- Международные рамки компетенций преподавателя в цифровой и ИИ-среде: {cite}`unesco_ai_competency_teachers_2024,redecker_digcompedu_2017`.
+- Развитие цифровых компетенций преподавателей и повышение квалификации педагогов: {cite}`antipina_digital_competencies_university_teacher_2022,polyakova_teacher_digital_literacy_pd_2019,masalova_digital_competence_russian_university_teachers_2021,shirokolobova_digital_competencies_pd_2022`.
+- Оценивание результатов и эффективности программ ДПО педагогов: {cite}`sorokina_elinskaya_dpo_assessment_criteria_2020,vertyanova_dpo_effectiveness_evaluation_2021`.
+- Отношение преподавателей к ИИ, барьеры внедрения и практики применения ИИ в образовательном процессе вуза: {cite}`burganova_ai_attitudes_university_teachers_2025,andreeva_ai_barriers_dpo_2025,toktarova_ai_tools_university_process_2024,andreeva_tuchkevich_three_tasks_ai_teacher_2024`.
+
 ## Техническая публикация
 
 - Документация Jupyter Book используется для настройки `_config.yml`, `_toc.yml`, сборки и публикации книги как автоматически генерируемого HTML-ресурса {cite}`jupyterbook_config_v1,jupyterbook_toc_v1`.

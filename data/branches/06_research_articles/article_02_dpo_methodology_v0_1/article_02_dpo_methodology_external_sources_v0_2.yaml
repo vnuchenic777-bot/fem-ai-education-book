@@ -1,0 +1,133 @@
+article_version: "0.2"
+purpose: "Внешняя научная база для усиления статьи 02 о методологии проектирования программ ДПО по ИИ-инструментам для преподавателей."
+checked_at: "2026-06-01"
+selection_principles:
+  - "Связь с ДПО, повышением квалификации, цифровыми компетенциями преподавателей, ИИ-компетентностью, оцениванием результатов или практиками применения ИИ в вузе."
+  - "Наличие открытой карточки публикации или официальной страницы источника."
+  - "Возможность использовать источник для обобщаемой методологической рамки, а не только для локального кейса."
+sources:
+  - id: 15
+    bibtex_key: "unesco_ai_competency_teachers_2024"
+    title: "AI Competency Framework for Teachers"
+    authors:
+      - "Miao F."
+      - "Cukurova M."
+    year: 2024
+    organization: "UNESCO"
+    url: "https://www.unesco.org/en/articles/ai-competency-framework-teachers?hub=83250"
+    used_for: "Международная рамка ИИ-компетенций преподавателя: этика, педагогика, человекоцентричность, знания и навыки."
+  - id: 16
+    bibtex_key: "redecker_digcompedu_2017"
+    title: "European Framework for the Digital Competence of Educators: DigCompEdu"
+    authors:
+      - "Redecker C."
+      - "Punie Y."
+    year: 2017
+    publisher: "Publications Office of the European Union"
+    doi: "10.2760/159770"
+    url: "https://op.europa.eu/sl/publication-detail/-/publication/fcc33b68-d581-11e7-a5b9-01aa75ed71a1"
+    used_for: "Цифровая компетентность преподавателя как рамка профессиональных действий, ресурсов, преподавания, оценивания и поддержки обучающихся."
+  - id: 17
+    bibtex_key: "antipina_digital_competencies_university_teacher_2022"
+    title: "Направления организации развития цифровых компетенций преподавателя вуза"
+    authors:
+      - "Антипина И. О."
+    year: 2022
+    venue: "Международный журнал гуманитарных и естественных наук"
+    issue: "11-1"
+    url: "https://cyberleninka.ru/article/n/napravleniya-organizatsii-razvitiya-tsifrovyh-kompetentsiy-prepodavatelya-vuza"
+    used_for: "Организация профессионального развития преподавателей вуза и дифференциация повышения квалификации."
+  - id: 18
+    bibtex_key: "sorokina_elinskaya_dpo_assessment_criteria_2020"
+    title: "Критерии и уровни оценки результатов освоения дополнительных профессиональных образовательных программ"
+    authors:
+      - "Сорокина Е. Л."
+      - "Елинская Я. А."
+    year: 2020
+    venue: "Материалы Всероссийской научно-практической конференции «Наука и социум»"
+    issue: "XIV"
+    url: "https://cyberleninka.ru/article/n/kriterii-i-urovni-otsenki-rezultatov-osvoeniya-dopolnitelnyh-professionalnyh-obrazovatelnyh-programm"
+    used_for: "Критерии и уровни оценки результатов освоения дополнительных профессиональных программ."
+  - id: 19
+    bibtex_key: "burganova_ai_attitudes_university_teachers_2025"
+    title: "Отношение университетских преподавателей к искусственному интеллекту"
+    authors:
+      - "Бурганова Л. А."
+      - "Мягков Г. П."
+      - "Юрьева О. В."
+    year: 2025
+    venue: "Вестник экономики, права и социологии"
+    issue: "4"
+    url: "https://cyberleninka.ru/article/n/otnoshenie-universitetskih-prepodavateley-k-iskusstvennomu-intellektu"
+    used_for: "Неоднозначность отношения преподавателей к ИИ, возможности и риски применения ИИ в высшем образовании."
+  - id: 20
+    bibtex_key: "andreeva_ai_barriers_dpo_2025"
+    title: "Барьеры внедрения технологий искусственного интеллекта в систему дополнительного профессионального образования"
+    authors:
+      - "Андреева А. А."
+    year: 2025
+    venue: "KANT"
+    issue: "4 (57)"
+    url: "https://cyberleninka.ru/article/n/bariery-vnedreniya-tehnologiy-iskusstvennogo-intellekta-v-sistemu-dopolnitelnogo-professionalnogo-obrazovaniya"
+    used_for: "Барьеры внедрения ИИ в ДПО и необходимость методической, организационной и цифровой поддержки."
+  - id: 21
+    bibtex_key: "polyakova_teacher_digital_literacy_pd_2019"
+    title: "Цифровая грамотность педагога: возможности региональной системы повышения квалификации"
+    authors:
+      - "Полякова В. А."
+    year: 2019
+    venue: "Нижегородское образование"
+    issue: "2"
+    url: "https://cyberleninka.ru/article/n/tsifrovaya-gramotnost-pedagoga-vozmozhnosti-regionalnoy-sistemy-povysheniya-kvalifikatsii"
+    used_for: "Повышение квалификации педагогов как система формального, неформального и информального развития цифровой грамотности."
+  - id: 22
+    bibtex_key: "vertyanova_dpo_effectiveness_evaluation_2021"
+    title: "Методика оценивания эффективности программ дополнительного профессионального образования педагогов"
+    authors:
+      - "Вертьянова А. А."
+      - "Безукладников К. Э."
+      - "Красноборова Н. А."
+    year: 2021
+    venue: "Вестник Пермского национального исследовательского политехнического университета. Проблемы языкознания и педагогики"
+    issue: "2"
+    url: "https://cyberleninka.ru/article/n/metodika-otsenivaniya-effektivnosti-programm-dopolnitelnogo-professionalnogo-obrazovaniya-pedagogov"
+    used_for: "Оценивание эффективности ДПО педагогов и необходимость комплексной модели оценки."
+  - id: 23
+    bibtex_key: "masalova_digital_competence_russian_university_teachers_2021"
+    title: "Цифровая компетентность преподавателей российских вузов"
+    authors:
+      - "Масалова Ю. А."
+    year: 2021
+    venue: "Университетское управление: практика и анализ"
+    volume: "25"
+    issue: "3"
+    url: "https://cyberleninka.ru/article/n/tsifrovaya-kompetentnost-prepodavateley-rossiyskih-vuzov"
+    used_for: "Мониторинг цифровой компетентности преподавателей российских вузов и потребность в повышении квалификации."
+  - id: 24
+    bibtex_key: "toktarova_ai_tools_university_process_2024"
+    title: "Эмпирическое изучение практики реализации и использования инструментов искусственного интеллекта в образовательном процессе вуза"
+    authors:
+      - "Токтарова В. И."
+      - "Ребко О. В."
+      - "Хабибрахманова И. И."
+      - "Мусин Р. А."
+    year: 2024
+    venue: "Вестник Марийского государственного университета"
+    volume: "18"
+    issue: "2"
+    url: "https://cyberleninka.ru/article/n/empiricheskoe-izuchenie-praktiki-realizatsii-i-ispolzovaniya-instrumentov-iskusstvennogo-intellekta-v-obrazovatelnom-protsesse-vuza"
+    used_for: "Эмпирическая база по использованию ИИ-инструментов в образовательном процессе вуза."
+  - id: 25
+    bibtex_key: "andreeva_tuchkevich_three_tasks_ai_teacher_2024"
+    title: "Три задачи преподавателя высшей школы, решаемых с помощью ИИ"
+    authors:
+      - "Андреева А. А."
+      - "Тучкевич Е. И."
+    year: 2024
+    venue: "KANT"
+    issue: "3 (52)"
+    url: "https://cyberleninka.ru/article/n/tri-zadachi-prepodavatelya-vysshey-shkoly-reshaemyh-s-pomoschyu-ii"
+    used_for: "Связь ИИ с практическими задачами преподавателя высшей школы."
+notes:
+  - "Источники добавлены для усиления версии v0.2 и требуют EDN/eLIBRARY-проверки перед журнальной подачей."
+  - "Список намеренно поддерживает универсализируемую рамку статьи, где авторский курс выступает апробационной конфигурацией модели."
