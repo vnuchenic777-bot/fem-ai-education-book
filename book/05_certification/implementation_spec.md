@@ -1,19 +1,19 @@
-# Implementation spec: сертификат или удостоверение
+# Структурированная спецификация: сертификат или удостоверение
 
 ## Назначение
 
-Раздел подключает структурированные технические спецификации ветки 10 к публичной книге без потери YAML/JSON-структуры.
+Раздел подключает структурированные спецификации сертификационного контура к публичной книге без потери YAML/JSON-структуры.
 
-## Статус
+## Публикационный уровень
 
-Черновик, исходные данные сохранены.
+Исходные данные сохранены как проверяемые структурированные материалы. В публичной главе они рассматриваются как проектная модель, а не как утвержденный юридический или эксплуатационный регламент.
 
 ## Подключенные материалы
 
 - [`implementation_spec.yaml`](implementation_spec.yaml) — человекочитаемая структурированная спецификация.
 - [`implementation_spec.json`](implementation_spec.json) — машинно-читаемая версия той же спецификации.
 - [`data/certificate_entities.yaml`](data/certificate_entities.yaml) — сущности сертификационного контура.
-- [`data/certificate_api_contracts.json`](data/certificate_api_contracts.json) — проектные API-контракты.
+- [`data/certificate_api_contracts.json`](data/certificate_api_contracts.json) — проектная модель взаимодействия компонентов.
 - [`data/example_certificate_payload.json`](data/example_certificate_payload.json) — пример полезной нагрузки.
 
 ```{important}
